@@ -13,4 +13,4 @@ export const CINEMATIC_SCENES: SceneConfig[] = [
   { id: "scene-08-cta", start: 0.95, end: 1.00, name: "Return / CTA" },
 ];
 
-export const CINEMATIC_TOTAL_HEIGHT = "800vh"; // Dictates how long the scroll lasts
+export const CINEMATIC_TOTAL_HEIGHT = "1200vh";

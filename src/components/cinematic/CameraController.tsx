@@ -15,22 +15,44 @@ export default function CameraController({ children }: CameraControllerProps) {
   // Instead of the camera moving Right, the world translates Left (-x).
   // Instead of zooming In, the world Scales Up.
   
-  // As the bird takes off (0.18 to 0.25), it moves right and up.
-  // The camera should subtly follow it by moving the world left and down.
+  const isMobile = viewportMode === "mobile";
+
   const x = useTransform(
     progress, 
-    [0, 0.18, 0.25], 
-    ["0px", "0px", viewportMode === "mobile" ? "-20px" : "-100px"]
+    [0, 0.18, 0.25, 0.42, 0.52, 0.58, 0.72, 0.84, 0.94, 1.0], 
+    [
+      "0vw", "0vw", 
+      isMobile ? "-4vw" : "-8vw", 
+      isMobile ? "-8vw" : "-15vw", 
+      isMobile ? "-12vw" : "-22vw", 
+      isMobile ? "-2vw" : "-5vw", 
+      isMobile ? "-5vw" : "-10vw", 
+      "0vw", 
+      "0vw", "0vw"
+    ]
   ); 
   
   const y = useTransform(
     progress, 
-    [0, 0.18, 0.25], 
-    ["0px", "0px", viewportMode === "mobile" ? "10px" : "30px"]
+    [0, 0.18, 0.25, 0.42, 0.52, 0.58, 0.72, 0.84, 0.94, 1.0], 
+    [
+      "0vh", "0vh", 
+      "2vh", 
+      "1vh", 
+      "-2vh", 
+      "0vh", 
+      "1vh", 
+      "0vh", 
+      "0vh", "0vh"
+    ]
   ); 
 
-  const scale = useTransform(progress, [0, 1], [1, 1]);   // Will control zoom
-  const rotate = useTransform(progress, [0, 1], [0, 0]);  // Slight rotations for cinematic feel
+  const scale = useTransform(
+    progress, 
+    [0, 0.48, 0.52, 0.58, 0.72, 0.84, 0.94, 1.0], 
+    [1, 1, 1.12, 1, 1.04, 0.98, 1, 1]
+  );
+  const rotate = useTransform(progress, [0, 1], [0, 0]);
 
   return (
     <motion.div

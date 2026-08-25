@@ -35,8 +35,8 @@ export default function DebugOverlay() {
       <h3 style={{ margin: "0 0 10px 0", borderBottom: "1px solid rgba(0,255,204,0.3)", paddingBottom: "5px" }}>Cinematic Engine Debug</h3>
       <div style={{ display: "flex", flexDirection: "column", gap: "4px" }}>
         <div><strong>Progress:</strong> {currentProgress.toFixed(4)}</div>
-        <div><strong>Scene:</strong> {activeScene?.name || "Unknown"}</div>
         <div><strong>Takeoff:</strong> {currentProgress >= 0.12 && currentProgress <= 0.25 ? ((currentProgress - 0.12) / 0.13 * 100).toFixed(1) + "%" : currentProgress > 0.25 ? "Airborne" : "Resting"}</div>
+        <div><strong>Journey:</strong> {currentProgress >= 0.25 && currentProgress <= 0.85 ? ((currentProgress - 0.25) / 0.60 * 100).toFixed(1) + "%" : currentProgress > 0.85 ? "Complete" : "Waiting"}</div>
         <div><strong>Viewport:</strong> {viewportMode}</div>
         <div><strong>Reduced Motion:</strong> {isReducedMotion ? "YES" : "NO"}</div>
       </div>

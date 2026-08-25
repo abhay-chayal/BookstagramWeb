@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       {/* Cinematic Scroll Engine with Hero Overlay */}
-      <CinematicExperience debug={true}>
+      <CinematicExperience debug={false}>
         {/* We place the existing Hero typography inside the cinematic overlay */}
         <div className={`container ${styles.heroContainer}`} style={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", pointerEvents: "auto" }}>
           <div className={styles.heroContent} style={{ marginTop: "10vh" }}>

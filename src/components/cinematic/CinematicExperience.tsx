@@ -1,12 +1,31 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useReducedMotion } from "framer-motion";
+import { motion, useScroll, useReducedMotion, useTransform, MotionValue } from "framer-motion";
+
+// Helper: Fades hero content out as the cinematic journey begins
+function HeroOverlay({ progress, children }: { progress: MotionValue<number>; children: React.ReactNode }) {
+  const opacity = useTransform(progress, [0, 0.08, 0.18], [1, 1, 0]);
+  // Use a discrete visibility toggle to ensure child components (FadeIn etc.)
+  // can't override the parent's opacity via their own motion styles.
+  const display = useTransform(progress, (v) => v > 0.20 ? "none" : "block");
+  return (
+    <motion.div style={{ position: "absolute", inset: 0, zIndex: 50, pointerEvents: "none", opacity, display }}>
+      {children}
+    </motion.div>
+  );
+}
 import { CinematicContext, ViewportMode } from "./CinematicContext";
 import { CINEMATIC_SCENES, CINEMATIC_TOTAL_HEIGHT } from "./config";
 import CameraController from "./CameraController";
 import DebugOverlay from "./DebugOverlay";
 import Scene01Quiet from "./Scene01Quiet";
+import Scene03Journey from "./Scene03Journey";
+import Scene04Window from "./Scene04Window";
+import Scene05Studio from "./Scene05Studio";
+import Scene06Community from "./Scene06Community";
+import Scene07Return from "./Scene07Return";
+import Scene08CTA from "./Scene08CTA";
 import BirdController from "./BirdController";
 
 interface CinematicExperienceProps {
@@ -73,7 +92,7 @@ export default function CinematicExperience({ debug = false, children }: Cinemat
           position: "relative", 
           height: prefersReducedMotion ? "100vh" : CINEMATIC_TOTAL_HEIGHT, 
           width: "100%",
-          backgroundColor: "#0B1121" // Dark staging ground
+          backgroundColor: "var(--color-bg-base)" // Off-white theme background
         }}
       >
         <div 
@@ -91,14 +110,19 @@ export default function CinematicExperience({ debug = false, children }: Cinemat
           {/* 4. Camera System (The World) */}
           <CameraController>
             <Scene01Quiet />
+            <Scene03Journey />
+            <Scene04Window />
+            <Scene05Studio />
+            <Scene06Community />
+            <Scene07Return />
+            <Scene08CTA />
             <BirdController />
-            {/* Future scenes will be injected here */}
           </CameraController>
 
-          {/* Overlay Content (e.g., Hero Typography) */}
-          <div style={{ position: "absolute", inset: 0, zIndex: 50, pointerEvents: "none" }}>
+          {/* Overlay Content (e.g., Hero Typography) — Fades out as journey begins */}
+          <HeroOverlay progress={scrollYProgress}>
             {children}
-          </div>
+          </HeroOverlay>
           
           {/* 9. Debug Mode */}
           <DebugOverlay />

@@ -31,46 +31,94 @@ export default function BirdController() {
   // 0.250 (100%) : Airborne
 
   // Flight Path X
-  const targetX = viewportMode === "mobile" ? 150 : 600;
+  const isMobile = viewportMode === "mobile";
+  const targetX = isMobile ? 150 : 600;
   const birdX = useTransform(
     progress,
-    [0, 0.18, 0.204, 0.224, 0.25],
-    [startX, startX, startX + 50, startX + (targetX/2), startX + targetX]
+    [
+      0,      // 01 Quiet
+      0.18, 0.204, 0.224, 0.25, // 02 Takeoff
+      0.35, 0.42, // 03 Literary Journey
+      0.48, 0.52, 0.56, // 04 Window approach, landing on sill, flight into studio
+      0.62, 0.68, // 05 Studio services
+      0.76, 0.84, // 06 Community
+      0.88, 0.94, // 07 Return to tree
+      1.00   // 08 CTA resting
+    ],
+    [
+      startX,
+      startX, startX + 50, startX + targetX/2, startX + targetX,
+      isMobile ? 250 : 800, isMobile ? 320 : 950,
+      isMobile ? 380 : 1100, isMobile ? 420 : 1150, isMobile ? 450 : 1250,
+      isMobile ? 350 : 900, isMobile ? 400 : 1050,
+      isMobile ? 300 : 750, isMobile ? 380 : 900,
+      isMobile ? 200 : 550, isMobile ? 150 : startX + 190,
+      isMobile ? 150 : startX + 190
+    ]
   );
 
-  // Flight Path Y (Remember: in DOM, smaller Y is "higher")
-  const targetY = viewportMode === "mobile" ? 50 : -50;
+  // Flight Path Y
   const birdY = useTransform(
     progress,
-    [0, 0.146, 0.185, 0.204, 0.224, 0.25],
-    [startY, startY + 15, startY + 5, startY - 50, startY - 120, targetY]
+    [
+      0,
+      0.146, 0.185, 0.204, 0.224, 0.25,
+      0.35, 0.42,
+      0.48, 0.52, 0.56,
+      0.62, 0.68,
+      0.76, 0.84,
+      0.88, 0.94,
+      1.00
+    ],
+    [
+      startY,
+      startY + 15, startY + 5, startY - 50, 120, 150,
+      180, 140,
+      190, 220, 160, // Window descent, perch on sill, lift-off
+      140, 170, // Studio
+      130, 160, // Community
+      190, startY - 12, // Return to tree branch
+      startY - 12 // Settled on branch
+    ]
   );
 
-  // Bird Scale (Anticipation crouch)
+  // Bird Scale
   const birdScaleY = useTransform(
     progress,
-    [0, 0.12, 0.146, 0.185, 0.204, 0.25],
-    [1, 1, 0.85, 1.1, 1, 1]
+    [0, 0.12, 0.146, 0.185, 0.204, 0.25, 0.52, 0.56, 0.94, 1],
+    [1, 1, 0.85, 1.1, 1, 1, 0.9, 1, 0.9, 1]
   );
   
   const birdScaleX = useTransform(
     progress,
-    [0, 0.12, 0.146, 0.185, 0.204, 0.25],
-    [1, 1, 1.1, 0.9, 1, 1]
+    [0, 0.12, 0.146, 0.185, 0.204, 0.25, 0.52, 0.56, 0.94, 1],
+    [1, 1, 1.1, 0.9, 1, 1, 1, 1, 1, 1]
   );
 
   // Bird Rotation (Trajectory angle)
   const birdRotate = useTransform(
     progress,
-    [0, 0.146, 0.185, 0.204, 0.224, 0.25],
-    [0, 5, -10, -25, -15, -5] // Tilts down slightly in anticipation, then pitches UP for takeoff, then levels out
+    [0, 0.146, 0.185, 0.204, 0.224, 0.25, 0.35, 0.42, 0.48, 0.52, 0.56, 0.65, 0.76, 0.88, 0.94, 1],
+    [0, 5, -10, -25, -15, -5, -2, 5, 8, 0, -12, 3, -4, 10, 0, 0] 
   );
 
-  // Wing Open Progress (Passed down to Bird)
+  // Wing Open Progress (Flapping cycle during flight)
   const wingProgress = useTransform(
     progress,
-    [0.165, 0.185, 0.204, 0.25],
-    [0, 1, -1, 0] // 0: closed, 1: fully up, -1: fully down, then begins flapping cycle...
+    [
+      0, 0.165, 0.185, 0.204, 0.25, 
+      0.30, 0.35, 0.40, 0.45, 
+      0.50, 0.52, 0.54, // Window perch (wings fold)
+      0.56, 0.60, 0.65, 0.70, 0.75, 0.80, 0.85, 0.90, 
+      0.94, 1.00 // Tree return (wings settle)
+    ],
+    [
+      0, 0, 1, -1, 1,
+      -1, 1, -1, 1,
+      0.5, 0, 0,
+      1, -1, 1, -1, 1, -1, 1, -1,
+      0, 0
+    ]
   );
 
   return (
