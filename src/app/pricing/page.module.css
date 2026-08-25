@@ -1,0 +1,242 @@
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--gradient-subtle);
+  padding: 6rem 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(27, 42, 61, 0.05);
+}
+
+.headerTitle {
+  font-size: 4rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-primary-navy);
+}
+
+.headerSubtitle {
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.pricingSection {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-white);
+}
+
+.pricingGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .pricingGrid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center; /* Center the non-featured cards vertically */
+  }
+}
+
+.pricingCard {
+  background-color: var(--color-bg-base);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(27, 42, 61, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform var(--transition-normal);
+}
+
+.pricingCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.featured {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-accent-rose);
+  box-shadow: var(--shadow-lg);
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .featured {
+    transform: scale(1.05);
+  }
+  .featured:hover {
+    transform: scale(1.05) translateY(-5px);
+  }
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--color-accent-rose);
+  color: var(--color-white);
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cardHeader {
+  padding: var(--space-md);
+  text-align: center;
+  border-bottom: 1px solid rgba(27, 42, 61, 0.05);
+}
+
+.cardHeader h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+}
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--color-primary-navy);
+  font-weight: 700;
+  margin-bottom: var(--space-xs);
+}
+
+.price span {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.description {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.featureList {
+  list-style: none;
+  padding: var(--space-md);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.featureList li {
+  color: var(--color-text-main);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: flex-start;
+}
+
+.featureList li::before {
+  content: "✓";
+  color: var(--color-accent-rose);
+  margin-right: 12px;
+  font-weight: bold;
+}
+
+.cardFooter {
+  padding: var(--space-md);
+  padding-top: 0;
+}
+
+.fullWidthBtn {
+  width: 100%;
+}
+
+.customQuote {
+  background-color: var(--color-bg-base);
+  padding: var(--space-lg);
+  border-radius: 12px;
+  text-align: center;
+  border: 1px dashed rgba(27, 42, 61, 0.2);
+}
+
+.customQuote h3 {
+  font-size: 1.75rem;
+  margin-bottom: var(--space-xs);
+}
+
+.customQuote p {
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-md);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FAQ Section */
+.faqSection {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-bg-alt);
+}
+
+.faqContainer {
+  max-width: 800px;
+}
+
+.faqTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: var(--space-lg);
+  color: var(--color-primary-navy);
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.faqItem {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  border: 1px solid rgba(27, 42, 61, 0.05);
+  overflow: hidden;
+}
+
+.faqItem summary {
+  padding: var(--space-md);
+  font-weight: 600;
+  color: var(--color-primary-navy);
+  cursor: pointer;
+  list-style: none; /* Hide default arrow */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqItem summary::after {
+  content: "+";
+  color: var(--color-accent-rose);
+  font-size: 1.5rem;
+  font-weight: normal;
+  transition: transform 0.3s;
+}
+
+.faqItem[open] summary::after {
+  transform: rotate(45deg);
+}
+
+.faqItem[open] summary {
+  border-bottom: 1px solid rgba(27, 42, 61, 0.05);
+}
+
+.faqAnswer {
+  padding: var(--space-md);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}

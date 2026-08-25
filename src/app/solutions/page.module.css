@@ -1,0 +1,114 @@
+.main {
+  padding-top: 120px;
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+}
+
+.header {
+  padding: var(--space-2xl) 0 var(--space-xl);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-md);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.solutionsSection {
+  padding: var(--space-xl) 0 var(--space-3xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-xl);
+  grid-auto-rows: minmax(350px, auto);
+}
+
+/* Bento Box Spans */
+.span4, .span6, .span8, .span12 {
+  grid-column: span 12;
+  display: flex;
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .span4 { grid-column: span 6; }
+  .span6 { grid-column: span 12; }
+  .span8 { grid-column: span 12; }
+}
+
+@media (min-width: 1024px) {
+  .span4 { grid-column: span 4; }
+  .span6 { grid-column: span 6; }
+  .span8 { grid-column: span 8; }
+  .span12 { grid-column: span 12; }
+}
+
+.philosophySection {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-alt);
+  position: relative;
+  overflow: hidden;
+}
+
+.philosophyBox {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 4rem 2rem;
+  border-radius: var(--radius-2xl);
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-premium);
+  position: relative;
+  z-index: 2;
+}
+
+.philosophyTitle {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-md);
+}
+
+.philosophyText {
+  font-size: 1.2rem;
+  color: var(--color-text-body);
+  margin-bottom: var(--space-xl);
+  line-height: 1.6;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: var(--color-primary-navy);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+
+.ctaButton:hover {
+  background-color: var(--color-accent-rose);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}

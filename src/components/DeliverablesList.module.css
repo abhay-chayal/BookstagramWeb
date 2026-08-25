@@ -1,0 +1,52 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  height: 100%;
+  padding: var(--space-md);
+}
+
+.categoryTitle {
+  font-family: var(--font-heading);
+  color: var(--color-primary-navy);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid rgba(27, 42, 61, 0.1);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: var(--color-text-body);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.checkIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-secondary-rose);
+  flex-shrink: 0;
+  margin-top: 3px;
+}

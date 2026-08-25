@@ -1,0 +1,59 @@
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: var(--space-xl) 0;
+}
+
+.timelineItem {
+  display: flex;
+  gap: var(--space-md);
+  position: relative;
+}
+
+.stepNumberContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+}
+
+.stepNumber {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--color-primary-navy);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  z-index: 2;
+  box-shadow: 0 0 0 4px var(--color-bg-base);
+}
+
+.stepLine {
+  flex-grow: 1;
+  width: 2px;
+  background-color: rgba(27, 42, 61, 0.1);
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.stepContent {
+  padding-bottom: var(--space-lg);
+  padding-top: 8px;
+}
+
+.stepTitle {
+  font-size: 1.25rem;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-xs);
+}
+
+.stepDescription {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}

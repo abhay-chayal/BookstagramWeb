@@ -1,0 +1,84 @@
+.navbarWrapper {
+  position: sticky;
+  top: 1rem;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  pointer-events: none; /* Let clicks pass through the wrapper itself */
+}
+
+.navbar {
+  pointer-events: auto; /* Re-enable clicks on the actual navbar */
+  background-color: rgba(253, 251, 249, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(200, 155, 123, 0.2);
+  border-radius: var(--radius-full);
+  padding: 0.5rem 1rem;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-normal);
+  width: 90%;
+  max-width: 1000px;
+}
+
+.navbar:hover {
+  box-shadow: var(--shadow-premium);
+}
+
+.navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logoImage {
+  object-fit: contain;
+  margin-right: 0.5rem;
+}
+
+.navLinks {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navLinks {
+    display: flex;
+    gap: var(--space-md);
+  }
+}
+
+.navLinks a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+}
+
+.navLinks a:hover {
+  color: var(--color-accent-rose);
+}
+
+.ctaButton {
+  background-color: var(--color-accent-rose);
+  color: var(--color-white);
+  padding: 0.5rem 1.25rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.ctaButton:hover {
+  background-color: var(--color-accent-rose-hover);
+  color: var(--color-white);
+}

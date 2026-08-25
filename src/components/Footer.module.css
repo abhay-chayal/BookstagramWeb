@@ -1,0 +1,88 @@
+.footer {
+  background-color: var(--color-primary-navy);
+  color: var(--color-white);
+  padding: var(--space-xl) 0 var(--space-md);
+  margin-top: auto;
+}
+
+.footerContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .footerContainer {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.logoImage {
+  object-fit: contain;
+}
+
+.tagline {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-rose);
+  font-weight: 600;
+}
+
+.description {
+  margin-top: var(--space-sm);
+  color: #94a3b8;
+  line-height: 1.6;
+  max-width: 300px;
+}
+
+.footerLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
+}
+
+.linkGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.linkGroup h4 {
+  color: var(--color-white);
+  font-size: 1.1rem;
+  margin-bottom: var(--space-xs);
+}
+
+.linkGroup a {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.linkGroup a:hover {
+  color: var(--color-accent-rose);
+}
+
+.footerBottom {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.85rem;
+}

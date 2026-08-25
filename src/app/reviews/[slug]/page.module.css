@@ -1,0 +1,252 @@
+.main {
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+}
+
+/* Cinematic Hero */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: 8rem 2rem 4rem;
+  border-bottom: 1px solid rgba(28, 37, 48, 0.05);
+}
+
+.heroBackground {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  width: 110%;
+  height: 110%;
+  z-index: 0;
+  filter: blur(40px) brightness(0.9);
+  opacity: 0.3;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(253, 251, 249, 0.6), var(--color-bg-base));
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 900px;
+}
+
+.heroCoverWrapper {
+  position: relative;
+  width: 180px;
+  aspect-ratio: 2/3;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+  margin-bottom: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.heroCoverWrapper:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.heroCover {
+  object-fit: cover;
+}
+
+.title {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-primary-navy);
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.badges {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.badge {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-primary-navy);
+  box-shadow: var(--shadow-sm);
+}
+
+.badgeStar {
+  color: #EAB308;
+  margin-right: 0.25rem;
+}
+
+/* Editorial Content */
+.editorialContainer {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem 10rem; /* Bottom padding accounts for floating bar */
+}
+
+.section {
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid rgba(200, 155, 123, 0.2);
+}
+
+.paragraph {
+  font-size: 1.15rem;
+  line-height: 1.9;
+  color: var(--color-text-main);
+  margin-bottom: 1.5rem;
+  font-family: var(--font-body);
+}
+
+/* Drop cap for the very first paragraph of the very first section */
+.section:first-of-type .paragraph:first-of-type::first-letter {
+  font-family: var(--font-heading);
+  float: left;
+  font-size: 4.5rem;
+  line-height: 0.8;
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  color: var(--color-accent-rose);
+  font-weight: 800;
+}
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.listItem {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--color-text-main);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.listItem::before {
+  content: "✦";
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  color: var(--color-accent-rose);
+  font-size: 1.2rem;
+}
+
+.listItem strong {
+  color: var(--color-primary-navy);
+  font-weight: 700;
+}
+
+/* Floating Action Bar */
+.floatingBar {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(28, 37, 48, 0.85); /* Navy transparent */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: var(--shadow-premium);
+  z-index: 50;
+  width: max-content;
+  max-width: 90vw;
+}
+
+.floatingBarInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.floatingBarTitle {
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: var(--font-heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.floatingBarAuthor {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.8rem;
+}
+
+.floatingBuyButton {
+  background: var(--color-accent-rose);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.floatingBuyButton:hover {
+  background: var(--color-accent-rose-hover);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-glow);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 50vh;
+    padding-top: 6rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .floatingBar {
+    width: 90vw;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 1.25rem;
+  }
+  
+  .floatingBarInfo {
+    max-width: 50%;
+  }
+}

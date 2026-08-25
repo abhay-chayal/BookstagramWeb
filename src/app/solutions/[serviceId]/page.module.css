@@ -1,0 +1,142 @@
+.main {
+  padding-top: 120px;
+  min-height: 100vh;
+  background-color: var(--color-bg-base);
+}
+
+.header {
+  padding: var(--space-2xl) 0 var(--space-xl);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(27, 42, 61, 0.1);
+}
+
+.categoryTag {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-secondary-rose);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+  padding: 4px 12px;
+  background: rgba(200, 155, 123, 0.1);
+  border-radius: 20px;
+}
+
+.title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-md);
+  line-height: 1.2;
+}
+
+.purpose {
+  font-size: 1.2rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--space-xl) 0 var(--space-3xl);
+}
+
+.contentLayout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xl);
+}
+
+@media (min-width: 1024px) {
+  .contentLayout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.mainContent {
+  flex: 1;
+  max-width: 800px;
+}
+
+.sidebar {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 320px;
+    position: sticky;
+    top: 100px;
+  }
+}
+
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-sm);
+}
+
+.text {
+  font-size: 1.1rem;
+  color: var(--color-text-body);
+  line-height: 1.7;
+}
+
+.cardBlock {
+  background: var(--color-white);
+  padding: var(--space-lg);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(27, 42, 61, 0.05);
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--space-md);
+}
+
+.spacer {
+  height: var(--space-2xl);
+}
+
+.actionCard {
+  background: var(--color-primary-navy);
+  color: var(--color-white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+}
+
+.actionTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-white);
+}
+
+.actionText {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: var(--space-lg);
+}
+
+.actionBtn {
+  width: 100%;
+  margin-bottom: var(--space-lg);
+  justify-content: center;
+}
+
+.backLink {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.backLink:hover {
+  color: var(--color-white);
+}

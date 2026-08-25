@@ -1,0 +1,617 @@
+/* ==========================================================================
+   ABOUT PAGE STYLES (EDITORIAL / MAGAZINE / PREMIUM)
+   ========================================================================== */
+
+.main {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  overflow-x: hidden;
+}
+
+/* SECTION 1: HERO */
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 120px 5% 40px;
+  background-color: var(--color-bg-alt);
+  overflow: hidden;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .heroContent {
+    max-width: 60%;
+    margin: 0;
+  }
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 1;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.03em;
+  display: flex;
+  flex-direction: column;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  color: var(--color-text-body);
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.heroCollage {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.collageImg {
+  position: absolute;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+  transition: transform 1s ease-out;
+}
+
+.img1 {
+  width: 300px;
+  height: 400px;
+  top: 15%;
+  right: 20%;
+  transform: rotate(5deg);
+}
+
+.img2 {
+  width: 250px;
+  height: 350px;
+  bottom: 10%;
+  right: 5%;
+  transform: rotate(-3deg);
+}
+
+.img3 {
+  width: 200px;
+  height: 250px;
+  top: 40%;
+  left: 10%;
+  transform: rotate(-10deg);
+}
+
+@media (max-width: 1024px) {
+  .heroCollage {
+    opacity: 0.3;
+    width: 100%;
+  }
+}
+
+/* SECTION 2: THE PROBLEM */
+.problem {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-base);
+  text-align: center;
+}
+
+.problemTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-md);
+}
+
+.problemText {
+  font-size: 1.25rem;
+  color: var(--color-text-body);
+  max-width: 700px;
+  margin: 0 auto var(--space-2xl);
+  line-height: 1.6;
+}
+
+.wallOfBooks {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wallOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(27, 42, 61, 0.7); /* Navy overlay */
+}
+
+.wallHighlight {
+  position: relative;
+  z-index: 2;
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: clamp(1.5rem, 5vw, 4rem);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.wallHighlight h3 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-bg-base);
+  margin: 0;
+}
+
+/* SECTION 3: SPLIT SCREEN */
+.splitScreen {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary-navy);
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .splitScreen {
+    flex-direction: row;
+  }
+}
+
+.splitLeft, .splitRight {
+  flex: 1;
+  padding: var(--space-3xl) 10%;
+}
+
+@media (min-width: 1024px) {
+  .splitLeft {
+    position: relative;
+    border-right: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .stickyContent {
+    position: sticky;
+    top: 30vh;
+  }
+}
+
+.splitTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 5vw, 5rem);
+  line-height: 1.1;
+  color: var(--color-bg-base);
+}
+
+.rightContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: 150vh;
+}
+
+.rightText {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: var(--space-2xl);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 15vh;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--color-accent-rose);
+}
+
+.timelineArrow {
+  font-size: 2rem;
+  opacity: 0.5;
+  margin-left: 2rem;
+}
+
+/* SECTION 4: OUR PHILOSOPHY */
+.philosophy {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-alt);
+}
+
+.philosophyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .philosophyGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.philCard {
+  background: white;
+  padding: 4rem 3rem;
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.philCard:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-premium);
+}
+
+.philNumber {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  line-height: 1;
+  color: rgba(200, 155, 123, 0.2); /* Rose gold translucent */
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.philTitle {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--color-primary-navy);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.philText {
+  font-size: 1.1rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
+}
+
+/* SECTION 5: BEHIND EVERY BOOK (STICKY SCROLL) */
+.behindEvery {
+  background-color: var(--color-primary-navy);
+  color: white;
+  padding: var(--space-3xl) 0;
+}
+
+.behindStickyContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.behindScrollItem {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+}
+
+.behindScrollItem h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  opacity: 0.3;
+  transition: opacity 0.5s ease;
+  line-height: 1.1;
+}
+
+.behindScrollItem h2.behindHighlight {
+  opacity: 1;
+  color: var(--color-accent-rose);
+}
+
+/* SECTION 6: WHAT WE DO (VISUAL ECOSYSTEM) */
+.ecosystem {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-base);
+  text-align: center;
+}
+
+.ecosystemDiagram {
+  max-width: 800px;
+  margin: 0 auto var(--space-2xl);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-primary-navy);
+}
+
+.ecoNodeTop, .ecoNodeBottom, .ecoFinalLayer {
+  padding: 1rem;
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.ecoCenterBlock {
+  border: 2px solid var(--color-primary-navy);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  display: inline-block;
+  margin: 1rem 0;
+  background: white;
+  box-shadow: var(--shadow-md);
+}
+
+.ecoBrandName {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+}
+
+.ecoBranches {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.ecoBranch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ecoArrow, .ecoArrowVertical, .ecoArrowDiagonal, .ecoArrowDiagonalRight {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  color: var(--color-secondary-rose);
+}
+
+.ecoFinalLayer {
+  margin-top: 2rem;
+  background: var(--color-primary-navy);
+  color: white;
+  padding: 1.5rem 3rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+}
+
+.ecoExplanation {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.ecoExplainTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ecoList {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.ecoList li {
+  font-size: 1.1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.ecoList li::before {
+  content: "•";
+  color: var(--color-secondary-rose);
+  position: absolute;
+  left: 0;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+/* SECTION 7: OUR MISSION */
+.mission {
+  padding: 150px 0;
+  background-color: var(--color-primary-navy);
+  color: white;
+  text-align: center;
+}
+
+.missionSub {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-secondary-rose);
+  margin-bottom: 2rem;
+}
+
+.missionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 6rem);
+  line-height: 1.1;
+  max-width: 1000px;
+  margin: 0 auto 2rem;
+}
+
+.missionText {
+  font-size: 1.25rem;
+  color: rgba(255,255,255,0.7);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* SECTION 8: OUR VISION (HORIZONTAL SCROLL) */
+.vision {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-alt);
+  overflow: hidden;
+}
+
+.horizontalScrollWrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 4rem 5%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.horizontalScrollWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontalScrollTrack {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: max-content;
+}
+
+.visionItem, .visionItemHighlight {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 8vw, 8rem);
+  color: rgba(27, 42, 61, 0.1); /* Very faint outline text effect ideally, but we'll use faint color */
+  transition: color 0.3s ease;
+}
+
+.visionItem:hover {
+  color: var(--color-primary-navy);
+}
+
+.visionItemHighlight {
+  color: var(--color-accent-rose);
+}
+
+.visionArrow {
+  font-size: 3rem;
+  color: var(--color-text-muted);
+}
+
+.visionFooter {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  color: var(--color-primary-navy);
+  margin-top: 2rem;
+}
+
+/* SECTION 9: OUR PROMISE */
+.promise {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-base);
+}
+
+.promiseHeading {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--color-primary-navy);
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.promiseGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .promiseGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.promiseCol h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--color-secondary-rose);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.promiseCol p {
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+/* SECTION 10: FINAL CTA */
+.finalCta {
+  padding: 150px 0;
+  text-align: center;
+  background: linear-gradient(135deg, var(--color-primary-navy) 0%, #111a26 100%);
+  color: white;
+}
+
+.ctaTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5rem);
+  margin-bottom: 1rem;
+}
+
+.ctaSubtitle {
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 3rem;
+}
+
+.ctaButtonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .ctaButtonGroup {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+
+.btnPrimary, .btnSecondary {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.btnPrimary {
+  background-color: var(--color-accent-rose);
+  color: var(--color-bg-base);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(200, 155, 123, 0.3);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.btnSecondary:hover {
+  border-color: white;
+  background-color: rgba(255,255,255,0.1);
+}
