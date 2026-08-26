@@ -4,20 +4,23 @@ import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
 import StaggeredText from "@/components/StaggeredText";
 import GlassCard from "@/components/GlassCard";
-import dynamic from "next/dynamic";
 import styles from "./page.module.css";
-
-// 8. LOADING STRATEGY: Lazy load the cinematic engine to protect initial page load
-const CinematicExperience = dynamic(() => import("@/components/cinematic/CinematicExperience"));
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      {/* Cinematic Scroll Engine with Hero Overlay */}
-      <CinematicExperience debug={false}>
-        {/* We place the existing Hero typography inside the cinematic overlay */}
-        <div className={`container ${styles.heroContainer}`} style={{ height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", pointerEvents: "auto" }}>
-          <div className={styles.heroContent} style={{ marginTop: "10vh" }}>
+      {/* Hero Section */}
+      <section className={styles.hero}>
+        <Image 
+          src="https://images.unsplash.com/photo-1481627834876-c511de8f8285?q=80&w=2000" 
+          alt="Author aesthetic" 
+          fill 
+          priority 
+          className={styles.heroBgImage} 
+        />
+        <div className={styles.heroOverlay} />
+        <div className={`container ${styles.heroContainer}`}>
+          <div className={styles.heroContent}>
             <FadeIn direction="up" delay={0.1}>
               <p className={styles.heroSubtitle}>Premium Author Branding & Book Marketing</p>
             </FadeIn>
@@ -29,6 +32,7 @@ export default function Home() {
                 Bookstagram Club is not a bookstore. We are a world-class agency built specifically for authors. Let us handle your branding, marketing, and digital presence so you can focus on writing.
               </p>
             </FadeIn>
+            
             <FadeIn direction="up" delay={0.8}>
               <div className={styles.heroActions}>
                 <Button href="/contact" variant="primary">Start Your Journey</Button>
@@ -36,16 +40,8 @@ export default function Home() {
               </div>
             </FadeIn>
           </div>
-          
-          {/* Subtle Scroll Indicator */}
-          <FadeIn direction="up" delay={1.5}>
-            <div style={{ position: "absolute", bottom: "5vh", left: "50%", transform: "translateX(-50%)", display: "flex", flexDirection: "column", alignItems: "center", opacity: 0.6 }}>
-              <span style={{ fontSize: "0.75rem", letterSpacing: "0.2em", textTransform: "uppercase", marginBottom: "8px", color: "var(--color-primary-navy)" }}>Scroll to Explore</span>
-              <div style={{ width: "1px", height: "40px", background: "linear-gradient(to bottom, rgba(28, 37, 48, 0.4), transparent)" }} />
-            </div>
-          </FadeIn>
         </div>
-      </CinematicExperience>
+      </section>
 
       {/* The Three Pillars */}
       <section className={styles.pillars}>
