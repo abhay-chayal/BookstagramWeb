@@ -13,8 +13,8 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <Image
-          src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=2000"
-          alt=""
+          src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2000"
+          alt="Book lovers sanctuary library"
           fill
           priority
           sizes="100vw"
@@ -23,8 +23,21 @@ export default function Home() {
         <div className={styles.heroOverlay} />
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent}>
-            <FadeIn direction="up" delay={0.1}>
-              <p className={styles.heroSubtitle}>Professional Book Promotion & Author Marketing</p>
+            <FadeIn direction="up" delay={0.05}>
+              <div className={styles.heroLogoBadge}>
+                <Image
+                  src="/images/logo.webp"
+                  alt="Bookstagram Club Logo"
+                  width={68}
+                  height={68}
+                  priority
+                  className={styles.heroLogoImg}
+                />
+              </div>
+            </FadeIn>
+
+            <FadeIn direction="up" delay={0.15}>
+              <p className={styles.heroSubtitle}>Professional Book Promotion &amp; Author Marketing</p>
             </FadeIn>
 
             <StaggeredText text="Great Books Deserve To Be Discovered." className={styles.heroTitle} />
