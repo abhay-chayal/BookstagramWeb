@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, MotionValue, useTransform } from "framer-motion";
+import { motion, MotionValue, useTransform, Variants } from "framer-motion";
 import { useCinematic } from "./CinematicContext";
 
 interface BirdProps {
@@ -13,7 +13,7 @@ export default function Bird({ className, wingProgress }: BirdProps) {
   const { isReducedMotion } = useCinematic();
 
   // Subtle idle breathing animation
-  const breathingVariants = {
+  const breathingVariants: Variants = {
     idle: {
       scaleY: [1, 1.02, 1],
       transition: {
@@ -28,7 +28,7 @@ export default function Bird({ className, wingProgress }: BirdProps) {
   };
 
   // Very subtle head tilt (using rotation)
-  const headVariants = {
+  const headVariants: Variants = {
     idle: {
       rotate: [0, -2, 0, 1, 0],
       transition: {

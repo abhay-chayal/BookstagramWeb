@@ -199,6 +199,84 @@ export const solutions: Solution[] = [
     integration: "Often serves as the critical 'Call to Action' phase of a broader Book Launch or Pre-Order campaign."
   },
   {
+    id: "editorial-support",
+    category: "strategy",
+    categoryTitle: "Prepare Your Book",
+    name: "Editorial & Manuscript Support",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M9 7h7M9 11h5"/></svg>',
+    purpose: "We work with authors on the manuscript itself — before it becomes a published book. This covers editorial feedback and refinement, so the book readers eventually meet is the strongest version of itself.",
+    problemSolved: "Promotion can only carry a book so far if the book is not ready. Editorial issues that go unaddressed before publication tend to surface later in reviews, where they are far more costly.",
+    deliverables: [
+      {
+        category: "Editorial",
+        items: ["Developmental feedback", "Structural & pacing notes", "Copyediting", "Proofreading"]
+      },
+      {
+        category: "Market Readiness",
+        items: ["Genre & reader-fit assessment", "Blurb and book description", "Opening-pages review", "Title & positioning input"]
+      }
+    ],
+    workflow: [
+      { id: "w1", stepNumber: 1, title: "Assess", description: "We review the manuscript and agree what level of editorial work it actually needs." },
+      { id: "w2", stepNumber: 2, title: "Edit", description: "We carry out the agreed editorial pass and return clear, actionable notes." },
+      { id: "w3", stepNumber: 3, title: "Refine", description: "You revise, and we review the changes where a second pass is included." },
+      { id: "w4", stepNumber: 4, title: "Ready", description: "The manuscript moves forward to publication and promotional planning." }
+    ],
+    integration: "Runs directly into Full-Lifecycle Launch Strategy — what we learn about the book editorially shapes how it is later positioned and promoted."
+  },
+  {
+    id: "launch-strategy",
+    category: "strategy",
+    categoryTitle: "Plan Your Launch",
+    name: "Full-Lifecycle Launch Strategy",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20"/><path d="M5 9l7-7 7 7"/><circle cx="12" cy="16" r="3"/></svg>',
+    purpose: "We support a book at whatever stage it is in — manuscript, pre-publication, launch week, or long after release. Rather than treating promotion as something that starts on release day, we build a promotional plan appropriate to where your book actually is right now.",
+    problemSolved: "Most authors only think about marketing once the book is already published, by which point the most valuable window — building anticipation before release — has already passed. Coming in earlier gives a book far more room to find its readers.",
+    deliverables: [
+      {
+        category: "Positioning",
+        items: ["Genre & comp-title positioning", "Target reader profile", "Core promotional angles", "Key messaging and hooks"]
+      },
+      {
+        category: "Campaign Plan",
+        items: ["Stage-appropriate roadmap", "Pre-launch build-up plan", "Launch week schedule", "Post-launch sustain plan"]
+      }
+    ],
+    workflow: [
+      { id: "w1", stepNumber: 1, title: "Assess", description: "We establish exactly what stage your book is at and what is realistically achievable from here." },
+      { id: "w2", stepNumber: 2, title: "Position", description: "We define the genre positioning, target readership, and the angles that make this book compelling." },
+      { id: "w3", stepNumber: 3, title: "Plan", description: "We map a promotional timeline built around your release date and goals." },
+      { id: "w4", stepNumber: 4, title: "Execute", description: "The plan feeds directly into content creation and campaign delivery." }
+    ],
+    integration: "This is the foundation every other service builds on. Positioning decided here shapes the Instagram Promotion, Promotional Graphics, and Author Website that follow."
+  },
+  {
+    id: "ai-tech-solutions",
+    category: "technology",
+    categoryTitle: "Technology & Data",
+    name: "AI & Tech Solutions",
+    icon: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2"/></svg>',
+    purpose: "We build custom software, AI integrations, and data pipelines for bookstores, publishers, and book businesses — helping them track sales, understand their data, and apply AI meaningfully to their operations.",
+    problemSolved: "Book businesses often run on spreadsheets and disconnected tools, with no clear view of what is actually selling or why. We turn that scattered data into systems that support real decisions.",
+    deliverables: [
+      {
+        category: "Software & Data",
+        items: ["Custom software development", "Sales tracking dashboards", "Data pipelines & integrations", "Inventory and catalogue systems"]
+      },
+      {
+        category: "AI Integration",
+        items: ["AI-assisted analytics", "Recommendation systems", "Workflow automation", "Custom AI tooling"]
+      }
+    ],
+    workflow: [
+      { id: "w1", stepNumber: 1, title: "Discovery", description: "We map your current systems, data sources, and the decisions you are trying to make." },
+      { id: "w2", stepNumber: 2, title: "Scope", description: "We define a practical solution and agree on scope, timeline, and cost." },
+      { id: "w3", stepNumber: 3, title: "Build", description: "We develop the software, pipeline, or AI integration." },
+      { id: "w4", stepNumber: 4, title: "Handover", description: "We deploy, document, and support the system in production." }
+    ],
+    integration: "Operates alongside our promotional work. Bookstores and publishers can engage us for technology alone, without any marketing service."
+  },
+  {
     id: "author-features",
     category: "brand-building",
     categoryTitle: "Build Long-Term Value",

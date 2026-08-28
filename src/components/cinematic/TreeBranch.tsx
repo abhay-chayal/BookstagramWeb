@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useTransform } from "framer-motion";
+import { motion, useTransform, Variants } from "framer-motion";
 import { useCinematic } from "./CinematicContext";
 
 interface TreeBranchProps {
@@ -19,7 +19,7 @@ export default function TreeBranch({ className }: TreeBranchProps) {
   );
 
   // Gentle organic branch sway
-  const swayVariants = {
+  const swayVariants: Variants = {
     sway: {
       rotate: [0, 0.5, 0],
       transition: {
@@ -34,7 +34,7 @@ export default function TreeBranch({ className }: TreeBranchProps) {
   };
 
   // Subtle leaf flutter
-  const leafVariants = {
+  const leafVariants: Variants = {
     flutter: {
       rotate: [0, -3, 2, 0],
       transition: {

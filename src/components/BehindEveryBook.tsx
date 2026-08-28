@@ -8,36 +8,61 @@ export default function BehindEveryBook() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"]
+    offset: ["start start", "end end"],
   });
 
-  // We have 4 items. We'll divide the scroll progress into 4 segments.
-  const opacity1 = useTransform(scrollYProgress, [0, 0.2, 0.4], [0.3, 1, 0.3]);
-  const opacity2 = useTransform(scrollYProgress, [0.2, 0.4, 0.6], [0.3, 1, 0.3]);
-  const opacity3 = useTransform(scrollYProgress, [0.4, 0.6, 0.8], [0.3, 1, 0.3]);
-  const opacity4 = useTransform(scrollYProgress, [0.6, 0.8, 1], [0.3, 1, 1]);
+  // Smooth staggered opacity and scale across 4 poetic statements
+  const opacity1 = useTransform(scrollYProgress, [0, 0.18, 0.32], [0, 1, 0]);
+  const scale1 = useTransform(scrollYProgress, [0, 0.18, 0.32], [0.95, 1, 1.05]);
 
-  const color4 = useTransform(scrollYProgress, [0.6, 0.8, 1], ["rgba(255,255,255,1)", "var(--color-accent-rose)", "var(--color-accent-rose)"]);
+  const opacity2 = useTransform(scrollYProgress, [0.32, 0.48, 0.62], [0, 1, 0]);
+  const scale2 = useTransform(scrollYProgress, [0.32, 0.48, 0.62], [0.95, 1, 1.05]);
+
+  const opacity3 = useTransform(scrollYProgress, [0.62, 0.76, 0.88], [0, 1, 0]);
+  const scale3 = useTransform(scrollYProgress, [0.62, 0.76, 0.88], [0.95, 1, 1.05]);
+
+  const opacity4 = useTransform(scrollYProgress, [0.85, 0.95, 1], [0, 1, 1]);
+  const scale4 = useTransform(scrollYProgress, [0.85, 0.95, 1], [0.95, 1, 1]);
 
   return (
-    <section className={styles.behindEvery} ref={containerRef} style={{ height: "400vh", position: "relative", padding: 0 }}>
-      <div className={styles.behindStickyContainer} style={{ position: "sticky", top: 0, height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden" }}>
+    <section ref={containerRef} className={styles.behindEverySection}>
+      <div className={styles.behindStickyWrap}>
+        {/* Ambient atmospheric backdrop */}
+        <div className={styles.behindGlow} />
         
-        <div style={{ position: "absolute", top: 0, left: 0, right: 0, bottom: 0, display: "flex", alignItems: "center", justifyContent: "center", padding: "0 5%" }}>
-          <motion.h2 style={{ opacity: opacity1, position: "absolute", fontFamily: "var(--font-heading)", fontSize: "clamp(2.5rem, 5vw, 5rem)", lineHeight: 1.1, textAlign: "center", margin: 0 }}>
-            Behind every book is an author.
-          </motion.h2>
-          <motion.h2 style={{ opacity: opacity2, position: "absolute", fontFamily: "var(--font-heading)", fontSize: "clamp(2.5rem, 5vw, 5rem)", lineHeight: 1.1, textAlign: "center", margin: 0 }}>
-            Behind every author is a story.
-          </motion.h2>
-          <motion.h2 style={{ opacity: opacity3, position: "absolute", fontFamily: "var(--font-heading)", fontSize: "clamp(2.5rem, 5vw, 5rem)", lineHeight: 1.1, textAlign: "center", margin: 0 }}>
-            Behind every story is an idea worth sharing.
-          </motion.h2>
-          <motion.h2 style={{ opacity: opacity4, color: color4, position: "absolute", fontFamily: "var(--font-heading)", fontSize: "clamp(2.5rem, 5vw, 5rem)", lineHeight: 1.1, textAlign: "center", margin: 0 }}>
-            We help bring that story to more readers.
-          </motion.h2>
-        </div>
+        <div className={styles.behindContent}>
+          <span className={styles.behindEyebrow}>Our Guiding Belief</span>
 
+          <div className={styles.behindTextContainer}>
+            <motion.h2
+              style={{ opacity: opacity1, scale: scale1 }}
+              className={styles.behindStatement}
+            >
+              Behind every book is an <span className="text-gradient">author</span>.
+            </motion.h2>
+
+            <motion.h2
+              style={{ opacity: opacity2, scale: scale2 }}
+              className={styles.behindStatement}
+            >
+              Behind every author is a <span className="text-gradient">vision</span>.
+            </motion.h2>
+
+            <motion.h2
+              style={{ opacity: opacity3, scale: scale3 }}
+              className={styles.behindStatement}
+            >
+              Behind every vision is a story <span className="text-gradient">worth discovering</span>.
+            </motion.h2>
+
+            <motion.h2
+              style={{ opacity: opacity4, scale: scale4 }}
+              className={`${styles.behindStatement} ${styles.behindStatementFinal}`}
+            >
+              We build the bridge that brings that story to the <span className={styles.highlightGold}>readers meant to find it</span>.
+            </motion.h2>
+          </div>
+        </div>
       </div>
     </section>
   );

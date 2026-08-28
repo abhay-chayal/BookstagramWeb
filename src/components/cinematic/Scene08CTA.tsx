@@ -76,7 +76,7 @@ export default function Scene08CTA() {
             lineHeight: 1.6,
           }}
         >
-          Bookstagram Club turns books and author brands into memorable literary experiences that readers cherish, recommend, and share.
+          Bookstagram Club helps authors get their books in front of the right readers through strategic Instagram promotion, creative content, and campaigns built around your book.
         </p>
 
         <div

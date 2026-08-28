@@ -1,0 +1,272 @@
+.page {
+  background-color: var(--color-bg-base);
+  min-height: 100vh;
+  padding-bottom: var(--space-xl);
+}
+
+.header {
+  padding-top: calc(var(--space-xl) + 2rem);
+  padding-bottom: var(--space-lg);
+  background: var(--gradient-subtle);
+  border-bottom: 1px solid var(--glass-border);
+  text-align: center;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: var(--space-sm);
+  color: var(--color-primary-navy);
+}
+
+.headerSubtitle {
+  font-size: 1.15rem;
+  color: var(--color-text-body);
+  max-width: 680px;
+  line-height: 1.7;
+}
+
+.statsBar {
+  padding: var(--space-md) 0;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(28, 37, 48, 0.06);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  text-align: center;
+}
+
+.statItem h3 {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  color: var(--color-accent-rose);
+  font-family: var(--font-heading);
+  margin-bottom: 4px;
+}
+
+.statItem p {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+.portfolioSection {
+  padding: var(--space-xl) 0;
+}
+
+.caseStudiesGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.caseStudyCard {
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.caseStudyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-premium);
+}
+
+.caseStudyCard.reversed {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.imageWrapper {
+  position: relative;
+  min-height: 420px;
+  background: #1C2530;
+  overflow: hidden;
+}
+
+.coverImage {
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.caseStudyCard:hover .coverImage {
+  transform: scale(1.04);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(28, 37, 48, 0.85) 0%, rgba(28, 37, 48, 0.2) 60%, transparent 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: var(--space-md);
+}
+
+.overlayBadge {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 6px 14px;
+  background: var(--color-accent-rose);
+  color: #ffffff;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.overlayTitle {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-family: var(--font-heading);
+  margin-bottom: 4px;
+}
+
+.overlayAuthor {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+.contentWrapper {
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.metricsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.metricBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(200, 155, 123, 0.3);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--color-primary-navy);
+  font-weight: 600;
+}
+
+.narrativeBlock {
+  margin-bottom: var(--space-md);
+}
+
+.narrativeBlock h4 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent-rose);
+  margin-bottom: 6px;
+}
+
+.narrativeBlock p {
+  font-size: 0.98rem;
+  line-height: 1.65;
+  color: var(--color-text-body);
+}
+
+.deliverablesPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.deliverablePill {
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.quoteBox {
+  background: var(--color-bg-alt);
+  border-left: 3px solid var(--color-accent-rose);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: var(--space-md);
+}
+
+.quoteText {
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-primary-navy);
+  margin-bottom: 6px;
+}
+
+.quoteAuthor {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent-rose);
+}
+
+.cardActions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding-top: var(--space-xs);
+}
+
+.ctaSection {
+  margin-top: var(--space-xl);
+  background: var(--color-primary-navy);
+  color: #ffffff;
+  border-radius: var(--radius-2xl);
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaSection h2 {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--space-sm);
+}
+
+.ctaSection p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin: 0 auto var(--space-md);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .caseStudyCard,
+  .caseStudyCard.reversed {
+    grid-template-columns: 1fr;
+  }
+  
+  .imageWrapper {
+    min-height: 280px;
+  }
+  
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+}

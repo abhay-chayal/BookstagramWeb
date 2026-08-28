@@ -1,22 +1,25 @@
 /* ==========================================================================
-   ABOUT PAGE STYLES (EDITORIAL / MAGAZINE / PREMIUM)
+   ABOUT PAGE STYLES (PREMIUM EDITORIAL & CINEMATIC REDESIGN)
    ========================================================================== */
 
 .main {
   background-color: var(--color-bg-base);
   color: var(--color-text-main);
-  overflow-x: hidden;
+  overflow: clip;
 }
 
-/* SECTION 1: HERO */
+/* ==========================================================================
+   SECTION 1: HERO
+   ========================================================================== */
 .hero {
-  min-height: 100vh;
+  min-height: 90vh;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 120px 5% 40px;
-  background-color: var(--color-bg-alt);
+  padding: 140px 5% 60px;
+  background: var(--gradient-subtle);
+  border-bottom: 1px solid var(--glass-border);
   overflow: hidden;
 }
 
@@ -28,40 +31,50 @@
   width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 900px) {
   .heroContent {
-    max-width: 60%;
+    max-width: 58%;
     margin: 0;
   }
 }
 
+.heroEyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-rose);
+  margin-bottom: var(--space-sm);
+}
+
 .heroTitle {
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 8vw, 7rem);
-  line-height: 1;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1.05;
   color: var(--color-primary-navy);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   letter-spacing: -0.03em;
   display: flex;
   flex-direction: column;
 }
 
 .heroSubtitle {
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-size: clamp(1.15rem, 2vw, 1.4rem);
   color: var(--color-text-body);
-  max-width: 600px;
-  line-height: 1.5;
+  max-width: 580px;
+  line-height: 1.65;
 }
 
 .heroCollage {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
+  width: 48%;
   height: 100%;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.8;
+  opacity: 0.85;
 }
 
 .collageImg {
@@ -73,545 +86,970 @@
 }
 
 .img1 {
-  width: 300px;
-  height: 400px;
+  width: 280px;
+  height: 380px;
   top: 15%;
-  right: 20%;
-  transform: rotate(5deg);
+  right: 18%;
+  transform: rotate(4deg);
 }
 
 .img2 {
-  width: 250px;
-  height: 350px;
-  bottom: 10%;
+  width: 240px;
+  height: 330px;
+  bottom: 12%;
   right: 5%;
   transform: rotate(-3deg);
 }
 
 .img3 {
   width: 200px;
-  height: 250px;
-  top: 40%;
-  left: 10%;
-  transform: rotate(-10deg);
+  height: 260px;
+  top: 38%;
+  left: 8%;
+  transform: rotate(-8deg);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
   .heroCollage {
-    opacity: 0.3;
+    opacity: 0.2;
     width: 100%;
   }
 }
 
-/* SECTION 2: THE PROBLEM */
-.problem {
-  padding: var(--space-3xl) 0;
-  background-color: var(--color-bg-base);
+/* ==========================================================================
+   SECTION 2: THE PROBLEM (EDITORIAL DARK SPOTLIGHT)
+   ========================================================================== */
+.problemSection {
+  padding: var(--space-xl) 0;
+  background-color: #0F1722;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.problemHeader {
   text-align: center;
+  max-width: 780px;
+  margin: 0 auto var(--space-xl);
+}
+
+.problemEyebrow {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent-rose);
+  margin-bottom: var(--space-xs);
 }
 
 .problemTitle {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  color: #ffffff;
+  margin-bottom: var(--space-sm);
+  line-height: 1.15;
+}
+
+.problemSubtitle {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.65;
+}
+
+.problemGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.problemCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg) var(--space-md);
+  backdrop-filter: blur(12px);
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.problemCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 155, 123, 0.4);
+}
+
+.problemCardNum {
   font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: 2.2rem;
+  color: var(--color-accent-rose);
+  margin-bottom: var(--space-xs);
+  display: block;
+}
+
+.problemCard h3 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  margin-bottom: var(--space-xs);
+}
+
+.problemCard p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.problemBanner {
+  background: linear-gradient(135deg, rgba(200, 155, 123, 0.15) 0%, rgba(28, 37, 48, 0.4) 100%);
+  border: 1px solid rgba(200, 155, 123, 0.3);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg) var(--space-md);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.problemBanner h3 {
+  color: #ffffff;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 8px;
+}
+
+.problemBanner p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .problemGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SECTION 3: WHY WE EXIST (STICKY LEFT + MOVING RIGHT PROGRESSION)
+   ========================================================================== */
+.splitProgressSection {
+  padding: calc(var(--space-xl) + 2rem) 0;
+  background-color: var(--color-bg-base);
+  position: relative;
+}
+
+.splitProgressGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: var(--space-xl);
+  align-items: flex-start;
+}
+
+.splitStickyLeft {
+  position: sticky;
+  top: 140px;
+  align-self: flex-start;
+  padding-right: var(--space-lg);
+  z-index: 10;
+}
+
+.splitStickyLeft h2 {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  line-height: 1.15;
   color: var(--color-primary-navy);
   margin-bottom: var(--space-md);
 }
 
-.problemText {
-  font-size: 1.25rem;
+.splitStickyLeft p {
+  font-size: 1.1rem;
   color: var(--color-text-body);
-  max-width: 700px;
-  margin: 0 auto var(--space-2xl);
-  line-height: 1.6;
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
 }
 
-.wallOfBooks {
-  position: relative;
-  width: 100%;
-  height: 60vh;
-  background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600&q=80');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Parallax effect */
+.movingCardsRight {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-bottom: var(--space-md);
 }
 
-.wallOverlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(27, 42, 61, 0.7); /* Navy overlay */
-}
-
-.wallHighlight {
-  position: relative;
-  z-index: 2;
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: clamp(1.5rem, 5vw, 4rem);
+.progressionCard {
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(255,255,255,0.2);
-}
-
-.wallHighlight h3 {
-  font-family: var(--font-heading);
-  font-size: clamp(2rem, 4vw, 3rem);
-  color: var(--color-bg-base);
-  margin: 0;
-}
-
-/* SECTION 3: SPLIT SCREEN */
-.splitScreen {
-  display: flex;
-  flex-direction: column;
-  background-color: var(--color-primary-navy);
-  color: white;
-}
-
-@media (min-width: 1024px) {
-  .splitScreen {
-    flex-direction: row;
-  }
-}
-
-.splitLeft, .splitRight {
-  flex: 1;
-  padding: var(--space-3xl) 10%;
-}
-
-@media (min-width: 1024px) {
-  .splitLeft {
-    position: relative;
-    border-right: 1px solid rgba(255,255,255,0.1);
-  }
-  
-  .stickyContent {
-    position: sticky;
-    top: 30vh;
-  }
-}
-
-.splitTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(3rem, 5vw, 5rem);
-  line-height: 1.1;
-  color: var(--color-bg-base);
-}
-
-.rightContent {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-  min-height: 150vh;
-}
-
-.rightText {
-  font-size: 1.5rem;
-  line-height: 1.6;
-  color: rgba(255,255,255,0.8);
-  margin-bottom: var(--space-2xl);
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 15vh;
-  font-family: var(--font-heading);
-  font-size: 2.5rem;
-  color: var(--color-accent-rose);
-}
-
-.timelineArrow {
-  font-size: 2rem;
-  opacity: 0.5;
-  margin-left: 2rem;
-}
-
-/* SECTION 4: OUR PHILOSOPHY */
-.philosophy {
-  padding: var(--space-3xl) 0;
-  background-color: var(--color-bg-alt);
-}
-
-.philosophyGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-xl);
-}
-
-@media (min-width: 768px) {
-  .philosophyGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.philCard {
-  background: white;
-  padding: 4rem 3rem;
-  border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease;
+  padding: var(--space-xl) var(--space-lg);
+  box-shadow: var(--shadow-md);
   position: relative;
-  overflow: hidden;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
 }
 
-.philCard:hover {
-  transform: translateY(-10px);
+.progressionCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 155, 123, 0.4);
   box-shadow: var(--shadow-premium);
 }
 
-.philNumber {
-  font-family: var(--font-heading);
-  font-size: 5rem;
-  line-height: 1;
-  color: rgba(200, 155, 123, 0.2); /* Rose gold translucent */
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
+.progressionBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: var(--color-bg-alt);
+  color: var(--color-accent-rose);
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
 }
 
-.philTitle {
-  font-family: var(--font-heading);
-  font-size: 2rem;
+.progressionCard h3 {
+  font-size: 1.45rem;
   color: var(--color-primary-navy);
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 2;
+  margin-bottom: var(--space-xs);
 }
 
-.philText {
+.progressionCard p {
+  color: var(--color-text-body);
+  font-size: 0.98rem;
+  line-height: 1.65;
+}
+
+.progressionTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: var(--space-sm);
+}
+
+.progressionTag {
+  font-size: 0.8rem;
+  background: #f1f5f9;
+  color: #475569;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+}
+
+@media (max-width: 900px) {
+  .splitProgressGrid {
+    grid-template-columns: 1fr;
+  }
+  .splitStickyLeft {
+    position: static;
+    padding-right: 0;
+  }
+}
+
+/* ==========================================================================
+   SECTION 4: TWO SIDES OF THE SAME MISSION (SYMMETRICAL DUAL CARDS)
+   ========================================================================== */
+.dualSidesSection {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-bg-alt);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.dualSidesHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-xl);
+}
+
+.dualSidesHeader h2 {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary-navy);
+}
+
+.dualSidesHeader p {
   font-size: 1.1rem;
   color: var(--color-text-body);
-  line-height: 1.6;
-  position: relative;
-  z-index: 2;
 }
 
-/* SECTION 5: BEHIND EVERY BOOK (STICKY SCROLL) */
-.behindEvery {
-  background-color: var(--color-primary-navy);
-  color: white;
-  padding: var(--space-3xl) 0;
+.dualSidesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-lg);
 }
 
-.behindStickyContainer {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 5%;
-}
-
-.behindScrollItem {
-  min-height: 50vh;
-  display: flex;
-  align-items: center;
-}
-
-.behindScrollItem h2 {
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 5vw, 5rem);
-  opacity: 0.3;
-  transition: opacity 0.5s ease;
-  line-height: 1.1;
-}
-
-.behindScrollItem h2.behindHighlight {
-  opacity: 1;
-  color: var(--color-accent-rose);
-}
-
-/* SECTION 6: WHAT WE DO (VISUAL ECOSYSTEM) */
-.ecosystem {
-  padding: var(--space-3xl) 0;
-  background-color: var(--color-bg-base);
-  text-align: center;
-}
-
-.ecosystemDiagram {
-  max-width: 800px;
-  margin: 0 auto var(--space-2xl);
-  font-family: var(--font-sans);
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--color-primary-navy);
-}
-
-.ecoNodeTop, .ecoNodeBottom, .ecoFinalLayer {
-  padding: 1rem;
-  background: var(--color-bg-alt);
-  border-radius: var(--radius-sm);
-  display: inline-block;
-}
-
-.ecoCenterBlock {
-  border: 2px solid var(--color-primary-navy);
-  padding: 2rem;
-  border-radius: var(--radius-lg);
-  display: inline-block;
-  margin: 1rem 0;
-  background: white;
+.dualSideCard {
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-xl) var(--space-lg);
   box-shadow: var(--shadow-md);
-}
-
-.ecoBrandName {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  letter-spacing: 0.05em;
-}
-
-.ecoBranches {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 1rem 0;
-}
-
-.ecoBranch {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-
-.ecoArrow, .ecoArrowVertical, .ecoArrowDiagonal, .ecoArrowDiagonalRight {
-  font-size: 1.5rem;
-  margin: 0.5rem 0;
-  color: var(--color-secondary-rose);
-}
-
-.ecoFinalLayer {
-  margin-top: 2rem;
-  background: var(--color-primary-navy);
-  color: white;
-  padding: 1.5rem 3rem;
-  border-radius: 50px;
-  font-size: 1.2rem;
-}
-
-.ecoExplanation {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-.ecoExplainTitle {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.ecoList {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-}
-
-.ecoList li {
-  font-size: 1.1rem;
-  padding-left: 1.5rem;
+  justify-content: space-between;
   position: relative;
-}
-
-.ecoList li::before {
-  content: "•";
-  color: var(--color-secondary-rose);
-  position: absolute;
-  left: 0;
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
-/* SECTION 7: OUR MISSION */
-.mission {
-  padding: 150px 0;
-  background-color: var(--color-primary-navy);
-  color: white;
-  text-align: center;
-}
-
-.missionSub {
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  color: var(--color-secondary-rose);
-  margin-bottom: 2rem;
-}
-
-.missionTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(3rem, 6vw, 6rem);
-  line-height: 1.1;
-  max-width: 1000px;
-  margin: 0 auto 2rem;
-}
-
-.missionText {
-  font-size: 1.25rem;
-  color: rgba(255,255,255,0.7);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-/* SECTION 8: OUR VISION (HORIZONTAL SCROLL) */
-.vision {
-  padding: var(--space-3xl) 0;
-  background-color: var(--color-bg-alt);
   overflow: hidden;
 }
 
-.horizontalScrollWrapper {
-  width: 100%;
-  overflow-x: auto;
-  padding: 4rem 5%;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.dualSideNum {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: rgba(200, 155, 123, 0.25);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
 }
 
-.horizontalScrollWrapper::-webkit-scrollbar {
-  display: none;
+.dualSideCard h3 {
+  font-size: 1.75rem;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-sm);
+  line-height: 1.2;
 }
 
-.horizontalScrollTrack {
+.dualSideCard p {
+  color: var(--color-text-body);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.dualSideFeatures {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dualSideFeatures li {
+  font-size: 0.95rem;
+  color: var(--color-primary-navy);
   display: flex;
   align-items: center;
-  gap: 3rem;
-  width: max-content;
+  gap: 8px;
 }
 
-.visionItem, .visionItemHighlight {
+.dualSideFeatures li span {
+  color: var(--color-accent-rose);
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .dualSidesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SECTION 5: BEHIND EVERY BOOK (CINEMATIC KINETIC EXPERIENCE)
+   ========================================================================== */
+.behindEverySection {
+  position: relative;
+  height: 160vh;
+  background-color: #0B111A;
+  color: #ffffff;
+  padding: 0;
+}
+
+.behindStickyWrap {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.behindGlow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(200, 155, 123, 0.18) 0%, rgba(11, 17, 26, 0) 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.behindContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0 5%;
+  max-width: 950px;
+  width: 100%;
+}
+
+.behindEyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent-rose);
+  margin-bottom: var(--space-lg);
+}
+
+.behindTextContainer {
+  position: relative;
+  min-height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.behindStatement {
+  position: absolute;
   font-family: var(--font-heading);
-  font-size: clamp(3rem, 8vw, 8rem);
-  color: rgba(27, 42, 61, 0.1); /* Very faint outline text effect ideally, but we'll use faint color */
-  transition: color 0.3s ease;
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+  width: 100%;
+  text-align: center;
 }
 
-.visionItem:hover {
+.behindStatementFinal {
+  font-size: clamp(2.2rem, 4.5vw, 3.75rem);
+}
+
+.highlightGold {
+  color: #E0B496;
+  text-decoration: underline;
+  text-decoration-color: rgba(200, 155, 123, 0.5);
+  text-underline-offset: 8px;
+}
+
+/* ==========================================================================
+   SECTION 6: THE ECOSYSTEM ARCHITECTURE (INFOGRAPHIC REPLACEMENT)
+   ========================================================================== */
+.ecosystemSection {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-bg-base);
+}
+
+.ecoHeader {
+  text-align: center;
+  max-width: 750px;
+  margin: 0 auto var(--space-xl);
+}
+
+.ecoHeader h2 {
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  margin-bottom: var(--space-xs);
   color: var(--color-primary-navy);
 }
 
-.visionItemHighlight {
-  color: var(--color-accent-rose);
+.ecoHeader p {
+  font-size: 1.1rem;
+  color: var(--color-text-body);
 }
 
-.visionArrow {
-  font-size: 3rem;
+.ecoArchitecture {
+  background: var(--color-bg-alt);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-xl) var(--space-md);
+  box-shadow: var(--shadow-md);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.ecoSourceNode {
+  text-align: center;
+  margin-bottom: var(--space-md);
+}
+
+.ecoSourceBadge {
+  display: inline-block;
+  background: var(--color-primary-navy);
+  color: #ffffff;
+  padding: 8px 24px;
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  box-shadow: var(--shadow-sm);
+}
+
+.ecoCoreEngine {
+  background: #ffffff;
+  border: 2px solid var(--color-accent-rose);
+  border-radius: var(--radius-xl);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto var(--space-lg);
+  box-shadow: var(--shadow-glow);
+}
+
+.ecoCoreEngine h3 {
+  font-size: 1.6rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 4px;
+}
+
+.ecoCoreEngine p {
   color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.ecoPillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.ecoPillarCard {
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal);
+}
+
+.ecoPillarCard:hover {
+  transform: translateY(-4px);
+}
+
+.ecoPillarIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg-alt);
+  border: 1px solid rgba(200, 155, 123, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--color-accent-rose);
+  margin-bottom: var(--space-sm);
+  transition: transform var(--transition-normal), background-color var(--transition-normal);
+}
+
+.ecoPillarCard:hover .ecoPillarIcon {
+  transform: scale(1.08);
+  background: rgba(200, 155, 123, 0.15);
+}
+
+.ecoPillarCard h4 {
+  font-size: 1.2rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 8px;
+}
+
+.ecoPillarCard p {
+  font-size: 0.92rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+}
+
+.ecoDestinationNode {
+  background: var(--color-primary-navy);
+  color: #ffffff;
+  border-radius: var(--radius-xl);
+  padding: var(--space-md) var(--space-lg);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ecoDestinationNode h4 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.ecoDestinationNode p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .ecoPillarsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SECTION 7: OUR VISION (HORIZONTAL TRACK)
+   ========================================================================== */
+.visionSection {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-primary-navy);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.visionHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-xl);
+  padding: 0 var(--space-md);
+}
+
+.visionEyebrow {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent-rose);
+  margin-bottom: var(--space-xs);
+}
+
+.visionTitle {
+  color: #ffffff;
+  font-size: clamp(2.25rem, 4vw, 3.25rem);
+  margin-bottom: var(--space-xs);
+}
+
+.visionSubtitle {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+}
+
+.horizontalTrackWrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: var(--space-md) 0;
+}
+
+.horizontalTrack {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  width: max-content;
+}
+
+.trackItemWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.trackItem {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-xl);
+  padding: var(--space-md) var(--space-lg);
+  min-width: 200px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+}
+
+.trackItemHighlight {
+  border-color: var(--color-accent-rose);
+  background: rgba(200, 155, 123, 0.15);
+  box-shadow: 0 0 25px rgba(200, 155, 123, 0.25);
+}
+
+.trackStepNum {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-accent-rose);
+  margin-bottom: 4px;
+}
+
+.trackLabel {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.trackSub {
+  display: block;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.trackConnector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-accent-rose);
+  font-size: 1.4rem;
+}
+
+.trackLine {
+  width: 30px;
+  height: 2px;
+  background: rgba(200, 155, 123, 0.4);
 }
 
 .visionFooter {
   text-align: center;
-  font-size: 1.5rem;
-  font-family: var(--font-heading);
-  color: var(--color-primary-navy);
-  margin-top: 2rem;
+  margin-top: var(--space-lg);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
 }
 
-/* SECTION 9: OUR PROMISE */
-.promise {
-  padding: var(--space-3xl) 0;
-  background-color: var(--color-bg-base);
+/* ==========================================================================
+   SECTION 8: THE TEAM BEHIND YOUR STORY
+   ========================================================================== */
+.teamSection {
+  padding: var(--space-xl) 0;
+  background-color: #ffffff;
+  border-top: 1px solid var(--glass-border);
 }
 
-.promiseHeading {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  color: var(--color-primary-navy);
+.teamHeader {
   text-align: center;
-  margin-bottom: var(--space-2xl);
+  max-width: 650px;
+  margin: 0 auto var(--space-xl);
 }
 
-.promiseGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-xl);
-}
-
-@media (min-width: 768px) {
-  .promiseGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.promiseCol h3 {
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
+.teamHeader h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--space-xs);
   color: var(--color-primary-navy);
-  margin-bottom: 1rem;
-  border-bottom: 2px solid var(--color-secondary-rose);
-  padding-bottom: 0.5rem;
-  display: inline-block;
 }
 
-.promiseCol p {
+.teamHeader p {
+  color: var(--color-text-body);
+  font-size: 1.1rem;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.teamCard {
+  background: var(--color-bg-alt);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--glass-border);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.teamCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.teamImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background: #1C2530;
+}
+
+.teamImage {
+  object-fit: cover;
+  object-position: center 20%;
+  transition: transform var(--transition-slow);
+}
+
+.teamCard:hover .teamImage {
+  transform: scale(1.03);
+}
+
+.teamContent {
+  padding: var(--space-md);
+}
+
+.teamName {
+  font-size: 1.4rem;
+  font-family: var(--font-heading);
+  color: var(--color-primary-navy);
+  margin-bottom: 4px;
+}
+
+.teamRole {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent-rose);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-xs);
+}
+
+.teamBio {
+  font-size: 0.95rem;
   color: var(--color-text-body);
   line-height: 1.6;
 }
 
-/* SECTION 10: FINAL CTA */
-.finalCta {
-  padding: 150px 0;
-  text-align: center;
-  background: linear-gradient(135deg, var(--color-primary-navy) 0%, #111a26 100%);
-  color: white;
-}
-
-.ctaTitle {
-  font-family: var(--font-heading);
-  font-size: clamp(3rem, 6vw, 5rem);
-  margin-bottom: 1rem;
-}
-
-.ctaSubtitle {
-  font-size: 1.5rem;
-  color: rgba(255,255,255,0.7);
-  margin-bottom: 3rem;
-}
-
-.ctaButtonGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (min-width: 600px) {
-  .ctaButtonGroup {
-    flex-direction: row;
-    gap: 2rem;
+@media (max-width: 900px) {
+  .teamGrid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
   }
 }
 
-.btnPrimary, .btnSecondary {
-  padding: 1rem 2.5rem;
-  border-radius: 50px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
+/* ==========================================================================
+   SECTION 9: OUR THREE CORE COMMITMENTS (PROMISE)
+   ========================================================================== */
+.promiseSection {
+  padding: var(--space-xl) 0;
+  background-color: var(--color-bg-alt);
+}
+
+.promiseHeader {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-xl);
+}
+
+.promiseHeader h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: var(--space-xs);
+  color: var(--color-primary-navy);
+}
+
+.promiseHeader p {
   font-size: 1.1rem;
+  color: var(--color-text-body);
 }
 
-.btnPrimary {
-  background-color: var(--color-accent-rose);
-  color: var(--color-bg-base);
+.promiseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
 }
 
-.btnPrimary:hover {
+.promiseCard {
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+}
+
+.promiseCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(200, 155, 123, 0.4);
+  box-shadow: var(--shadow-md);
+}
+
+.promiseIcon {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(200, 155, 123, 0.1);
+  border: 1px solid rgba(200, 155, 123, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--color-accent-rose);
+  margin-bottom: var(--space-md);
+  transition: transform var(--transition-normal), background-color var(--transition-normal), color var(--transition-normal);
+}
+
+.promiseCard:hover .promiseIcon {
+  transform: scale(1.1);
+  background: var(--color-accent-rose);
+  color: #ffffff;
+}
+
+.promiseCard h3 {
+  font-size: 1.35rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 8px;
+}
+
+.promiseCard p {
+  color: var(--color-text-body);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+@media (max-width: 900px) {
+  .promiseGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================================
+   SECTION 10: LUXURY FINAL CTA
+   ========================================================================== */
+.finalCtaSection {
+  padding: var(--space-xl) var(--space-md);
+  background-color: var(--color-bg-base);
+}
+
+.finalCtaBox {
+  background: linear-gradient(135deg, #1C2530 0%, #2A3F5C 100%);
+  color: #ffffff;
+  border-radius: var(--radius-2xl);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-premium);
+}
+
+.finalCtaBox h2 {
+  color: #ffffff;
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  margin-bottom: var(--space-sm);
+  line-height: 1.15;
+}
+
+.finalCtaBox p {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto var(--space-lg);
+  line-height: 1.65;
+}
+
+.finalCtaActions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+
+/* Primary Button in Dark CTA: High-contrast Rose Gold */
+.finalCtaActions a:first-child,
+.finalCtaActions button:first-child {
+  background-color: var(--color-accent-rose) !important;
+  color: #ffffff !important;
+  border: 2px solid var(--color-accent-rose) !important;
+  box-shadow: 0 4px 20px rgba(200, 155, 123, 0.4) !important;
+  font-weight: 700;
+}
+
+.finalCtaActions a:first-child:hover,
+.finalCtaActions button:first-child:hover {
+  background-color: var(--color-accent-rose-hover) !important;
+  border-color: var(--color-accent-rose-hover) !important;
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(200, 155, 123, 0.3);
+  box-shadow: 0 6px 25px rgba(200, 155, 123, 0.6) !important;
 }
 
-.btnSecondary {
-  background-color: transparent;
-  color: white;
-  border: 1px solid rgba(255,255,255,0.3);
+/* Outline Button in Dark CTA: Crisp White/Glass */
+.finalCtaActions a:last-child,
+.finalCtaActions button:last-child {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #ffffff !important;
+  border: 2px solid rgba(255, 255, 255, 0.6) !important;
+  backdrop-filter: blur(8px);
 }
 
-.btnSecondary:hover {
-  border-color: white;
-  background-color: rgba(255,255,255,0.1);
+.finalCtaActions a:last-child:hover,
+.finalCtaActions button:last-child:hover {
+  background-color: #ffffff !important;
+  color: var(--color-primary-navy) !important;
+  border-color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3) !important;
 }

@@ -86,7 +86,7 @@ export const reviewsData: Review[] = [
     reviewer: "BookstagramClub",
     rating: "4.5/5",
     coverImage: "/images/books/infectious-injustice.webp",
-    amazonLink: "https://a.co/d/6sONkA8",
+    amazonLink: "https://www.amazon.com/dp/B0CKD2FPJC",
     sections: [
       {
         title: "Introduction",
@@ -336,8 +336,8 @@ export const reviewsData: Review[] = [
     author: "George Orwell",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/9267242-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=1984%20George%20Orwell&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -399,8 +399,8 @@ export const reviewsData: Review[] = [
     author: "Harper Lee",
     reviewer: "BookstagramClub",
     rating: "4.6/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/14351077-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=To%20Kill%20a%20Mockingbird%20Harper%20Lee&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -462,8 +462,8 @@ export const reviewsData: Review[] = [
     author: "F. Scott Fitzgerald",
     reviewer: "BookstagramClub",
     rating: "4.9/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/10590366-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Great%20Gatsby%20F.%20Scott%20Fitzgerald&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -525,8 +525,8 @@ export const reviewsData: Review[] = [
     author: "Jane Austen",
     reviewer: "BookstagramClub",
     rating: "4.5/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/14348537-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Pride%20and%20Prejudice%20Jane%20Austen&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -588,8 +588,8 @@ export const reviewsData: Review[] = [
     author: "J.D. Salinger",
     reviewer: "BookstagramClub",
     rating: "4.4/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/9273490-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Catcher%20in%20the%20Rye%20J.D.%20Salinger&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -651,8 +651,8 @@ export const reviewsData: Review[] = [
     author: "J.R.R. Tolkien",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/14627509-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Hobbit%20J.R.R.%20Tolkien&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -714,8 +714,8 @@ export const reviewsData: Review[] = [
     author: "Ray Bradbury",
     reviewer: "BookstagramClub",
     rating: "4.5/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/12993656-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Fahrenheit%20451%20Ray%20Bradbury&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -777,8 +777,8 @@ export const reviewsData: Review[] = [
     author: "Charlotte Brontë",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8235363-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Jane%20Eyre%20Charlotte%20Bront%C3%AB&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -840,8 +840,8 @@ export const reviewsData: Review[] = [
     author: "George Orwell",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/11261770-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Animal%20Farm%20George%20Orwell&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -903,8 +903,8 @@ export const reviewsData: Review[] = [
     author: "J.R.R. Tolkien",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/14625765-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Lord%20of%20the%20Rings%20J.R.R.%20Tolkien&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -966,8 +966,8 @@ export const reviewsData: Review[] = [
     author: "Joseph Heller",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/6468653-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Catch-22%20Joseph%20Heller&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1029,8 +1029,8 @@ export const reviewsData: Review[] = [
     author: "Aldous Huxley",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8231823-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Brave%20New%20World%20Aldous%20Huxley&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1092,8 +1092,8 @@ export const reviewsData: Review[] = [
     author: "John Steinbeck",
     reviewer: "BookstagramClub",
     rating: "4.2/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/12715902-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Grapes%20of%20Wrath%20John%20Steinbeck&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1155,8 +1155,8 @@ export const reviewsData: Review[] = [
     author: "Anne Frank",
     reviewer: "BookstagramClub",
     rating: "4.7/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/13526331-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Diary%20of%20a%20Young%20Girl%20Anne%20Frank&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1218,8 +1218,8 @@ export const reviewsData: Review[] = [
     author: "Louisa May Alcott",
     reviewer: "BookstagramClub",
     rating: "5.0/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8775559-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Little%20Women%20Louisa%20May%20Alcott&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1281,8 +1281,8 @@ export const reviewsData: Review[] = [
     author: "Paulo Coelho",
     reviewer: "BookstagramClub",
     rating: "4.7/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/7414780-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Alchemist%20Paulo%20Coelho&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1344,8 +1344,8 @@ export const reviewsData: Review[] = [
     author: "Khaled Hosseini",
     reviewer: "BookstagramClub",
     rating: "4.9/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/14846827-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Kite%20Runner%20Khaled%20Hosseini&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1407,8 +1407,8 @@ export const reviewsData: Review[] = [
     author: "Markus Zusak",
     reviewer: "BookstagramClub",
     rating: "4.2/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8153054-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Book%20Thief%20Markus%20Zusak&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1470,8 +1470,8 @@ export const reviewsData: Review[] = [
     author: "Kurt Vonnegut",
     reviewer: "BookstagramClub",
     rating: "4.5/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/12727001-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Slaughterhouse-Five%20Kurt%20Vonnegut&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1533,8 +1533,8 @@ export const reviewsData: Review[] = [
     author: "Oscar Wilde",
     reviewer: "BookstagramClub",
     rating: "4.7/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/14314858-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Picture%20of%20Dorian%20Gray%20Oscar%20Wilde&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1596,8 +1596,8 @@ export const reviewsData: Review[] = [
     author: "Emily Brontë",
     reviewer: "BookstagramClub",
     rating: "4.3/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/12818862-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Wuthering%20Heights%20Emily%20Bront%C3%AB&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1659,8 +1659,8 @@ export const reviewsData: Review[] = [
     author: "Herman Melville",
     reviewer: "BookstagramClub",
     rating: "4.2/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/10544254-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Moby-Dick%20Herman%20Melville&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1722,8 +1722,8 @@ export const reviewsData: Review[] = [
     author: "Mary Shelley",
     reviewer: "BookstagramClub",
     rating: "4.4/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/12356249-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Frankenstein%20Mary%20Shelley&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1785,8 +1785,8 @@ export const reviewsData: Review[] = [
     author: "Homer",
     reviewer: "BookstagramClub",
     rating: "4.6/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/9045853-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Odyssey%20Homer&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1848,8 +1848,8 @@ export const reviewsData: Review[] = [
     author: "Margaret Atwood",
     reviewer: "BookstagramClub",
     rating: "4.9/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8231851-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Handmaid's%20Tale%20Margaret%20Atwood&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1911,8 +1911,8 @@ export const reviewsData: Review[] = [
     author: "Sylvia Plath",
     reviewer: "BookstagramClub",
     rating: "4.9/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8477115-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Bell%20Jar%20Sylvia%20Plath&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -1974,8 +1974,8 @@ export const reviewsData: Review[] = [
     author: "Charles Dickens",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/13301713-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=A%20Tale%20of%20Two%20Cities%20Charles%20Dickens&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2037,8 +2037,8 @@ export const reviewsData: Review[] = [
     author: "Victor Hugo",
     reviewer: "BookstagramClub",
     rating: "4.3/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/12721865-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Les%20Mis%C3%A9rables%20Victor%20Hugo&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2100,8 +2100,8 @@ export const reviewsData: Review[] = [
     author: "Fyodor Dostoevsky",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/9411873-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Crime%20and%20Punishment%20Fyodor%20Dostoevsky&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2163,8 +2163,8 @@ export const reviewsData: Review[] = [
     author: "Fyodor Dostoevsky",
     reviewer: "BookstagramClub",
     rating: "4.6/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8272336-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Brothers%20Karamazov%20Fyodor%20Dostoevsky&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2226,8 +2226,8 @@ export const reviewsData: Review[] = [
     author: "Leo Tolstoy",
     reviewer: "BookstagramClub",
     rating: "4.5/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/2560652-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Anna%20Karenina%20Leo%20Tolstoy&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2289,8 +2289,8 @@ export const reviewsData: Review[] = [
     author: "Leo Tolstoy",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/12621906-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=War%20and%20Peace%20Leo%20Tolstoy&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2352,8 +2352,8 @@ export const reviewsData: Review[] = [
     author: "Gabriel García Márquez",
     reviewer: "BookstagramClub",
     rating: "4.3/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/12627383-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=One%20Hundred%20Years%20of%20Solitude%20Gabriel%20Garc%C3%ADa%20M%C3%A1rquez&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2415,8 +2415,8 @@ export const reviewsData: Review[] = [
     author: "Miguel de Cervantes",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/14428305-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Don%20Quixote%20Miguel%20de%20Cervantes&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2478,8 +2478,8 @@ export const reviewsData: Review[] = [
     author: "T.M. Logan",
     reviewer: "BookstagramClub",
     rating: "4.3/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/6468653-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Catch%20T.M.%20Logan&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2541,8 +2541,8 @@ export const reviewsData: Review[] = [
     author: "Matt Haig",
     reviewer: "BookstagramClub",
     rating: "4.9/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/10313767-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Midnight%20Library%20Matt%20Haig&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2604,8 +2604,8 @@ export const reviewsData: Review[] = [
     author: "Andy Weir",
     reviewer: "BookstagramClub",
     rating: "4.3/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/11200092-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Project%20Hail%20Mary%20Andy%20Weir&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2667,8 +2667,8 @@ export const reviewsData: Review[] = [
     author: "Frank Herbert",
     reviewer: "BookstagramClub",
     rating: "4.5/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/11481354-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Dune%20Frank%20Herbert&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2730,8 +2730,8 @@ export const reviewsData: Review[] = [
     author: "Andy Weir",
     reviewer: "BookstagramClub",
     rating: "4.7/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/11447888-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Martian%20Andy%20Weir&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2793,8 +2793,8 @@ export const reviewsData: Review[] = [
     author: "Yuval Noah Harari",
     reviewer: "BookstagramClub",
     rating: "4.4/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8634250-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Sapiens%3A%20A%20Brief%20History%20of%20Humankind%20Yuval%20Noah%20Harari&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2856,8 +2856,8 @@ export const reviewsData: Review[] = [
     author: "Tara Westover",
     reviewer: "BookstagramClub",
     rating: "4.7/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/137962-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Educated%20Tara%20Westover&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2919,8 +2919,8 @@ export const reviewsData: Review[] = [
     author: "Michelle Obama",
     reviewer: "BookstagramClub",
     rating: "4.6/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8596356-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Becoming%20Michelle%20Obama&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -2982,8 +2982,8 @@ export const reviewsData: Review[] = [
     author: "James Clear",
     reviewer: "BookstagramClub",
     rating: "4.4/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/12539702-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Atomic%20Habits%20James%20Clear&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3045,8 +3045,8 @@ export const reviewsData: Review[] = [
     author: "Daniel Kahneman",
     reviewer: "BookstagramClub",
     rating: "5.0/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/13290711-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Thinking%2C%20Fast%20and%20Slow%20Daniel%20Kahneman&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3108,8 +3108,8 @@ export const reviewsData: Review[] = [
     author: "Mark Manson",
     reviewer: "BookstagramClub",
     rating: "4.5/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8231990-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Subtle%20Art%20of%20Not%20Giving%20a%20F*ck%20Mark%20Manson&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3171,8 +3171,8 @@ export const reviewsData: Review[] = [
     author: "Don Miguel Ruiz",
     reviewer: "BookstagramClub",
     rating: "4.6/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/924521-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Four%20Agreements%20Don%20Miguel%20Ruiz&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3234,8 +3234,8 @@ export const reviewsData: Review[] = [
     author: "Charles Duhigg",
     reviewer: "BookstagramClub",
     rating: "5.0/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/9078085-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Power%20of%20Habit%20Charles%20Duhigg&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3297,8 +3297,8 @@ export const reviewsData: Review[] = [
     author: "Susan Cain",
     reviewer: "BookstagramClub",
     rating: "4.7/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/7079753-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Quiet%20Susan%20Cain&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3360,8 +3360,8 @@ export const reviewsData: Review[] = [
     author: "Stephen R. Covey",
     reviewer: "BookstagramClub",
     rating: "4.7/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/10079937-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%207%20Habits%20of%20Highly%20Effective%20People%20Stephen%20R.%20Covey&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3423,8 +3423,8 @@ export const reviewsData: Review[] = [
     author: "Robert T. Kiyosaki",
     reviewer: "BookstagramClub",
     rating: "4.7/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/8315603-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Rich%20Dad%20Poor%20Dad%20Robert%20T.%20Kiyosaki&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3486,8 +3486,8 @@ export const reviewsData: Review[] = [
     author: "Jim Collins",
     reviewer: "BookstagramClub",
     rating: "4.8/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/7431270-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Good%20to%20Great%20Jim%20Collins&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3549,8 +3549,8 @@ export const reviewsData: Review[] = [
     author: "Brené Brown",
     reviewer: "BookstagramClub",
     rating: "4.5/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/10304768-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Dare%20to%20Lead%20Bren%C3%A9%20Brown&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3612,8 +3612,8 @@ export const reviewsData: Review[] = [
     author: "Angela Duckworth",
     reviewer: "BookstagramClub",
     rating: "4.6/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/7438753-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Grit%20Angela%20Duckworth&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3675,8 +3675,8 @@ export const reviewsData: Review[] = [
     author: "Carol S. Dweck",
     reviewer: "BookstagramClub",
     rating: "4.3/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/746414-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Mindset%20Carol%20S.%20Dweck&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3738,8 +3738,8 @@ export const reviewsData: Review[] = [
     author: "Malcolm Gladwell",
     reviewer: "BookstagramClub",
     rating: "4.4/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/10021591-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=Outliers%20Malcolm%20Gladwell&i=stripbooks",
     sections: [
       {
         title: "Introduction",
@@ -3801,8 +3801,8 @@ export const reviewsData: Review[] = [
     author: "Malcolm Gladwell",
     reviewer: "BookstagramClub",
     rating: "4.9/5",
-    coverImage: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80",
-    amazonLink: "https://amazon.com",
+    coverImage: "https://covers.openlibrary.org/b/id/10873292-L.jpg",
+    amazonLink: "https://www.amazon.com/s?k=The%20Tipping%20Point%20Malcolm%20Gladwell&i=stripbooks",
     sections: [
       {
         title: "Introduction",

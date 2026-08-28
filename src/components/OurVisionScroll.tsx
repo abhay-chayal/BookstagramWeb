@@ -8,37 +8,54 @@ export default function OurVisionScroll() {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"]
+    offset: ["start end", "end start"],
   });
 
-  // Map scroll progress to horizontal translation
-  // We want to move the track leftwards as we scroll down
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-60%"]);
+  // Smooth, synchronized horizontal translation tied to entering and leaving viewport
+  const x = useTransform(scrollYProgress, [0.1, 0.9], ["15%", "-45%"]);
+
+  const STEPS = [
+    { label: "Author", sub: "The Creator" },
+    { label: "Story", sub: "The World" },
+    { label: "Book", sub: "The Artifact" },
+    { label: "Positioning", sub: "The Identity" },
+    { label: "Discovery", sub: "The Spark" },
+    { label: "Reader", sub: "The Connection" },
+    { label: "Community", sub: "The Legacy", highlight: true },
+  ];
 
   return (
-    <section ref={containerRef} className={styles.vision} style={{ height: "300vh", position: "relative", padding: 0 }}>
-      <div style={{ position: "sticky", top: 0, height: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", overflow: "hidden" }}>
-        
-        <div className={styles.horizontalScrollWrapper} style={{ overflowX: "hidden", padding: "4rem 5%" }}>
-          <motion.div className={styles.horizontalScrollTrack} style={{ x }}>
-            <div className={styles.visionItem}>AUTHOR</div>
-            <div className={styles.visionArrow}>→</div>
-            <div className={styles.visionItem}>STORY</div>
-            <div className={styles.visionArrow}>→</div>
-            <div className={styles.visionItem}>BOOK</div>
-            <div className={styles.visionArrow}>→</div>
-            <div className={styles.visionItem}>DISCOVERY</div>
-            <div className={styles.visionArrow}>→</div>
-            <div className={styles.visionItem}>READER</div>
-            <div className={styles.visionArrow}>→</div>
-            <div className={styles.visionItemHighlight}>COMMUNITY</div>
-          </motion.div>
-        </div>
+    <section ref={containerRef} className={styles.visionSection}>
+      <div className={styles.visionHeader}>
+        <span className={styles.visionEyebrow}>The Lifecycle of Literature</span>
+        <h2 className={styles.visionTitle}>From First Draft to Lifelong Readers</h2>
+        <p className={styles.visionSubtitle}>
+          How a creative vision transforms into an engaged, enduring community.
+        </p>
+      </div>
 
-        <div className={styles.visionFooter}>
-          <p>A world where great books are easier to discover.</p>
-        </div>
+      <div className={styles.horizontalTrackWrapper}>
+        <motion.div className={styles.horizontalTrack} style={{ x }}>
+          {STEPS.map((step, idx) => (
+            <div key={idx} className={styles.trackItemWrapper}>
+              <div className={`${styles.trackItem} ${step.highlight ? styles.trackItemHighlight : ""}`}>
+                <span className={styles.trackStepNum}>0{idx + 1}</span>
+                <span className={styles.trackLabel}>{step.label}</span>
+                <span className={styles.trackSub}>{step.sub}</span>
+              </div>
+              {idx < STEPS.length - 1 && (
+                <div className={styles.trackConnector}>
+                  <div className={styles.trackLine} />
+                  <span className={styles.trackArrow}>→</span>
+                </div>
+              )}
+            </div>
+          ))}
+        </motion.div>
+      </div>
 
+      <div className={styles.visionFooter}>
+        <p>A literary ecosystem where no exceptional book remains unnoticed.</p>
       </div>
     </section>
   );

@@ -15,24 +15,35 @@
   --glass-blur: blur(16px);
   --color-text-main: #1C2530;
   --color-text-muted: #64748B;
+  /* Body copy: softer than headings, but darker than muted for readability */
+  --color-text-body: #475569;
+  /* Alias kept for stylesheets that reference the rose accent by this name */
+  --color-secondary-rose: var(--color-accent-rose);
   --color-white: #FFFFFF;
 
   /* Typography */
   --font-heading: var(--font-playfair), serif;
   --font-body: var(--font-inter), sans-serif;
+  --font-sans: var(--font-body);
 
-  /* Spacing */
+  /* Spacing
+     Note: --space-xl (8rem) is section-scale and predates the 2xl/3xl additions,
+     so the ramp is not strictly monotonic. 2xl is an intra-section gap;
+     3xl is section padding. */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 2rem;
   --space-lg: 4rem;
   --space-xl: 8rem;
-  
+  --space-2xl: 5rem;
+  --space-3xl: 9rem;
+
   /* Border Radii */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 24px;
   --radius-xl: 32px;
+  --radius-2xl: 40px;
   --radius-full: 9999px;
   
   /* Shadows - Ultra Premium Ambient Diffused */

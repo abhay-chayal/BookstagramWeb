@@ -1,0 +1,371 @@
+.main {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  min-height: 100vh;
+}
+
+/* 1. HERO & SUBSCRIPTION */
+.heroSection {
+  padding: calc(var(--space-xl) + 2rem) 0 var(--space-xl);
+  background: radial-gradient(circle at 50% 0%, rgba(200, 155, 123, 0.15) 0%, transparent 70%);
+  text-align: center;
+}
+
+.heroContainer {
+  max-width: 860px;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-accent-rose);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: var(--space-xs);
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  line-height: 1.15;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-heading);
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: var(--color-text-body);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+.subscribeCardWrapper {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.subscribeCard {
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-lg) var(--space-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+.subscribeForm h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 4px;
+}
+
+.subscribeForm p {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-md);
+}
+
+.inputGroupRow {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.inputField {
+  flex: 1 1 200px;
+  padding: 12px 18px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-full);
+  font-size: 0.95rem;
+  outline: none;
+  background: var(--color-bg-base);
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.inputField:focus {
+  border-color: var(--color-accent-rose);
+  background: #ffffff;
+}
+
+.submitBtn {
+  background: var(--color-accent-rose) !important;
+  color: #ffffff !important;
+  border-color: var(--color-accent-rose) !important;
+  border-radius: var(--radius-full) !important;
+  padding: 12px 24px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 15px rgba(200, 155, 123, 0.4) !important;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.submitBtn:hover {
+  background: var(--color-accent-rose-hover) !important;
+  transform: translateY(-2px);
+}
+
+.privacyNote {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-sm);
+  margin-bottom: 0 !important;
+}
+
+.errorAlert {
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #f87171;
+  padding: 10px 16px;
+  border-radius: 8px;
+  margin-bottom: var(--space-sm);
+  font-size: 0.9rem;
+}
+
+.successState {
+  padding: var(--space-md);
+  text-align: center;
+}
+
+.successIcon {
+  width: 56px;
+  height: 56px;
+  background: rgba(34, 197, 94, 0.1);
+  color: #16a34a;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-sm);
+}
+
+.successState h3 {
+  font-size: 1.4rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 6px;
+}
+
+.successState p {
+  color: var(--color-text-body);
+  font-size: 0.95rem;
+}
+
+/* 2. PILLARS SECTION */
+.pillarsSection {
+  padding: var(--space-xl) 0;
+  background: var(--color-bg-alt);
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.sectionHeader {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto var(--space-xl);
+}
+
+.sectionHeader h2 {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-xs);
+}
+
+.sectionHeader p {
+  color: var(--color-text-body);
+  font-size: 1.1rem;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.pillarCard {
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl) var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform var(--transition-normal);
+}
+
+.pillarCard:hover {
+  transform: translateY(-4px);
+}
+
+.pillarIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: rgba(200, 155, 123, 0.12);
+  border: 1px solid rgba(200, 155, 123, 0.3);
+  color: var(--color-accent-rose);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-sm);
+}
+
+.pillarCard h3 {
+  font-size: 1.25rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 8px;
+}
+
+.pillarCard p {
+  color: var(--color-text-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 3. ARCHIVE SECTION */
+.archiveSection {
+  padding: var(--space-xl) 0 calc(var(--space-xl) + 2rem);
+}
+
+.archiveGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.issueCard {
+  background: #ffffff;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-lg);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.issueCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.issueHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xs);
+}
+
+.issueBadge {
+  background: var(--color-primary-navy);
+  color: #ffffff;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.issueDate {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.issueTitle {
+  font-size: 1.35rem;
+  color: var(--color-primary-navy);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.issueTitle a {
+  color: inherit;
+  transition: color var(--transition-fast);
+}
+
+.issueTitle a:hover {
+  color: var(--color-accent-rose);
+}
+
+.issueIntro {
+  font-size: 0.95rem;
+  color: var(--color-text-body);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.issueBookHighlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-bg-alt);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 10px 14px;
+  margin-bottom: var(--space-md);
+}
+
+.bookThumbWrapper {
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.bookThumb {
+  object-fit: cover;
+}
+
+.bookHighlightLabel {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--color-accent-rose);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.bookHighlightTitle {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--color-primary-navy);
+  line-height: 1.2;
+}
+
+.bookHighlightAuthor {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.issueFooter {
+  border-top: 1px solid var(--glass-border);
+  padding-top: var(--space-xs);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.readIssueBtn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--color-accent-rose);
+  transition: transform var(--transition-fast);
+}
+
+.readIssueBtn:hover {
+  transform: translateX(4px);
+}
+
+@media (max-width: 900px) {
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+  }
+  .archiveGrid {
+    grid-template-columns: 1fr;
+  }
+  .inputGroupRow {
+    flex-direction: column;
+  }
+}

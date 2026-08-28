@@ -68,7 +68,7 @@ export default function Scene05Studio() {
           color: "var(--color-text-muted)",
           letterSpacing: "0.05em",
         }}>
-          The Author Growth Ecosystem
+          Where Books Get Discovered
         </p>
       </motion.div>
 
@@ -98,7 +98,7 @@ export default function Scene05Studio() {
             <rect x="35" y="78" width="50" height="8" rx="2" fill="var(--color-primary-navy)" opacity="0.1" />
             <rect x="37" y="76" width="46" height="4" rx="1" fill="var(--color-accent-rose)" opacity="0.3" />
           </svg>
-          <p style={labelStyle("center")}>Book Photography</p>
+          <p style={labelStyle("center")}>Cinematic Content</p>
         </motion.div>
 
         {/* Zone 2: Creative Graphics */}
@@ -116,7 +116,7 @@ export default function Scene05Studio() {
             {/* Pen */}
             <line x1="75" y1="45" x2="82" y2="68" stroke="var(--color-primary-navy)" strokeWidth="2" strokeOpacity="0.15" strokeLinecap="round" />
           </svg>
-          <p style={labelStyle("center")}>Creative Graphics</p>
+          <p style={labelStyle("center")}>Promotional Graphics</p>
         </motion.div>
 
         {/* Zone 3: Social Promotion */}
@@ -136,7 +136,7 @@ export default function Scene05Studio() {
             <rect x="44" y="62" width="28" height="3" rx="1" fill="var(--color-primary-navy)" opacity="0.08" />
             <rect x="44" y="68" width="20" height="3" rx="1" fill="var(--color-primary-navy)" opacity="0.06" />
           </svg>
-          <p style={labelStyle("center")}>Social Promotion</p>
+          <p style={labelStyle("center")}>Instagram Promotion</p>
         </motion.div>
 
         {/* Zone 4: Author Branding */}
@@ -155,7 +155,7 @@ export default function Scene05Studio() {
             {/* Verified badge */}
             <circle cx="84" cy="22" r="5" fill="var(--color-accent-rose)" opacity="0.5" />
           </svg>
-          <p style={labelStyle("center")}>Author Branding</p>
+          <p style={labelStyle("center")}>Author Features</p>
         </motion.div>
 
         {/* Zone 5: Launch Strategy */}
@@ -173,7 +173,7 @@ export default function Scene05Studio() {
             <circle cx="90" cy="85" r="3" fill="var(--color-accent-rose)" opacity="0.6" />
             <line x1="30" y1="85" x2="90" y2="85" stroke="var(--color-primary-navy)" strokeWidth="1" strokeOpacity="0.08" />
           </svg>
-          <p style={labelStyle("center")}>Launch Strategy</p>
+          <p style={labelStyle("center")}>Launch Campaigns</p>
         </motion.div>
       </div>
     </motion.div>

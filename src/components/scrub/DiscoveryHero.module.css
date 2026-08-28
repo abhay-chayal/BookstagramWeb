@@ -1,0 +1,150 @@
+.section {
+  position: relative;
+  /* Five beats at roughly one screen of scroll each. Deliberately far shorter
+     than the old 1200vh hero — the story lands before patience runs out. */
+  height: 520vh;
+  background: linear-gradient(180deg, #f7f4f0 0%, #efebe6 55%, #f7f4f0 100%);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.beat {
+  position: absolute;
+  width: min(92vw, 1100px);
+  text-align: center;
+  will-change: transform, opacity;
+}
+
+/* --- Typography -----------------------------------------------------------
+   Sizes are viewport-relative so the composition holds at every width,
+   the way the reference site does it. */
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: clamp(0.65rem, 0.78vw, 0.85rem);
+  text-transform: uppercase;
+  letter-spacing: 0.42em;
+  color: var(--color-accent-rose);
+  margin-bottom: clamp(1.2rem, 2.4vw, 2.2rem);
+  /* Optical correction: tracking pushes the last letter off-centre. */
+  text-indent: 0.42em;
+}
+
+.display {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 5.6vw, 5.75rem);
+  line-height: 1.04;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+  color: var(--color-primary-navy);
+}
+
+.statement {
+  font-family: var(--font-heading);
+  font-size: clamp(1.7rem, 3.9vw, 4rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  color: var(--color-primary-navy);
+}
+
+.scrollCue {
+  margin-top: clamp(2rem, 4vw, 3.5rem);
+  font-family: var(--font-body);
+  font-size: clamp(0.6rem, 0.72vw, 0.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.34em;
+  text-indent: 0.34em;
+  color: var(--color-text-muted);
+  opacity: 0.55;
+}
+
+/* --- Method list ---------------------------------------------------------- */
+
+.methodList {
+  list-style: none;
+  display: grid;
+  gap: clamp(0.85rem, 1.6vw, 1.5rem);
+  justify-content: center;
+  text-align: left;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.methodList li {
+  display: flex;
+  align-items: baseline;
+  gap: clamp(1rem, 2vw, 2rem);
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 2.5vw, 2.4rem);
+  letter-spacing: -0.015em;
+  color: var(--color-primary-navy);
+  border-bottom: 1px solid rgba(28, 37, 48, 0.09);
+  padding-bottom: clamp(0.6rem, 1.2vw, 1.1rem);
+  min-width: min(78vw, 520px);
+}
+
+.methodIndex {
+  font-family: var(--font-body);
+  font-size: clamp(0.6rem, 0.75vw, 0.78rem);
+  letter-spacing: 0.2em;
+  color: var(--color-accent-rose);
+  font-weight: 600;
+}
+
+/* --- Actions -------------------------------------------------------------- */
+
+.actions {
+  display: flex;
+  gap: clamp(0.75rem, 1.4vw, 1.25rem);
+  justify-content: center;
+  margin-top: clamp(1.8rem, 3.2vw, 3rem);
+  flex-wrap: wrap;
+}
+
+/* --- Progress rail -------------------------------------------------------- */
+
+.rail {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: clamp(1.5rem, 3vh, 3rem);
+  width: min(46vw, 420px);
+  height: 1px;
+  background: rgba(28, 37, 48, 0.12);
+  z-index: 20;
+}
+
+.railFill {
+  width: 100%;
+  height: 100%;
+  background: var(--color-accent-rose);
+  transform-origin: left center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section {
+    height: auto;
+  }
+  .sticky {
+    position: relative;
+    height: auto;
+    padding: var(--space-xl) 0;
+  }
+}

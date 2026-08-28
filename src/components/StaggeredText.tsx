@@ -48,8 +48,9 @@ export default function StaggeredText({
   };
 
   return (
-    <Wrapper className={className}>
+    <Wrapper className={className} aria-label={text}>
       <motion.span
+        aria-hidden="true"
         style={{ display: "inline-block", overflow: "hidden" }}
         variants={container}
         initial="hidden"

@@ -26,11 +26,18 @@ export default function Footer() {
           </div>
           
           <div className={styles.linkGroup}>
+            <h4>Editorial &amp; Media</h4>
+            <Link href="/journal">The Journal</Link>
+            <Link href="/newsletter">The Newsletter</Link>
+            <Link href="/reviews">Book Reviews</Link>
+            <Link href="/community">Reviewer Circle</Link>
+          </div>
+
+          <div className={styles.linkGroup}>
             <h4>Company</h4>
-            <li><Link href="/about" className={styles.link}>About Us</Link></li>
-            <li><Link href="/solutions" className={styles.link}>Solutions</Link></li>
-            <li><Link href="/reviews" className={styles.link}>Reviews</Link></li>
-            <li><Link href="/portfolio" className={styles.link}>Portfolio</Link></li>
+            <Link href="/about">About Us</Link>
+            <Link href="/portfolio">Case Studies</Link>
+            <Link href="/pricing">Pricing &amp; Plans</Link>
             <Link href="/contact">Contact</Link>
           </div>
         </div>
