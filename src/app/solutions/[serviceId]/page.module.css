@@ -1,11 +1,11 @@
 .main {
-  padding-top: 120px;
+  padding-top: 100px;
   min-height: 100vh;
   background-color: var(--color-bg-base);
 }
 
 .header {
-  padding: var(--space-2xl) 0 var(--space-xl);
+  padding: clamp(2rem, 5vw, 3.5rem) 1rem clamp(1.5rem, 4vw, 2.5rem);
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
@@ -14,40 +14,40 @@
 
 .categoryTag {
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-secondary-rose);
   font-weight: 700;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
   padding: 4px 12px;
-  background: rgba(200, 155, 123, 0.1);
-  border-radius: 20px;
+  background: rgba(200, 155, 123, 0.12);
+  border-radius: var(--radius-full);
 }
 
 .title {
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2rem, 5vw, 3.2rem);
   color: var(--color-primary-navy);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
   line-height: 1.2;
 }
 
 .purpose {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.15rem);
   color: var(--color-text-body);
-  line-height: 1.6;
+  line-height: 1.65;
   max-width: 700px;
   margin: 0 auto;
 }
 
 .section {
-  padding: var(--space-xl) 0 var(--space-3xl);
+  padding: var(--space-lg) 0 var(--space-3xl);
 }
 
 .contentLayout {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2xl);
+  gap: var(--space-xl);
 }
 
 @media (min-width: 1024px) {
@@ -76,62 +76,63 @@
 
 .sectionTitle {
   font-family: var(--font-heading);
-  font-size: 1.75rem;
+  font-size: clamp(1.4rem, 3.5vw, 1.75rem);
   color: var(--color-primary-navy);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
 }
 
 .text {
-  font-size: 1.1rem;
+  font-size: 1.02rem;
   color: var(--color-text-body);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 .cardBlock {
   background: var(--color-white);
-  padding: var(--space-lg);
+  padding: clamp(1.25rem, 3vw, 1.75rem);
   border-radius: var(--radius-lg);
-  border: 1px solid rgba(27, 42, 61, 0.05);
+  border: 1px solid rgba(27, 42, 61, 0.08);
   box-shadow: var(--shadow-sm);
-  margin-top: var(--space-md);
+  margin-top: var(--space-sm);
 }
 
 .spacer {
-  height: var(--space-2xl);
+  height: var(--space-xl);
 }
 
 .actionCard {
-  background: var(--color-primary-navy);
+  background: linear-gradient(135deg, #1C2530 0%, #2A3F5C 100%);
   color: var(--color-white);
-  padding: var(--space-xl);
-  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border-radius: var(--radius-xl);
   box-shadow: var(--shadow-lg);
   text-align: center;
+  border: 1px solid rgba(200, 155, 123, 0.25);
 }
 
 .actionTitle {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  margin-bottom: var(--space-sm);
+  font-size: 1.4rem;
+  margin-bottom: var(--space-xs);
   color: var(--color-white);
 }
 
 .actionText {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
   line-height: 1.5;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
 }
 
 .actionBtn {
   width: 100%;
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   justify-content: center;
 }
 
 .backLink {
   display: inline-block;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 0.9rem;
   text-decoration: none;
   transition: color 0.3s ease;

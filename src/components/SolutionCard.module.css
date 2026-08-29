@@ -8,17 +8,18 @@
 .card {
   height: 100%;
   width: 100%;
-  padding: 3rem 2.5rem;
+  padding: clamp(1.5rem, 3.5vw, 2.5rem);
   display: flex;
   flex-direction: column;
   position: relative;
   background: var(--glass-bg);
   backdrop-filter: var(--glass-blur);
-  border-radius: var(--radius-2xl);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border-radius: var(--radius-xl);
   border: 1px solid var(--glass-border);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
 /* Linear-style radial hover glow */
@@ -30,7 +31,7 @@
   height: 100%;
   background: radial-gradient(circle at 50% 0%, rgba(200, 155, 123, 0.15), transparent 70%);
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.4s ease;
   z-index: 0;
   pointer-events: none;
 }
@@ -44,9 +45,9 @@
 }
 
 .link:hover .card {
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-premium);
-  border-color: rgba(200, 155, 123, 0.3);
+  border-color: rgba(200, 155, 123, 0.4);
 }
 
 .link:hover .cardGlow {
@@ -54,49 +55,50 @@
 }
 
 .header {
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-md);
 }
 
 .categoryTag {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--color-secondary-rose);
   font-weight: 700;
-  margin-bottom: var(--space-sm);
+  margin-bottom: 6px;
 }
 
 .title {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: clamp(1.4rem, 2.5vw, 1.85rem);
   color: var(--color-primary-navy);
   margin: 0;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
 }
 
 .description {
-  color: var(--color-text-main);
-  font-size: 1.1rem;
+  color: var(--color-text-body);
+  font-size: clamp(0.95rem, 1.8vw, 1.05rem);
   line-height: 1.6;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-md);
   flex-grow: 1;
 }
 
 .footer {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
   color: var(--color-primary-navy);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: color 0.3s ease;
   margin-top: auto;
+  padding-top: var(--space-xs);
 }
 
 .arrowIcon {
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   transition: transform 0.3s ease;
 }
 
@@ -105,5 +107,5 @@
 }
 
 .link:hover .arrowIcon {
-  transform: translateX(6px);
+  transform: translateX(4px);
 }

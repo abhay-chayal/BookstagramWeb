@@ -6,42 +6,43 @@
 
 /* 1. HERO */
 .heroSection {
-  padding: calc(var(--space-xl) + 2rem) 0 var(--space-lg);
+  padding: clamp(80px, 10vw, 120px) 1rem var(--space-md);
   background: radial-gradient(circle at 50% 0%, rgba(200, 155, 123, 0.12) 0%, transparent 70%);
   text-align: center;
 }
 
 .heroContainer {
   max-width: 850px;
+  margin: 0 auto;
 }
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-accent-rose);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   margin-bottom: var(--space-xs);
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-size: clamp(2rem, 5.5vw, 3.75rem);
   line-height: 1.15;
   color: var(--color-primary-navy);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
   font-family: var(--font-heading);
 }
 
 .heroSubtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   color: var(--color-text-body);
-  line-height: 1.7;
+  line-height: 1.65;
 }
 
 /* 2. FEATURED STORY */
 .featuredSection {
-  padding: 0 0 var(--space-xl);
+  padding: 0 0 var(--space-lg);
 }
 
 .featuredCard {
@@ -62,7 +63,7 @@
 
 .featuredImageWrapper {
   position: relative;
-  min-height: 440px;
+  min-height: 380px;
   background: #1c2530;
 }
 
@@ -527,16 +528,29 @@
     grid-template-columns: 1fr;
   }
   .featuredImageWrapper {
-    min-height: 300px;
+    min-height: 240px;
+    height: 240px;
+  }
+  .featuredContent {
+    padding: clamp(1.25rem, 4vw, 2rem);
   }
 }
 
 @media (max-width: 650px) {
   .articlesGrid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .filterBar {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
+  }
+  .searchWrapper {
+    width: 100%;
+    min-width: 100%;
+  }
+  .newsletterBox {
+    padding: 2rem 1.25rem;
   }
 }

@@ -6,38 +6,39 @@
 
 /* 1. HERO & SUBSCRIPTION */
 .heroSection {
-  padding: calc(var(--space-xl) + 2rem) 0 var(--space-xl);
+  padding: clamp(80px, 10vw, 120px) 1rem var(--space-xl);
   background: radial-gradient(circle at 50% 0%, rgba(200, 155, 123, 0.15) 0%, transparent 70%);
   text-align: center;
 }
 
 .heroContainer {
   max-width: 860px;
+  margin: 0 auto;
 }
 
 .eyebrow {
   display: inline-block;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: var(--color-accent-rose);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.12em;
   margin-bottom: var(--space-xs);
 }
 
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-size: clamp(2rem, 5.5vw, 3.75rem);
   line-height: 1.15;
   color: var(--color-primary-navy);
-  margin-bottom: var(--space-sm);
+  margin-bottom: var(--space-xs);
   font-family: var(--font-heading);
 }
 
 .heroSubtitle {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
   color: var(--color-text-body);
-  line-height: 1.7;
-  margin-bottom: var(--space-lg);
+  line-height: 1.65;
+  margin-bottom: var(--space-md);
 }
 
 .subscribeCardWrapper {
@@ -49,12 +50,12 @@
   background: #ffffff;
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-2xl);
-  padding: var(--space-lg) var(--space-xl);
+  padding: clamp(1.25rem, 4vw, 2.5rem);
   box-shadow: var(--shadow-lg);
 }
 
 .subscribeForm h3 {
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 3vw, 1.6rem);
   color: var(--color-primary-navy);
   margin-bottom: 4px;
 }
@@ -361,11 +362,26 @@
 @media (max-width: 900px) {
   .pillarsGrid {
     grid-template-columns: 1fr;
+    gap: 16px;
   }
   .archiveGrid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .issueCard {
+    padding: clamp(1.25rem, 3.5vw, 1.75rem);
   }
   .inputGroupRow {
     flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+  .inputField {
+    width: 100%;
+  }
+  .submitBtn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
   }
 }
