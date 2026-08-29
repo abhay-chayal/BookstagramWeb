@@ -334,61 +334,55 @@ export const reviewsData: Review[] = [
     id: "1984",
     bookTitle: "1984",
     author: "George Orwell",
-    reviewer: "BookstagramClub",
-    rating: "4.8/5",
+    reviewer: "Bookstagram Club",
+    rating: "4.9/5",
     coverImage: "https://covers.openlibrary.org/b/id/9267242-L.jpg",
     amazonLink: "https://www.amazon.com/s?k=1984%20George%20Orwell&i=stripbooks",
     sections: [
       {
-        title: "Introduction",
+        title: "The Premise & Reading Vibe",
         type: "text",
         content: [
-          "In '1984', George Orwell delivers a masterful narrative that immediately captures the reader's attention. This work stands as a testament to the author's ability to weave complex ideas into a highly readable and emotionally resonant story."
+          "George Orwell’s *1984* remains the definitive benchmark for political dystopian fiction. Set in the bleak, soot-stained metropolis of Airstrip One (London) under the omnipresent gaze of Big Brother, the novel is an unsettling exploration of totalitarian control, psychological surveillance, and the systematic obliteration of truth."
         ]
       },
       {
-        title: "Plot & Narrative",
+        title: "The Narrative & Worldbuilding",
         type: "text",
         content: [
-          "The narrative structure is meticulously crafted. From the opening pages, the pacing draws you in, balancing moments of quiet introspection with significant thematic developments. The plot moves with a deliberate rhythm, ensuring that every twist and revelation feels earned rather than forced."
+          "We follow Winston Smith, a mid-level bureaucrat at the Ministry of Truth whose daily job is rewriting historical records to match the Party's ever-shifting propaganda. Winston's internal rebellion begins with a forbidden diary and deepens when he enters a clandestine romance with Julia in a rented room above an antique shop.",
+          "Orwell’s worldbuilding is legendary because of its psychological precision. Concepts like *Newspeak* (narrowing language to eliminate rebellious thought), *Doublethink* (holding two contradictory beliefs simultaneously), and the *Memory Hole* feel chillingly plausible rather than fantastical."
         ]
       },
       {
-        title: "Themes & Social Commentary",
+        title: "Character Dynamics & Emotional Stakes",
         type: "text",
         content: [
-          "Beneath the surface, George Orwell explores profound themes of identity, resilience, and the human condition. The book acts as a mirror to society, offering sharp commentary wrapped in deeply personal journeys. It challenges readers to reflect on their own assumptions and worldviews."
+          "Winston is not a grand superhero; he is a frail, coughing, intellectually curious man desperate for an objective reality. His dynamic with Julia provides the story’s fragile human heartbeat—contrasting his philosophical dread with her fierce, pragmatic appetite for living. The third act, anchored by the cold intellectual cruelty of O'Brien and the horrors of Room 101, delivers an uncompromising psychological interrogation."
         ]
       },
       {
-        title: "Writing Style & Pacing",
-        type: "text",
-        content: [
-          "The prose is elegant yet accessible. George Orwell has a gift for cinematic description, creating scenes that linger in the mind long after the chapter ends. The pacing is expertly handled, maintaining momentum without sacrificing necessary character development."
-        ]
-      },
-      {
-        title: "Characterization",
-        type: "text",
-        content: [
-          "The characters in '1984' are strikingly human—flawed, vulnerable, and ultimately compelling. Their growth arcs are handled with nuance, making it impossible not to become emotionally invested in their fates. They feel like real people navigating extraordinary circumstances."
-        ]
-      },
-      {
-        title: "Strengths",
+        title: "Key Highlights & Tropes",
         type: "list",
         content: [
-          "**Narrative Flow:** A perfectly paced story that never loses momentum.",
-          "**Thematic Depth:** Explores complex societal and personal themes with grace.",
-          "**Prose:** Cinematic, evocative writing that elevates the reading experience.",
-          "**Emotional Resonance:** Characters that stay with you long after the final page."
+          "**Psychological Dread:** The constant paranoia that every telescreen, child informant, and facial micro-expression is being monitored.",
+          "**Linguistic Control:** The concept of Newspeak demonstrates how controlling vocabulary directly shapes the boundaries of thought.",
+          "**Forbidden Romance:** Winston and Julia’s secret sanctuary represents the ultimate defiance against an emotionally sterilized regime.",
+          "**Uncompromising Climax:** An ending that resists easy Hollywood tropes, leaving an indelible philosophical mark."
         ]
       },
       {
-        title: "Final Verdict",
+        title: "The Critic's Note (Pacing & Context)",
         type: "text",
         content: [
-          "'1984' is an essential read. Whether you are a longtime fan of George Orwell or discovering their work for the first time, this book offers a deeply satisfying experience that justifies its critical acclaim."
+          "Part I establishes the atmospheric dread with meticulous pacing, while Part II accelerates the romantic tension. Readers should note that Emmanuel Goldstein’s in-world political treatise in Part II slows down narrative momentum for pure political theory, but it pays off with the devastating momentum of Part III."
+        ]
+      },
+      {
+        title: "For Fans Of",
+        type: "text",
+        content: [
+          "Essential reading for fans of Margaret Atwood's *The Handmaid's Tale*, Ray Bradbury's *Fahrenheit 451*, and Aldous Huxley's *Brave New World*."
         ]
       }
     ]
@@ -397,61 +391,55 @@ export const reviewsData: Review[] = [
     id: "to-kill-a-mockingbird",
     bookTitle: "To Kill a Mockingbird",
     author: "Harper Lee",
-    reviewer: "BookstagramClub",
-    rating: "4.6/5",
+    reviewer: "Bookstagram Club",
+    rating: "4.9/5",
     coverImage: "https://covers.openlibrary.org/b/id/14351077-L.jpg",
     amazonLink: "https://www.amazon.com/s?k=To%20Kill%20a%20Mockingbird%20Harper%20Lee&i=stripbooks",
     sections: [
       {
-        title: "Introduction",
+        title: "The Premise & Reading Vibe",
         type: "text",
         content: [
-          "In 'To Kill a Mockingbird', Harper Lee delivers a masterful narrative that immediately captures the reader's attention. This work stands as a testament to the author's ability to weave complex ideas into a highly readable and emotionally resonant story."
+          "Harper Lee’s Pulitzer Prize-winning masterpiece *To Kill a Mockingbird* is a luminous, compassionate Southern gothic coming-of-age story. Set in the fictional town of Maycomb, Alabama during the Great Depression, the novel examines the fragility of justice, systemic racism, and the preservation of empathy through the innocent eyes of six-year-old Jean Louise 'Scout' Finch."
         ]
       },
       {
-        title: "Plot & Narrative",
+        title: "The Narrative & Dual Arcs",
         type: "text",
         content: [
-          "The narrative structure is meticulously crafted. From the opening pages, the pacing draws you in, balancing moments of quiet introspection with significant thematic developments. The plot moves with a deliberate rhythm, ensuring that every twist and revelation feels earned rather than forced."
+          "The narrative masterfully intertwines two distinct threads: the childhood fascination with the reclusive, phantom-like Boo Radley, and the explosive courtroom trial of Tom Robinson, a Black man falsely accused of assaulting a white woman.",
+          "Scout’s father, the principled lawyer Atticus Finch, takes on Tom’s defense despite the fierce hostility of the segregated town. The trial serves as a crucible that shatters Scout and her brother Jem’s naive belief in adult fairness, forcing them to confront human cruelty alongside genuine courage."
         ]
       },
       {
-        title: "Themes & Social Commentary",
+        title: "Voice, Atmosphere & Character Depth",
         type: "text",
         content: [
-          "Beneath the surface, Harper Lee explores profound themes of identity, resilience, and the human condition. The book acts as a mirror to society, offering sharp commentary wrapped in deeply personal journeys. It challenges readers to reflect on their own assumptions and worldviews."
+          "What elevates the novel is Scout's unforgettable narrative voice—warm, humorous, fiercely inquisitive, and completely unpretentious. Lee captures the lazy rhythm of 1930s Southern summers (creaky front porches, tire swings, summer lemonade) alongside the simmering social fractures beneath Maycomb's genteel surface. Atticus remains one of literature's most enduring figures of moral integrity: 'You never really understand a person until you consider things from his point of view… until you climb into his skin and walk around in it.'"
         ]
       },
       {
-        title: "Writing Style & Pacing",
-        type: "text",
-        content: [
-          "The prose is elegant yet accessible. Harper Lee has a gift for cinematic description, creating scenes that linger in the mind long after the chapter ends. The pacing is expertly handled, maintaining momentum without sacrificing necessary character development."
-        ]
-      },
-      {
-        title: "Characterization",
-        type: "text",
-        content: [
-          "The characters in 'To Kill a Mockingbird' are strikingly human—flawed, vulnerable, and ultimately compelling. Their growth arcs are handled with nuance, making it impossible not to become emotionally invested in their fates. They feel like real people navigating extraordinary circumstances."
-        ]
-      },
-      {
-        title: "Strengths",
+        title: "Key Highlights & Themes",
         type: "list",
         content: [
-          "**Narrative Flow:** A perfectly paced story that never loses momentum.",
-          "**Thematic Depth:** Explores complex societal and personal themes with grace.",
-          "**Prose:** Cinematic, evocative writing that elevates the reading experience.",
-          "**Emotional Resonance:** Characters that stay with you long after the final page."
+          "**The Mockingbird Symbol:** A poignant motif representing the sin of harming innocent creatures who bring only music to the world.",
+          "**Loss of Innocence:** Jem’s heartbreaking awakening to adult hypocrisy and societal prejudice.",
+          "**The Boo Radley Mystery:** A brilliant parallel storyline that transforms childhood folklore into a touching tale of quiet, protective friendship.",
+          "**Tense Courtroom Drama:** Chapter-by-chapter cross-examinations that remain among the most compelling legal scenes in American literature."
         ]
       },
       {
-        title: "Final Verdict",
+        title: "The Critic's Note",
         type: "text",
         content: [
-          "'To Kill a Mockingbird' is an essential read. Whether you are a longtime fan of Harper Lee or discovering their work for the first time, this book offers a deeply satisfying experience that justifies its critical acclaim."
+          "The first third of the novel is a nostalgic, episodic journey through childhood antics that may feel leisurely, but every neighbor and local rumor established in these early chapters pays off during the high-stakes second half and the heart-pounding Halloween climax."
+        ]
+      },
+      {
+        title: "For Fans Of",
+        type: "text",
+        content: [
+          "Must-read for lovers of Betty Smith’s *A Tree Grows in Brooklyn*, Sue Monk Kidd’s *The Secret Life of Bees*, and Jesmyn Ward’s *Sing, Unburied, Sing*."
         ]
       }
     ]
@@ -460,61 +448,55 @@ export const reviewsData: Review[] = [
     id: "the-great-gatsby",
     bookTitle: "The Great Gatsby",
     author: "F. Scott Fitzgerald",
-    reviewer: "BookstagramClub",
-    rating: "4.9/5",
+    reviewer: "Bookstagram Club",
+    rating: "4.8/5",
     coverImage: "https://covers.openlibrary.org/b/id/10590366-L.jpg",
     amazonLink: "https://www.amazon.com/s?k=The%20Great%20Gatsby%20F.%20Scott%20Fitzgerald&i=stripbooks",
     sections: [
       {
-        title: "Introduction",
+        title: "The Premise & Reading Vibe",
         type: "text",
         content: [
-          "In 'The Great Gatsby', F. Scott Fitzgerald delivers a masterful narrative that immediately captures the reader's attention. This work stands as a testament to the author's ability to weave complex ideas into a highly readable and emotionally resonant story."
+          "F. Scott Fitzgerald’s *The Great Gatsby* is the definitive portrait of the Roaring Twenties—a glittering, tragic, and intensely lyrical critique of wealth, obsession, and the illusion of the American Dream. Set across the sweltering summer of 1922 on Long Island, the novel contrasts the hollow hedonism of old money with the desperate romanticism of self-made excess."
         ]
       },
       {
-        title: "Plot & Narrative",
+        title: "The Narrative & The Green Light",
         type: "text",
         content: [
-          "The narrative structure is meticulously crafted. From the opening pages, the pacing draws you in, balancing moments of quiet introspection with significant thematic developments. The plot moves with a deliberate rhythm, ensuring that every twist and revelation feels earned rather than forced."
+          "Narrated by the Midwestern transplant Nick Carraway, the story revolves around his mysterious neighbor Jay Gatsby, who throws extravagant, champagne-soaked weekend parties at his West Egg mansion. But Gatsby's grand spectacle exists for a single purpose: to catch the attention of Daisy Buchanan, the lost love of his youth now married to the brutal, aristocratic Tom Buchanan.",
+          "As Nick facilitates a secret reunion between the former lovers, the glittering facade begins to crumble, culminating in the stifling confrontation at the Plaza Hotel and a tragic hit-and-run on the road through the desolate Valley of Ashes."
         ]
       },
       {
-        title: "Themes & Social Commentary",
+        title: "Prose Perfection & Cynical Grace",
         type: "text",
         content: [
-          "Beneath the surface, F. Scott Fitzgerald explores profound themes of identity, resilience, and the human condition. The book acts as a mirror to society, offering sharp commentary wrapped in deeply personal journeys. It challenges readers to reflect on their own assumptions and worldviews."
+          "At under two hundred pages, *The Great Gatsby* features some of the most luminous prose in the English language. Fitzgerald writes with a hypnotic rhythm—capturing silk shirts tumbling in cascades, moonlight shimmering across swimming pools, and the haunting, giant eyes of Doctor T.J. Eckleburg staring down from a faded billboard. Nick's observation remains immortal: 'They were careless people, Tom and Daisy—they smashed up things and creatures and then retreated back into their money or their vast carelessness.'"
         ]
       },
       {
-        title: "Writing Style & Pacing",
-        type: "text",
-        content: [
-          "The prose is elegant yet accessible. F. Scott Fitzgerald has a gift for cinematic description, creating scenes that linger in the mind long after the chapter ends. The pacing is expertly handled, maintaining momentum without sacrificing necessary character development."
-        ]
-      },
-      {
-        title: "Characterization",
-        type: "text",
-        content: [
-          "The characters in 'The Great Gatsby' are strikingly human—flawed, vulnerable, and ultimately compelling. Their growth arcs are handled with nuance, making it impossible not to become emotionally invested in their fates. They feel like real people navigating extraordinary circumstances."
-        ]
-      },
-      {
-        title: "Strengths",
+        title: "Key Highlights & Tropes",
         type: "list",
         content: [
-          "**Narrative Flow:** A perfectly paced story that never loses momentum.",
-          "**Thematic Depth:** Explores complex societal and personal themes with grace.",
-          "**Prose:** Cinematic, evocative writing that elevates the reading experience.",
-          "**Emotional Resonance:** Characters that stay with you long after the final page."
+          "**Unrequited Romantic Obsession:** Gatsby’s tragic attempt to recreate the past: 'Can't repeat the past? Why of course you can!'",
+          "**Jazz Age Aesthetic:** Decadent parties, orchestra music, flappers, and the roaring energy of 1920s New York.",
+          "**Class & Moral Decay:** The stark divide between East Egg (old inherited wealth) and West Egg (ostentatious new money).",
+          "**Lyrical Precision:** Every chapter contains indelible quotes that define longing, ambition, and disillusionment."
         ]
       },
       {
-        title: "Final Verdict",
+        title: "The Critic's Note",
         type: "text",
         content: [
-          "'The Great Gatsby' is an essential read. Whether you are a longtime fan of F. Scott Fitzgerald or discovering their work for the first time, this book offers a deeply satisfying experience that justifies its critical acclaim."
+          "Readers expecting likeable characters may struggle; almost everyone in Gatsby’s circle is shallow, self-serving, or dishonest. The novel's brilliance lies precisely in Nick’s observant, melancholy detachment as he watches their world unravel."
+        ]
+      },
+      {
+        title: "For Fans Of",
+        type: "text",
+        content: [
+          "Essential for admirers of Evelyn Waugh's *Brideshead Revisited*, Nella Larsen's *Passing*, and Taylor Jenkins Reid's *The Seven Husbands of Evelyn Hugo*."
         ]
       }
     ]
@@ -523,61 +505,56 @@ export const reviewsData: Review[] = [
     id: "pride-and-prejudice",
     bookTitle: "Pride and Prejudice",
     author: "Jane Austen",
-    reviewer: "BookstagramClub",
-    rating: "4.5/5",
+    reviewer: "Bookstagram Club",
+    rating: "5.0/5",
     coverImage: "https://covers.openlibrary.org/b/id/14348537-L.jpg",
     amazonLink: "https://www.amazon.com/s?k=Pride%20and%20Prejudice%20Jane%20Austen&i=stripbooks",
     sections: [
       {
-        title: "Introduction",
+        title: "The Premise & Reading Vibe",
         type: "text",
         content: [
-          "In 'Pride and Prejudice', Jane Austen delivers a masterful narrative that immediately captures the reader's attention. This work stands as a testament to the author's ability to weave complex ideas into a highly readable and emotionally resonant story."
+          "Jane Austen’s *Pride and Prejudice* is the undisputed blueprint for enemies-to-lovers romance and social comedy. Set in Regency-era rural England, it combines sparkling wit, sharp class satire, and emotional growth to tell the story of Elizabeth Bennet and Mr. Fitzwilliam Darcy as they navigate misunderstandings, social pressures, and their own stubborn egos."
         ]
       },
       {
-        title: "Plot & Narrative",
+        title: "The Narrative & The Dance of Wits",
         type: "text",
         content: [
-          "The narrative structure is meticulously crafted. From the opening pages, the pacing draws you in, balancing moments of quiet introspection with significant thematic developments. The plot moves with a deliberate rhythm, ensuring that every twist and revelation feels earned rather than forced."
+          "When the wealthy, affable Mr. Bingley leases Netherfield Park, the Bennet family—burdened by an entailed estate and Mrs. Bennet’s frantic matchmaking—is thrown into excitement. But Bingley is accompanied by his aristocratic friend Mr. Darcy, whose aloof pride and haughty dismissal of Elizabeth at a local ball spark her immediate disdain.",
+          "What follows is a brilliant war of wits. Elizabeth misjudges Darcy's character based on charming lies from the deceitful George Wickham, while Darcy finds himself captivated by Elizabeth’s fine eyes, sharp intellect, and refusal to flatter him."
         ]
       },
       {
-        title: "Themes & Social Commentary",
+        title: "Character Evolution & Mutual Respect",
         type: "text",
         content: [
-          "Beneath the surface, Jane Austen explores profound themes of identity, resilience, and the human condition. The book acts as a mirror to society, offering sharp commentary wrapped in deeply personal journeys. It challenges readers to reflect on their own assumptions and worldviews."
+          "Unlike modern romances that rely on arbitrary miscommunication, Austen's conflict is rooted in genuine character flaws. Darcy must overcome his aristocratic pride and learn genuine humility; Elizabeth must acknowledge that her quick wit blinded her to her own vanity and prejudice.",
+          "Darcy's disastrously arrogant first proposal at Hunsford and the transformative letter that follows remain one of the greatest turning points in literary history, leading up to Elizabeth’s breathless visit to the majestic Pemberley estate."
         ]
       },
       {
-        title: "Writing Style & Pacing",
-        type: "text",
-        content: [
-          "The prose is elegant yet accessible. Jane Austen has a gift for cinematic description, creating scenes that linger in the mind long after the chapter ends. The pacing is expertly handled, maintaining momentum without sacrificing necessary character development."
-        ]
-      },
-      {
-        title: "Characterization",
-        type: "text",
-        content: [
-          "The characters in 'Pride and Prejudice' are strikingly human—flawed, vulnerable, and ultimately compelling. Their growth arcs are handled with nuance, making it impossible not to become emotionally invested in their fates. They feel like real people navigating extraordinary circumstances."
-        ]
-      },
-      {
-        title: "Strengths",
+        title: "Key Highlights & Tropes",
         type: "list",
         content: [
-          "**Narrative Flow:** A perfectly paced story that never loses momentum.",
-          "**Thematic Depth:** Explores complex societal and personal themes with grace.",
-          "**Prose:** Cinematic, evocative writing that elevates the reading experience.",
-          "**Emotional Resonance:** Characters that stay with you long after the final page."
+          "**The Archetypal Enemies-to-Lovers:** Sizzling verbal sparring, slow-burn tension, and deep mutual respect.",
+          "**Iconic Supporting Cast:** The theatrical hysterics of Mrs. Bennet, the quiet irony of Mr. Bennet, and the insufferable obsequiousness of Mr. Collins.",
+          "**Sparkling Dialogue:** Austen’s irony and sentence cadence make every drawing-room interaction electrifying.",
+          "**Socioeconomic Stakes:** Realistic depiction of the precarious financial position of 19th-century women without inheritance."
         ]
       },
       {
-        title: "Final Verdict",
+        title: "The Critic's Note",
         type: "text",
         content: [
-          "'Pride and Prejudice' is an essential read. Whether you are a longtime fan of Jane Austen or discovering their work for the first time, this book offers a deeply satisfying experience that justifies its critical acclaim."
+          "First-time readers unaccustomed to 19th-century syntax may take two or three chapters to settle into Austen’s rhythmic prose, but once attuned to her sharp humor and irony, the book reads like a witty, fast-paced modern comedy."
+        ]
+      },
+      {
+        title: "For Fans Of",
+        type: "text",
+        content: [
+          "A foundational classic for fans of Emily Henry’s *Beach Read*, Sally Thorne’s *The Hating Game*, and Julia Quinn’s *Bridgerton* series."
         ]
       }
     ]
@@ -586,61 +563,56 @@ export const reviewsData: Review[] = [
     id: "the-catcher-in-the-rye",
     bookTitle: "The Catcher in the Rye",
     author: "J.D. Salinger",
-    reviewer: "BookstagramClub",
-    rating: "4.4/5",
+    reviewer: "Bookstagram Club",
+    rating: "4.5/5",
     coverImage: "https://covers.openlibrary.org/b/id/9273490-L.jpg",
     amazonLink: "https://www.amazon.com/s?k=The%20Catcher%20in%20the%20Rye%20J.D.%20Salinger&i=stripbooks",
     sections: [
       {
-        title: "Introduction",
+        title: "The Premise & Reading Vibe",
         type: "text",
         content: [
-          "In 'The Catcher in the Rye', J.D. Salinger delivers a masterful narrative that immediately captures the reader's attention. This work stands as a testament to the author's ability to weave complex ideas into a highly readable and emotionally resonant story."
+          "J.D. Salinger’s *The Catcher in the Rye* remains one of the most raw, iconic, and polarizing coming-of-age novels ever written. Narrated from a rest home by sixteen-year-old Holden Caulfield, the story recounts forty-eight hours of wandering through freezing New York City following his expulsion from Pencey Prep."
         ]
       },
       {
-        title: "Plot & Narrative",
+        title: "The Narrative & The Search for Authenticity",
         type: "text",
         content: [
-          "The narrative structure is meticulously crafted. From the opening pages, the pacing draws you in, balancing moments of quiet introspection with significant thematic developments. The plot moves with a deliberate rhythm, ensuring that every twist and revelation feels earned rather than forced."
+          "Rather than a traditional plot, the novel is an immersive stream-of-consciousness journey through 1950s Manhattan—grand hotel lobbies, smoke-filled jazz clubs, Central Park duck ponds, and late-night cab rides.",
+          "Holden rail against the 'phoniness' of the adult world, constantly searching for something genuine. Yet behind his sharp cynical banter lies a traumatized boy grieving the death of his younger brother Allie, terrified of growing up, and desperate for human connection while simultaneously pushing everyone away."
         ]
       },
       {
-        title: "Themes & Social Commentary",
+        title: "Voice, Vulnerability & The Red Hunting Hat",
         type: "text",
         content: [
-          "Beneath the surface, J.D. Salinger explores profound themes of identity, resilience, and the human condition. The book acts as a mirror to society, offering sharp commentary wrapped in deeply personal journeys. It challenges readers to reflect on their own assumptions and worldviews."
+          "Salinger’s genius lies in Holden’s unforgettable colloquial voice—his repetitive slang, breathless tangents, and sudden flashes of heartbreaking vulnerability. His relationship with his wise ten-year-old sister Phoebe provides the story's emotional anchor. In his famous confession, Holden reveals his impossible dream: to stand at the edge of a cliff in a field of rye, catching children before they fall into adulthood.",
+          "The scene at the Central Park carousel as Phoebe reaches for the gold ring in the pouring rain is one of the most tender, cathartic climaxes in modern literature."
         ]
       },
       {
-        title: "Writing Style & Pacing",
-        type: "text",
-        content: [
-          "The prose is elegant yet accessible. J.D. Salinger has a gift for cinematic description, creating scenes that linger in the mind long after the chapter ends. The pacing is expertly handled, maintaining momentum without sacrificing necessary character development."
-        ]
-      },
-      {
-        title: "Characterization",
-        type: "text",
-        content: [
-          "The characters in 'The Catcher in the Rye' are strikingly human—flawed, vulnerable, and ultimately compelling. Their growth arcs are handled with nuance, making it impossible not to become emotionally invested in their fates. They feel like real people navigating extraordinary circumstances."
-        ]
-      },
-      {
-        title: "Strengths",
+        title: "Key Highlights & Themes",
         type: "list",
         content: [
-          "**Narrative Flow:** A perfectly paced story that never loses momentum.",
-          "**Thematic Depth:** Explores complex societal and personal themes with grace.",
-          "**Prose:** Cinematic, evocative writing that elevates the reading experience.",
-          "**Emotional Resonance:** Characters that stay with you long after the final page."
+          "**Raw Adolescent Voice:** Salinger captures the exact cadence of teenage alienation, anxiety, and longing.",
+          "**Grief Beneath Cynicism:** An authentic psychological portrait of unaddressed loss and depression.",
+          "**Preserving Childhood Innocence:** Holden's iconic metaphor of the 'catcher in the rye'.",
+          "**Atmospheric 1950s NYC:** A nocturnal, snowy metropolis depicted through lonely diners, neon-lit cab rides, and hotel hallways."
         ]
       },
       {
-        title: "Final Verdict",
+        title: "The Critic's Note",
         type: "text",
         content: [
-          "'The Catcher in the Rye' is an essential read. Whether you are a longtime fan of J.D. Salinger or discovering their work for the first time, this book offers a deeply satisfying experience that justifies its critical acclaim."
+          "Holden's voice is intentionally unreliable and contradictory; readers looking for a structured adventure may find his complaining grating if they miss the underlying grief driving his behavior. It is a character study best read with empathy."
+        ]
+      },
+      {
+        title: "For Fans Of",
+        type: "text",
+        content: [
+          "Essential for readers of Stephen Chbosky’s *The Perks of Being a Wallflower*, John Green’s *Looking for Alaska*, and John Knowles’ *A Separate Peace*."
         ]
       }
     ]
@@ -649,61 +621,56 @@ export const reviewsData: Review[] = [
     id: "the-hobbit",
     bookTitle: "The Hobbit",
     author: "J.R.R. Tolkien",
-    reviewer: "BookstagramClub",
-    rating: "4.8/5",
+    reviewer: "Bookstagram Club",
+    rating: "4.9/5",
     coverImage: "https://covers.openlibrary.org/b/id/14627509-L.jpg",
     amazonLink: "https://www.amazon.com/s?k=The%20Hobbit%20J.R.R.%20Tolkien&i=stripbooks",
     sections: [
       {
-        title: "Introduction",
+        title: "The Premise & Reading Vibe",
         type: "text",
         content: [
-          "In 'The Hobbit', J.R.R. Tolkien delivers a masterful narrative that immediately captures the reader's attention. This work stands as a testament to the author's ability to weave complex ideas into a highly readable and emotionally resonant story."
+          "J.R.R. Tolkien’s *The Hobbit, or There and Back Again* is the gold standard of cozy, high-stakes classic fantasy. Before the sweeping apocalyptic drama of *The Lord of the Rings*, this charming, folkloric adventure introduces Middle-earth through the quiet, comfort-loving perspective of a hobbit who unexpectedly finds heroism within himself."
         ]
       },
       {
-        title: "Plot & Narrative",
+        title: "The Quest & The Journey East",
         type: "text",
         content: [
-          "The narrative structure is meticulously crafted. From the opening pages, the pacing draws you in, balancing moments of quiet introspection with significant thematic developments. The plot moves with a deliberate rhythm, ensuring that every twist and revelation feels earned rather than forced."
+          "Bilbo Baggins of Bag End is perfectly content with tea, pipe-weed, and a quiet hearth until the wizard Gandalf and thirteen boisterous dwarves, led by Thorin Oakenshield, arrive on his doorstep. Enlisted as their official 'burglar', Bilbo is swept into an epic quest to reclaim the lost dwarven kingdom of Erebor and its vast treasure from the fearsome dragon Smaug.",
+          "The journey traverses the enchanted safety of Rivendell, the perilous depths of the Misty Mountains, the suffocating gloom of Mirkwood spider nests, and the water-bound human settlement of Lake-town."
         ]
       },
       {
-        title: "Themes & Social Commentary",
+        title: "Riddles in the Dark & The Growth of a Hero",
         type: "text",
         content: [
-          "Beneath the surface, J.R.R. Tolkien explores profound themes of identity, resilience, and the human condition. The book acts as a mirror to society, offering sharp commentary wrapped in deeply personal journeys. It challenges readers to reflect on their own assumptions and worldviews."
+          "The centerpiece of the novel—and one of fantasy's most legendary encounters—is the game of 'Riddles in the Dark' beneath the mountains, where Bilbo matches wits with the wretched creature Gollum and stumbles upon the magical One Ring.",
+          "Tolkien's genius is in Bilbo's gradual transformation: he doesn't become a mighty swordsman, but rather overcomes trolls, giant spiders, and wood-elves using quick wit, stealth, common sense, and compassion. The climax—culminating in the Battle of Five Armies and the tragic reality of 'dragon-sickness' (greed)—shows that true nobility lies not in gold, but in simple kindness."
         ]
       },
       {
-        title: "Writing Style & Pacing",
-        type: "text",
-        content: [
-          "The prose is elegant yet accessible. J.R.R. Tolkien has a gift for cinematic description, creating scenes that linger in the mind long after the chapter ends. The pacing is expertly handled, maintaining momentum without sacrificing necessary character development."
-        ]
-      },
-      {
-        title: "Characterization",
-        type: "text",
-        content: [
-          "The characters in 'The Hobbit' are strikingly human—flawed, vulnerable, and ultimately compelling. Their growth arcs are handled with nuance, making it impossible not to become emotionally invested in their fates. They feel like real people navigating extraordinary circumstances."
-        ]
-      },
-      {
-        title: "Strengths",
+        title: "Key Highlights & Tropes",
         type: "list",
         content: [
-          "**Narrative Flow:** A perfectly paced story that never loses momentum.",
-          "**Thematic Depth:** Explores complex societal and personal themes with grace.",
-          "**Prose:** Cinematic, evocative writing that elevates the reading experience.",
-          "**Emotional Resonance:** Characters that stay with you long after the final page."
+          "**The Reluctant Hero Arc:** A protagonist who longs for his warm armchair, proving that ordinary courage matters most.",
+          "**Imaginative Set-Pieces:** The riddle duel with Gollum, escaping wood-elves in floating barrels, and Bilbo's verbal sparring with Smaug.",
+          "**Mythic Worldbuilding:** Ancient runes, elven songs, dwarven heirlooms, and talking thrushes that feel deeply rooted in Norse folklore.",
+          "**Warm Narrator Voice:** Tolkien’s grandfatherly, wry storytelling voice that welcomes readers of all ages."
         ]
       },
       {
-        title: "Final Verdict",
+        title: "The Critic's Note",
         type: "text",
         content: [
-          "'The Hobbit' is an essential read. Whether you are a longtime fan of J.R.R. Tolkien or discovering their work for the first time, this book offers a deeply satisfying experience that justifies its critical acclaim."
+          "Tolkien wrote *The Hobbit* with a lighter, more episodic children's fairy-tale tone than *The Lord of the Rings*. While the ending carries solemn weight regarding the cost of war, the earlier chapters are whimsical and storybook-paced."
+        ]
+      },
+      {
+        title: "For Fans Of",
+        type: "text",
+        content: [
+          "Beloved by readers of C.S. Lewis’ *The Chronicles of Narnia*, Ursula K. Le Guin’s *A Wizard of Earthsea*, and Patrick Rothfuss’ *The Name of the Wind*."
         ]
       }
     ]
