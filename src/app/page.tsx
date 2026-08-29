@@ -233,11 +233,12 @@ export default function Home() {
               <h2>The Bookstagram Club Newsletter</h2>
               <p>Books, authors, discoveries, and stories worth reading. Delivered every Saturday morning.</p>
               <div className={styles.newsletterCardActions}>
-                <Link href="/newsletter" className="btn btn-primary" style={{ background: "var(--color-accent-rose)", color: "#fff", borderColor: "var(--color-accent-rose)" }}>
-                  Join 12,000+ Readers &rarr;
+                <Link href="/newsletter" className={styles.newsletterPrimaryBtn}>
+                  <span>Join 12,000+ Readers</span>
+                  <span className={styles.btnArrow}>&rarr;</span>
                 </Link>
-                <Link href="/newsletter" className="btn btn-outline" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.6)" }}>
-                  Browse Issue Archive
+                <Link href="/newsletter" className={styles.newsletterOutlineBtn}>
+                  <span>Browse Issue Archive</span>
                 </Link>
               </div>
             </div>

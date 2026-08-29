@@ -238,11 +238,12 @@ export default function JournalPage() {
                 Join passionate readers and authors receiving our curated dispatches on new releases, deep-dive literary essays, and behind-the-book stories.
               </p>
               <div className={styles.newsletterActions}>
-                <Link href="/newsletter" className="btn btn-primary" style={{ background: "var(--color-accent-rose)", color: "#fff", borderColor: "var(--color-accent-rose)" }}>
-                  Subscribe to the Newsletter &rarr;
+                <Link href="/newsletter" className={styles.newsletterPrimaryBtn}>
+                  <span>Subscribe to the Newsletter</span>
+                  <span className={styles.btnArrow}>&rarr;</span>
                 </Link>
-                <Link href="/newsletter" className="btn btn-outline" style={{ color: "#fff", borderColor: "rgba(255,255,255,0.6)" }}>
-                  Explore Past Issues (#001–#008)
+                <Link href="/newsletter" className={styles.newsletterOutlineBtn}>
+                  <span>Explore Past Issues (#001–#008)</span>
                 </Link>
               </div>
             </div>
