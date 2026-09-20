@@ -16,7 +16,7 @@ export const SITE_TAGLINE = "Professional Book Promotion & Author Marketing";
 export const SITE_DESCRIPTION =
   "We help authors get their books discovered by the right readers through strategic Instagram promotion, creative content, and book launch campaigns built around your book.";
 
-export const INSTAGRAM_URL = "https://instagram.com/bookstagramclub";
+export const INSTAGRAM_URL = "https://www.instagram.com/bookstagram.club_/";
 
 export const CONTACT_EMAIL = "bookstagram.cclub@gmail.com";
 
