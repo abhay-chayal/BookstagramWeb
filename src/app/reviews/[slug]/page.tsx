@@ -5,6 +5,8 @@ import { reviewsData } from "@/data/reviews";
 import styles from "./page.module.css";
 import StaggeredText from "@/components/StaggeredText";
 import FadeIn from "@/components/FadeIn";
+import PromoteYourBook from "@/components/PromoteYourBook";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import ReactMarkdown from "react-markdown";
 
 export function generateStaticParams() {
@@ -117,6 +119,12 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
 
       {/* Editorial Content Container */}
       <article className={styles.editorialContainer}>
+        <Breadcrumbs
+          items={[
+            { name: "Book Reviews", href: "/reviews" },
+            { name: review.bookTitle },
+          ]}
+        />
         {review.sections.map((section, idx) => (
           <FadeIn key={idx} direction="up" delay={0.1}>
             <section className={styles.section}>
@@ -155,6 +163,8 @@ export default async function ReviewPage({ params }: { params: Promise<{ slug: s
           </div>
         </FadeIn>
       </article>
+
+      <PromoteYourBook seed={review.id} />
 
       {/* Floating Sticky Action Bar */}
       <FadeIn direction="up" delay={0.8}>

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import FadeIn from "@/components/FadeIn";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { JOURNAL_ARTICLES, JOURNAL_CATEGORIES, JournalArticle } from "@/data/journal";
 import styles from "./page.module.css";
 import { absoluteUrl } from "@/lib/site";
@@ -60,7 +61,7 @@ export default async function JournalArticlePage({ params }: Props) {
   // Schema.org structured data
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "NewsArticle",
+    "@type": "BlogPosting",
     headline: article.title,
     description: article.excerpt,
     image: [article.coverImage],
@@ -93,6 +94,9 @@ export default async function JournalArticlePage({ params }: Props) {
       {/* 1. ARTICLE HEADER */}
       <header className={styles.articleHeader}>
         <div className={`container ${styles.headerContainer}`}>
+          <Breadcrumbs
+            items={[{ name: "The Journal", href: "/journal" }, { name: article.title }]}
+          />
           <FadeIn direction="up">
             <div className={styles.breadcrumbRow}>
               <Link href="/journal" className={styles.breadcrumbLink}>

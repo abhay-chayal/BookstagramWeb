@@ -1,0 +1,42 @@
+.nav {
+  margin-bottom: var(--space-sm);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  font-size: 0.85rem;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+
+.link {
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast);
+}
+
+.link:hover {
+  color: var(--color-accent-rose);
+}
+
+.current {
+  color: var(--color-text-body);
+  font-weight: 600;
+  /* Long book titles shouldn't push the trail off a phone screen. */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 60vw;
+}
+
+.sep {
+  color: rgba(28, 37, 48, 0.25);
+}

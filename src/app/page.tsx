@@ -30,16 +30,19 @@ export default function Home() {
               />
             </div>
 
-            <p className={`${styles.heroSubtitle} ${styles.heroRise}`} style={{ animationDelay: "0.15s" }}>
-              Professional Book Promotion &amp; Author Marketing
+            {/* The tagline keeps the brand voice; the H1 below it carries the
+                terms people actually search. Visually the tagline still reads
+                as the headline. */}
+            <p className={`${styles.heroTagline} ${styles.heroRise}`} style={{ animationDelay: "0.15s" }}>
+              Great Books Deserve To Be Discovered.
             </p>
 
             <h1 className={`${styles.heroTitle} ${styles.heroRise}`} style={{ animationDelay: "0.25s" }}>
-              Great Books Deserve To Be Discovered.
+              Bookstagram Promotion &amp; Author Marketing
             </h1>
 
             <p className={`${styles.heroDescription} ${styles.heroRise}`} style={{ animationDelay: "0.35s" }}>
-              Bookstagram Club helps authors get their books in front of the readers who are meant to find them — through strategic Instagram promotion, creative content, and campaigns built around your book, not a template.
+              Bookstagram Club is a book promotion agency for authors. We put your book in front of the readers meant to find it — through Bookstagram campaigns, editorial reviews, and Instagram content built around your book, never a template.
             </p>
 
             <div className={`${styles.heroActions} ${styles.heroRise}`} style={{ animationDelay: "0.45s" }}>

@@ -63,6 +63,15 @@ const orgJsonLd = {
   },
 };
 
+const siteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": SITE_NAME,
+  "url": SITE_URL,
+  "description": SITE_DESCRIPTION,
+  "publisher": { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -74,6 +83,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteJsonLd) }}
         />
       </head>
       <body className="antialiased">

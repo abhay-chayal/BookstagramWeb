@@ -23,6 +23,7 @@ export default function Footer() {
             <Link href="/solutions/author-features">Author Features</Link>
             <Link href="/solutions/author-website">Author Websites</Link>
             <Link href="/solutions/instagram-promotion">Instagram Promotion</Link>
+            <Link href="/bookstagram-promotion">Bookstagram Guide</Link>
             <Link href="/solutions">All Solutions</Link>
           </div>
           

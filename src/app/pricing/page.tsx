@@ -9,9 +9,69 @@ export const metadata = {
   description: "One-time book promotion packages with no monthly retainer and no lock-in. Campaign pricing for launches, backlist promotion, and author brand building.",
 };
 
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this a subscription or a one-time payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "One-time. Each package is a single campaign with a defined scope, agreed before we begin. There is no monthly retainer, no recurring charge, and no lock-in. If you later want another campaign for another book, that is a fresh package."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you guarantee book sales or bestseller status?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. We will not promise sales figures, bestseller rankings, review counts, or follower numbers — no one honestly can, because reader behaviour cannot be controlled. What we commit to is the work itself: professional promotional content made specifically for your book, and consistent, targeted exposure to readers who are genuinely likely to be interested in it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My book isn’t finished yet. Is it too early?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is usually the opposite — most authors come to us too late. If your book is still at manuscript or pre-publication stage, we can work on positioning, target readership, and the promotional plan before release, which is the most valuable window for building anticipation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "My book was published a while ago. Can you still help?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A book does not stop deserving readers after its launch week. We regularly run promotional campaigns for books published months or years ago, reintroducing them to readers who never encountered them the first time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I’m traditionally published. Can I still work with you?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Many traditionally published authors work with us alongside their publisher’s own marketing, particularly for social media presence and author brand — areas publishers often leave to the author."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I only need a website, or only AI/tech work.",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That is fine — those can be booked on their own. Author websites, and our AI & technology work for bookstores, publishers, and book businesses, are scoped and quoted individually. Get in touch and tell us what you need."
+      }
+    }
+  ]
+};
+
 export default function PricingPage() {
   return (
     <div className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <header className={styles.header}>
         <div className={`container ${styles.headerContainer}`}>
           <StaggeredText text="Promotion Packages" className={styles.headerTitle} />

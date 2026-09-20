@@ -1,11 +1,13 @@
 import { notFound } from "next/navigation";
 import styles from "./page.module.css";
 import { getSolutionById, getAllSolutions } from "@/data/solutions";
-import { absoluteUrl, SITE_NAME } from "@/lib/site";
+import { absoluteUrl, SITE_NAME, SITE_URL } from "@/lib/site";
 import type { Metadata } from "next";
 import StaggeredText from "@/components/StaggeredText";
 import FadeIn from "@/components/FadeIn";
 import DeliverablesList from "@/components/DeliverablesList";
+import RelatedServices from "@/components/RelatedServices";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import WorkflowTimeline from "@/components/WorkflowTimeline";
 import Link from "next/link";
 
@@ -55,10 +57,49 @@ export default async function ServicePage({ params }: PageProps) {
     notFound();
   }
 
+  const serviceJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: solution.name,
+    serviceType: solution.categoryTitle,
+    description: solution.purpose,
+    url: absoluteUrl(`/solutions/${solution.id}`),
+    provider: {
+      "@type": "Organization",
+      name: SITE_NAME,
+      url: SITE_URL,
+    },
+    areaServed: "Worldwide",
+    audience: {
+      "@type": "Audience",
+      audienceType: "Authors and publishers",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: `${solution.name} deliverables`,
+      itemListElement: solution.deliverables.flatMap((group) =>
+        group.items.map((item) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: item, category: group.category },
+        }))
+      ),
+    },
+  };
+
   return (
     <main className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+      />
       <header className={styles.header}>
         <div className="container">
+          <Breadcrumbs
+            items={[
+              { name: "Solutions", href: "/solutions" },
+              { name: solution.name },
+            ]}
+          />
           <FadeIn direction="up">
             <span className={styles.categoryTag}>{solution.categoryTitle}</span>
           </FadeIn>
@@ -125,6 +166,8 @@ export default async function ServicePage({ params }: PageProps) {
           </div>
         </div>
       </section>
+
+      <RelatedServices currentId={solution.id} />
     </main>
   );
 }

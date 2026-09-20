@@ -81,20 +81,27 @@
   height: 100%;
 }
 
-.heroSubtitle {
-  color: var(--color-accent-rose);
+/* The display line keeps the brand voice and remains the visual headline.
+   The H1 below it carries the search terms. */
+.heroTagline {
+  font-family: var(--font-heading);
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-size: clamp(2.25rem, 8vw, 6rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--color-primary-navy);
   margin-bottom: var(--space-sm);
 }
 
 .heroTitle {
-  font-size: clamp(2.25rem, 8vw, 6rem);
-  letter-spacing: -0.03em;
+  font-family: var(--font-body);
+  font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  color: var(--color-accent-rose);
   margin-bottom: var(--space-md);
-  line-height: 1.05;
-  color: var(--color-primary-navy);
 }
 
 .heroDescription {

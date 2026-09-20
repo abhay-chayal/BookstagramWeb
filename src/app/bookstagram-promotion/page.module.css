@@ -1,0 +1,125 @@
+.main {
+  padding-top: 110px;
+  background-color: var(--color-bg-base);
+}
+
+.header {
+  padding: var(--space-md) 0 var(--space-lg);
+  border-bottom: 1px solid var(--glass-border);
+  background: linear-gradient(to bottom, var(--color-bg-alt) 0%, var(--color-bg-base) 100%);
+}
+
+.eyebrow {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent-rose);
+  margin-bottom: var(--space-xs);
+}
+
+.title {
+  font-size: clamp(2.1rem, 5vw, 3.6rem);
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-sm);
+  max-width: 18ch;
+}
+
+.standfirst {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.65;
+  color: var(--color-text-body);
+  max-width: 62ch;
+}
+
+.body {
+  padding: var(--space-lg) 0 var(--space-2xl);
+}
+
+.body section {
+  max-width: 70ch;
+  margin: 0 auto var(--space-lg);
+}
+
+.body h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-sm);
+}
+
+.body p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-body);
+  margin-bottom: var(--space-sm);
+}
+
+.body a {
+  color: var(--color-accent-rose);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.body a:hover {
+  color: var(--color-primary-navy);
+}
+
+.steps,
+.checks {
+  padding-left: 1.25rem;
+  margin-bottom: var(--space-sm);
+}
+
+.steps li,
+.checks li {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--color-text-body);
+  margin-bottom: var(--space-sm);
+}
+
+.steps strong,
+.checks strong {
+  color: var(--color-primary-navy);
+}
+
+.faq {
+  margin-top: var(--space-sm);
+}
+
+.faqItem {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.faqItem dt {
+  font-family: var(--font-heading);
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  margin-bottom: 6px;
+}
+
+.faqItem dd {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-body);
+}
+
+.cta {
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  border-radius: var(--radius-2xl);
+  background: var(--color-bg-alt);
+  border: 1px solid var(--glass-border);
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+  margin-top: var(--space-sm);
+}
