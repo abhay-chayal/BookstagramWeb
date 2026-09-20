@@ -18,6 +18,8 @@ export const SITE_DESCRIPTION =
 
 export const INSTAGRAM_URL = "https://instagram.com/bookstagramclub";
 
+export const CONTACT_EMAIL = "bookstagram.cclub@gmail.com";
+
 /** Absolute URL for a site-relative path — required by OG tags and JSON-LD. */
 export function absoluteUrl(path = "/"): string {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;

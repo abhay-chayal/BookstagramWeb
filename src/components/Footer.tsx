@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.css";
-import { INSTAGRAM_URL } from "@/lib/site";
+import { INSTAGRAM_URL, CONTACT_EMAIL } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -47,7 +47,7 @@ export default function Footer() {
             <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
               Instagram &#8599;
             </a>
-            <Link href="/contact">Send an enquiry</Link>
+            <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
           </div>
         </div>
       </div>

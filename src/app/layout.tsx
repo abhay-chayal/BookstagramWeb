@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SiteChrome from "@/components/SiteChrome";
 import "./globals.css";
-import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, INSTAGRAM_URL, absoluteUrl } from "@/lib/site";
+import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, INSTAGRAM_URL, CONTACT_EMAIL, absoluteUrl } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,6 +56,11 @@ const orgJsonLd = {
   "logo": absoluteUrl("/images/logo.png"),
   "description": "Professional Book Promotion, Author Marketing & Literary Community Ecosystem.",
   "sameAs": [INSTAGRAM_URL],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": CONTACT_EMAIL,
+    "contactType": "Customer Service",
+  },
 };
 
 export default function RootLayout({

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { CONTACT_EMAIL } from "@/lib/site";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
@@ -32,7 +33,7 @@ export default function NewsletterPage() {
 
     if (!serviceId || !templateId || !publicKey) {
       setErrorMessage(
-        "Subscriptions aren't open yet. Please use the contact form and we'll add you to the list."
+        `Subscriptions aren't open yet. Please email ${CONTACT_EMAIL} and we'll add you to the list.`
       );
       setIsSubmitting(false);
       return;
@@ -59,7 +60,7 @@ export default function NewsletterPage() {
       // anyway, so signups were lost silently. Surface the failure instead.
       console.error("Newsletter subscription failed:", err);
       setErrorMessage(
-        "We couldn't add you just now. Please try again, or reach us through the contact form."
+        `We couldn't add you just now. Please try again, or email ${CONTACT_EMAIL}.`
       );
     } finally {
       setIsSubmitting(false);
