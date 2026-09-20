@@ -5,7 +5,8 @@ import StaggeredText from "@/components/StaggeredText";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Author Case Studies & Portfolio | Bookstagram Club",
+  alternates: { canonical: "/portfolio" },
+  title: "Author Case Studies & Portfolio",
   description: "Books we have worked on, the campaigns we built around them, and the editorial reviews we published.",
 };
 

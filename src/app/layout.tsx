@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SiteChrome from "@/components/SiteChrome";
 import "./globals.css";
+import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, INSTAGRAM_URL, absoluteUrl } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,40 +18,44 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
+export const viewport = {
+  themeColor: "#1C2530",
+};
+
 export const metadata: Metadata = {
-  title: "Bookstagram Club | Professional Book Promotion & Author Marketing",
-  description: "We help authors get their books discovered by the right readers through strategic Instagram promotion, creative content, and book launch campaigns built around your book.",
+  // metadataBase makes every relative OG/Twitter image resolve to an absolute
+  // URL, and is what `alternates.canonical` is measured against.
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} | ${SITE_TAGLINE}`,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: SITE_DESCRIPTION,
   keywords: ["Book Promotion", "Author Marketing", "Bookstagram", "Instagram Book Promotion", "Book Launch Campaign", "Book Reviews"],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Bookstagram Club | Professional Book Promotion & Author Marketing",
+    title: `${SITE_NAME} | ${SITE_TAGLINE}`,
     description: "Great books deserve to be discovered. Strategic Instagram promotion, creative content, and launch campaigns for authors.",
-    url: "https://bookstagram.club",
-    siteName: "Bookstagram Club",
+    url: SITE_URL,
+    siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bookstagram Club | Professional Book Promotion",
+    title: `${SITE_NAME} | Professional Book Promotion`,
     description: "Great books deserve to be discovered. Strategic book promotion and author marketing.",
-  }
+  },
 };
 
 const orgJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Bookstagram Club",
-  "url": "https://bookstagram.club",
-  "logo": "https://bookstagram.club/images/logo.png",
+  "name": SITE_NAME,
+  "url": SITE_URL,
+  "logo": absoluteUrl("/images/logo.png"),
   "description": "Professional Book Promotion, Author Marketing & Literary Community Ecosystem.",
-  "sameAs": [
-    "https://instagram.com/bookstagramclub"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "hello@bookstagram.club",
-    "contactType": "Customer Service"
-  }
+  "sameAs": [INSTAGRAM_URL],
 };
 
 export default function RootLayout({

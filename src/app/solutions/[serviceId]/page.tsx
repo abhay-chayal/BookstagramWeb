@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import styles from "./page.module.css";
-import { getSolutionById } from "@/data/solutions";
+import { getSolutionById, getAllSolutions } from "@/data/solutions";
+import { absoluteUrl, SITE_NAME } from "@/lib/site";
+import type { Metadata } from "next";
 import StaggeredText from "@/components/StaggeredText";
 import FadeIn from "@/components/FadeIn";
 import DeliverablesList from "@/components/DeliverablesList";
@@ -11,6 +13,38 @@ interface PageProps {
   params: Promise<{
     serviceId: string;
   }>;
+}
+
+// Each service page previously inherited the root title, so all eleven looked
+// like duplicates of the homepage to search engines. Titles and descriptions
+// now come from each solution's own copy.
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { serviceId } = await params;
+  const solution = getSolutionById(serviceId);
+
+  if (!solution) {
+    return { title: "Service Not Found" };
+  }
+
+  const description =
+    solution.purpose.length > 155 ? `${solution.purpose.slice(0, 152).trimEnd()}...` : solution.purpose;
+
+  return {
+    title: solution.name,
+    description,
+    alternates: { canonical: `/solutions/${solution.id}` },
+    openGraph: {
+      title: `${solution.name} | ${SITE_NAME}`,
+      description,
+      url: absoluteUrl(`/solutions/${solution.id}`),
+      type: "article",
+    },
+  };
+}
+
+// Pre-render all eleven at build time rather than on first request.
+export function generateStaticParams() {
+  return getAllSolutions().map((s) => ({ serviceId: s.id }));
 }
 
 export default async function ServicePage({ params }: PageProps) {

@@ -32,7 +32,7 @@ export default function NewsletterPage() {
 
     if (!serviceId || !templateId || !publicKey) {
       setErrorMessage(
-        "Subscriptions aren't set up yet. Please email hello@bookstagram.club and we'll add you to the list."
+        "Subscriptions aren't open yet. Please use the contact form and we'll add you to the list."
       );
       setIsSubmitting(false);
       return;
@@ -59,7 +59,7 @@ export default function NewsletterPage() {
       // anyway, so signups were lost silently. Surface the failure instead.
       console.error("Newsletter subscription failed:", err);
       setErrorMessage(
-        "We couldn't add you just now. Please try again, or email hello@bookstagram.club."
+        "We couldn't add you just now. Please try again, or reach us through the contact form."
       );
     } finally {
       setIsSubmitting(false);

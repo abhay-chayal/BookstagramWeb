@@ -4,7 +4,8 @@ import StaggeredText from "@/components/StaggeredText";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Pricing | Bookstagram Club",
+  alternates: { canonical: "/pricing" },
+  title: "Pricing",
   description: "One-time book promotion packages with no monthly retainer and no lock-in. Campaign pricing for launches, backlist promotion, and author brand building.",
 };
 

@@ -8,6 +8,7 @@ import StaggeredText from "@/components/StaggeredText";
 import { JOURNAL_ARTICLES, JOURNAL_CATEGORIES, JournalArticle } from "@/data/journal";
 import styles from "./page.module.css";
 
+
 export default function JournalPage() {
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");

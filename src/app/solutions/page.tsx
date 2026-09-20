@@ -5,7 +5,8 @@ import SolutionCard from "@/components/SolutionCard";
 import { getAllSolutions } from "@/data/solutions";
 
 export const metadata = {
-  title: "Solutions | Bookstagram Club",
+  alternates: { canonical: "/solutions" },
+  title: "Solutions",
   description: "Book promotion and author marketing across the full life of a book — positioning, content, Instagram promotion, author websites, and AI & tech solutions for book businesses.",
 };
 

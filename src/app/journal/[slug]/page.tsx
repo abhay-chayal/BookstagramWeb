@@ -5,6 +5,7 @@ import ReactMarkdown from "react-markdown";
 import FadeIn from "@/components/FadeIn";
 import { JOURNAL_ARTICLES, JOURNAL_CATEGORIES, JournalArticle } from "@/data/journal";
 import styles from "./page.module.css";
+import { absoluteUrl } from "@/lib/site";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -27,7 +28,8 @@ export async function generateMetadata({ params }: Props) {
   }
 
   return {
-    title: `${article.title} | Bookstagram Club Journal`,
+    alternates: { canonical: `/journal/${slug}` },
+    title: { absolute: `${article.title} | Bookstagram Club Journal` },
     description: article.excerpt,
     openGraph: {
       title: article.title,
@@ -76,7 +78,7 @@ export default async function JournalArticlePage({ params }: Props) {
       name: "Bookstagram Club",
       logo: {
         "@type": "ImageObject",
-        url: "https://bookstagram.club/images/logo.png",
+        url: absoluteUrl("/images/logo.png"),
       },
     },
   };

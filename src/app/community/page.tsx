@@ -5,7 +5,8 @@ import StaggeredText from "@/components/StaggeredText";
 import styles from "./page.module.css";
 
 export const metadata = {
-  title: "Reader & Reviewer Community | Bookstagram Club",
+  alternates: { canonical: "/community" },
+  title: "Reader & Reviewer Community",
   description: "Join our active literary network of over 10,000 readers, Bookstagram reviewers, and book influencers.",
 };
 

@@ -3,8 +3,9 @@ import { getAllSolutions } from "@/data/solutions";
 import { reviewsData } from "@/data/reviews";
 import { JOURNAL_ARTICLES } from "@/data/journal";
 import { NEWSLETTER_ISSUES } from "@/data/newsletter";
+import { SITE_URL } from "@/lib/site";
 
-const BASE_URL = "https://bookstagram.club";
+const BASE_URL = SITE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPaths = [

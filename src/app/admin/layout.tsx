@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from "./layout.module.css";
 
 export const metadata = {
-  title: "Admin Editorial CMS | Bookstagram Club",
+  title: "Admin Editorial CMS",
   description: "Manage Journal articles, Newsletter issues, and editorial content.",
   robots: { index: false, follow: false },
 };

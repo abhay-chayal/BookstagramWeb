@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Footer.module.css";
+import { INSTAGRAM_URL } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -43,10 +44,10 @@ export default function Footer() {
 
           <div className={styles.linkGroup}>
             <h4>Get in Touch</h4>
-            <a href="https://instagram.com/bookstagramclub" target="_blank" rel="noopener noreferrer">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
               Instagram &#8599;
             </a>
-            <a href="mailto:hello@bookstagram.club">hello@bookstagram.club</a>
+            <Link href="/contact">Send an enquiry</Link>
           </div>
         </div>
       </div>

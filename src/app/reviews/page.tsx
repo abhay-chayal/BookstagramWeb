@@ -4,8 +4,9 @@ import styles from "./page.module.css";
 import StaggeredText from "@/components/StaggeredText";
 
 export const metadata = {
-  title: "Book Reviews | Bookstagram Club",
-  description: "Dive with us into the ocean of books. Read our premium professional reviews on the latest and greatest literary works.",
+  alternates: { canonical: "/reviews" },
+  title: "Editorial Book Reviews",
+  description: "Full editorial reviews written by the Bookstagram Club team — books we ran campaigns for, plus the classics our reader community returns to.",
 };
 
 export default function ReviewsPage() {

@@ -18,7 +18,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const review = reviewsData.find((r) => r.id === slug);
   if (!review) return { title: "Not Found" };
   return {
-    title: `${review.bookTitle} by ${review.author} | Bookstagram Review`,
+    alternates: { canonical: `/reviews/${slug}` },
+    title: { absolute: `${review.bookTitle} by ${review.author} | Bookstagram Club Review` },
     description: `Read our comprehensive editorial review of ${review.bookTitle} by ${review.author}. Rating: ${review.rating}.`,
     openGraph: {
       title: `${review.bookTitle} | Bookstagram Club`,

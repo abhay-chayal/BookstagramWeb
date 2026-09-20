@@ -8,7 +8,8 @@ import BehindEveryBook from "@/components/BehindEveryBook";
 import OurVisionScroll from "@/components/OurVisionScroll";
 
 export const metadata = {
-  title: "About Us | Bookstagram Club",
+  alternates: { canonical: "/about" },
+  title: "About Us",
   description: "A premium literary marketing and author growth ecosystem connecting exceptional books with the readers meant to discover them.",
 };
 

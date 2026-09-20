@@ -22,12 +22,13 @@ export async function generateMetadata({ params }: Props) {
 
   if (!issue) {
     return {
-      title: "Newsletter Issue Not Found | Bookstagram Club",
+      title: "Newsletter Issue Not Found",
     };
   }
 
   return {
-    title: `Issue #${String(issue.issueNumber).padStart(3, "0")}: ${issue.title} | Bookstagram Club Dispatch`,
+    alternates: { canonical: `/newsletter/${slug}` },
+    title: { absolute: `Issue #${String(issue.issueNumber).padStart(3, "0")}: ${issue.title} | Bookstagram Club Dispatch` },
     description: issue.previewText,
   };
 }
