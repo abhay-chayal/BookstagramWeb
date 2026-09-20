@@ -32,7 +32,7 @@ export default function AboutPage() {
         <div className={styles.heroCollage}>
           <div className={`${styles.collageImg} ${styles.img1}`}>
             <Image
-              src="https://images.unsplash.com/photo-1491841550275-ad7854e35ca6?w=600&q=80"
+              src="/images/stock/u-1491841550275-ad7854e35ca6-600.jpg"
               alt="Editorial book photography"
               fill
               sizes="300px"
@@ -42,7 +42,7 @@ export default function AboutPage() {
           </div>
           <div className={`${styles.collageImg} ${styles.img2}`}>
             <Image
-              src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=600&q=80"
+              src="/images/stock/u-1544947950-fa07a98d237f-600.jpg"
               alt="Stack of aesthetic novels"
               fill
               sizes="300px"
@@ -51,7 +51,7 @@ export default function AboutPage() {
           </div>
           <div className={`${styles.collageImg} ${styles.img3}`}>
             <Image
-              src="https://images.unsplash.com/photo-1512820790803-83ca734da794?w=600&q=80"
+              src="/images/stock/u-1512820790803-83ca734da794-600.jpg"
               alt="Cozy reading setting"
               fill
               sizes="300px"
@@ -357,7 +357,7 @@ export default function AboutPage() {
             <FadeIn direction="up" delay={0.2} className={styles.teamCard}>
               <div className={styles.teamImageWrapper}>
                 <Image
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800"
+                  src="/images/stock/u-1507003211169-0a1dd7228f2d-800.jpg"
                   alt="Marcus Thorne - Creative & Cinematic Lead"
                   fill
                   className={styles.teamImage}
@@ -376,7 +376,7 @@ export default function AboutPage() {
             <FadeIn direction="up" delay={0.3} className={styles.teamCard}>
               <div className={styles.teamImageWrapper}>
                 <Image
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800"
+                  src="/images/stock/u-1573496359142-b8d87734a5a2-800.jpg"
                   alt="Sarah Lin - Editorial Director & ARC Lead"
                   fill
                   className={styles.teamImage}
@@ -463,7 +463,7 @@ export default function AboutPage() {
                   Explore Campaign Packages &rarr;
                 </Button>
                 <Button href="/contact" variant="outline">
-                  Book a Discovery Consultation
+                  Start Your Campaign
                 </Button>
               </div>
             </div>

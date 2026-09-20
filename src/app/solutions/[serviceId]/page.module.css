@@ -47,7 +47,7 @@
 .contentLayout {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xl);
+  gap: var(--space-md);
 }
 
 @media (min-width: 1024px) {

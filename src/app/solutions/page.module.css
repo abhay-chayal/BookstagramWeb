@@ -58,7 +58,7 @@
 
 @media (min-width: 1024px) {
   .grid {
-    gap: var(--space-xl);
+    gap: var(--space-md);
   }
   .span4 { grid-column: span 4; }
   .span6 { grid-column: span 6; }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SiteChrome from "@/components/SiteChrome";
 import "./globals.css";
 
 const inter = Inter({
@@ -25,14 +26,6 @@ export const metadata: Metadata = {
     description: "Great books deserve to be discovered. Strategic Instagram promotion, creative content, and launch campaigns for authors.",
     url: "https://bookstagram.club",
     siteName: "Bookstagram Club",
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?q=80&w=1200",
-        width: 1200,
-        height: 630,
-        alt: "Bookstagram Club Author Branding",
-      }
-    ],
     locale: "en_US",
     type: "website",
   },
@@ -74,9 +67,13 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <Navbar />
+        <SiteChrome>
+          <Navbar />
+        </SiteChrome>
         <main>{children}</main>
-        <Footer />
+        <SiteChrome>
+          <Footer />
+        </SiteChrome>
       </body>
     </html>
   );

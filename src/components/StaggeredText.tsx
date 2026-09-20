@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
-import { ElementType } from "react";
+import { ElementType, Fragment } from "react";
 
 interface StaggeredTextProps {
   text: string;
@@ -58,13 +58,15 @@ export default function StaggeredText({
         viewport={{ once, margin: "-10%" }}
       >
         {textArray.map((word, index) => (
-          <motion.span
-            key={index}
-            style={{ display: "inline-block", marginRight: "0.25em" }}
-            variants={child}
-          >
-            {word}
-          </motion.span>
+          // The space is a real text node, not a margin: with margin-only
+          // spacing the rendered heading reads as "WhatWeDo" to search
+          // engines and to anyone copying the text.
+          <Fragment key={index}>
+            <motion.span style={{ display: "inline-block" }} variants={child}>
+              {word}
+            </motion.span>
+            {index < textArray.length - 1 ? " " : null}
+          </Fragment>
         ))}
       </motion.span>
     </Wrapper>

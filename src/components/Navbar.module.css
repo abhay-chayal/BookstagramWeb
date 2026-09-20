@@ -1,6 +1,11 @@
+/* Fixed rather than sticky: a sticky wrapper occupies flow space and pushed
+   every page down by ~68px, leaving a white band above the homepage hero.
+   Every page module already reserves >=80px of top padding for the navbar. */
 .navbarWrapper {
-  position: sticky;
+  position: fixed;
   top: 1rem;
+  left: 0;
+  right: 0;
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -9,7 +14,7 @@
 
 .navbar {
   pointer-events: auto; /* Re-enable clicks on the actual navbar */
-  background-color: rgba(253, 251, 249, 0.7);
+  background-color: rgba(253, 251, 249, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(200, 155, 123, 0.2);

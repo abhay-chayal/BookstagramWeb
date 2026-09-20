@@ -1,6 +1,6 @@
 .main {
   min-height: 100vh;
-  padding-top: 80px; /* Offset for navbar */
+  padding-top: 100px; /* Offset for the fixed navbar */
   background: var(--bg-primary);
 }
 
@@ -71,4 +71,25 @@
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
+}
+
+.groupHeader {
+  margin-bottom: var(--space-md);
+}
+
+.groupHeaderSpaced {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--glass-border);
+}
+
+.groupHeader h2 {
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  margin-bottom: var(--space-xs);
+}
+
+.groupHeader p {
+  color: var(--color-text-body);
+  font-size: 1.02rem;
+  max-width: 640px;
 }

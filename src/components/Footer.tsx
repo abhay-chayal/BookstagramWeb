@@ -10,18 +10,18 @@ export default function Footer() {
           <Link href="/" className={styles.logo}>
             <Image src="/images/logo.png" alt="Bookstagram Club Logo" width={80} height={80} className={styles.logoImage} />
           </Link>
-          <p className={styles.tagline}>ROOTS • STORIES • CONNECTIONS</p>
+          <p className={styles.tagline}>GREAT BOOKS DESERVE TO BE DISCOVERED</p>
           <p className={styles.description}>
-            The world-class agency built specifically for authors. We build your brand, market your books, and grow your career.
+            Book promotion and author marketing built around your book and the readers it was written for — never a template.
           </p>
         </div>
         
         <div className={styles.footerLinks}>
           <div className={styles.linkGroup}>
             <h4>Solutions</h4>
-            <Link href="/solutions/author-branding">Author Branding</Link>
-            <Link href="/solutions/custom-website">Custom Websites</Link>
-            <Link href="/solutions/social-media">Social Media</Link>
+            <Link href="/solutions/author-features">Author Features</Link>
+            <Link href="/solutions/author-website">Author Websites</Link>
+            <Link href="/solutions/instagram-promotion">Instagram Promotion</Link>
             <Link href="/solutions">All Solutions</Link>
           </div>
           
@@ -39,6 +39,14 @@ export default function Footer() {
             <Link href="/portfolio">Case Studies</Link>
             <Link href="/pricing">Pricing &amp; Plans</Link>
             <Link href="/contact">Contact</Link>
+          </div>
+
+          <div className={styles.linkGroup}>
+            <h4>Get in Touch</h4>
+            <a href="https://instagram.com/bookstagramclub" target="_blank" rel="noopener noreferrer">
+              Instagram &#8599;
+            </a>
+            <a href="mailto:hello@bookstagram.club">hello@bookstagram.club</a>
           </div>
         </div>
       </div>

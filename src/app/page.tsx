@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
-import StaggeredText from "@/components/StaggeredText";
 import GlassCard from "@/components/GlassCard";
 import { JOURNAL_ARTICLES } from "@/data/journal";
 import styles from "./page.module.css";
@@ -12,48 +11,41 @@ export default function Home() {
     <div className={styles.page}>
       {/* Hero Section */}
       <section className={styles.hero}>
-        <Image
-          src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=2000"
-          alt="Book lovers sanctuary library"
-          fill
-          priority
-          sizes="100vw"
-          className={styles.heroBgImage}
-        />
-        <div className={styles.heroOverlay} />
+        {/* Typographic hero: no background photograph. The structure below is
+            kept so a real, dark background image can be reintroduced later
+            without reworking the layout. */}
+        <div className={styles.heroBackdrop} />
         <div className={`container ${styles.heroContainer}`}>
           <div className={styles.heroContent}>
-            <FadeIn direction="up" delay={0.05}>
-              <div className={styles.heroLogoBadge}>
-                <Image
-                  src="/images/logo.webp"
-                  alt="Bookstagram Club Logo"
-                  width={68}
-                  height={68}
-                  priority
-                  className={styles.heroLogoImg}
-                />
-              </div>
-            </FadeIn>
+            {/* The hero animates with CSS, not framer-motion. Everything here
+                is visible at first paint even before JS runs. */}
+            <div className={`${styles.heroLogoBadge} ${styles.heroRise}`} style={{ animationDelay: "0.05s" }}>
+              <Image
+                src="/images/logo.webp"
+                alt="Bookstagram Club Logo"
+                width={68}
+                height={68}
+                priority
+                className={styles.heroLogoImg}
+              />
+            </div>
 
-            <FadeIn direction="up" delay={0.15}>
-              <p className={styles.heroSubtitle}>Professional Book Promotion &amp; Author Marketing</p>
-            </FadeIn>
+            <p className={`${styles.heroSubtitle} ${styles.heroRise}`} style={{ animationDelay: "0.15s" }}>
+              Professional Book Promotion &amp; Author Marketing
+            </p>
 
-            <StaggeredText text="Great Books Deserve To Be Discovered." className={styles.heroTitle} />
+            <h1 className={`${styles.heroTitle} ${styles.heroRise}`} style={{ animationDelay: "0.25s" }}>
+              Great Books Deserve To Be Discovered.
+            </h1>
 
-            <FadeIn direction="up" delay={0.6}>
-              <p className={styles.heroDescription}>
-                Bookstagram Club helps authors get their books in front of the readers who are meant to find them — through strategic Instagram promotion, creative content, and campaigns built around your book, not a template.
-              </p>
-            </FadeIn>
+            <p className={`${styles.heroDescription} ${styles.heroRise}`} style={{ animationDelay: "0.35s" }}>
+              Bookstagram Club helps authors get their books in front of the readers who are meant to find them — through strategic Instagram promotion, creative content, and campaigns built around your book, not a template.
+            </p>
 
-            <FadeIn direction="up" delay={0.8}>
-              <div className={styles.heroActions}>
-                <Button href="/contact" variant="primary">Start Your Campaign</Button>
-                <Button href="/solutions" variant="outline">See How It Works</Button>
-              </div>
-            </FadeIn>
+            <div className={`${styles.heroActions} ${styles.heroRise}`} style={{ animationDelay: "0.45s" }}>
+              <Button href="/contact" variant="primary">Start Your Campaign</Button>
+              <Button href="/solutions" variant="outline">See How It Works</Button>
+            </div>
           </div>
         </div>
       </section>
@@ -69,27 +61,27 @@ export default function Home() {
           </FadeIn>
 
           <div className={styles.pillarGrid}>
-            <GlassCard delay={0.1} className={styles.pillarFeature}>
+            <GlassCard delay={0.1} className={styles.pillarCard}>
               <div className={styles.pillarImageContainer}>
-                <Image src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?q=80&w=800" alt="Instagram & content promotion" fill sizes="(max-width: 768px) 100vw, 33vw" className={styles.pillarImage} />
+                <Image src="/images/stock/u-1495446815901-a7297e633e8d-800.jpg" alt="Instagram & content promotion" fill sizes="(max-width: 768px) 100vw, 33vw" className={styles.pillarImage} />
               </div>
               <h3>Instagram & Content Promotion</h3>
-              <p>Dedicated feed posts, stories, reels, and quote graphics — designed around your book's genre, themes, and readers, never a recycled template.</p>
+              <p>Dedicated feed posts, stories, reels, and quote graphics — designed around your book&rsquo;s genre, themes, and readers, never a recycled template.</p>
               <Link href="/solutions" className={styles.pillarLink}>View Solutions &rarr;</Link>
             </GlassCard>
 
-            <GlassCard delay={0.2} className={styles.pillarStandard1}>
+            <GlassCard delay={0.2} className={styles.pillarCard}>
               <div className={styles.pillarImageContainer}>
-                <Image src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=800" alt="Book launch campaigns" fill sizes="(max-width: 768px) 100vw, 33vw" className={styles.pillarImage} />
+                <Image src="/images/stock/u-1524995997946-a1c2e315a42f-800.jpg" alt="Book launch campaigns" fill sizes="(max-width: 768px) 100vw, 33vw" className={styles.pillarImage} />
               </div>
               <h3>Book Launch Campaigns</h3>
               <p>Structured promotion before, during, and after release — teasers, countdowns, launch-day content, and continued post-launch visibility.</p>
               <Link href="/solutions" className={styles.pillarLink}>See Launch Support &rarr;</Link>
             </GlassCard>
 
-            <GlassCard delay={0.3} className={styles.pillarStandard2}>
+            <GlassCard delay={0.3} className={styles.pillarCard}>
               <div className={styles.pillarImageContainer}>
-                <Image src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=800" alt="Reviews, author features and digital reach" fill sizes="(max-width: 768px) 100vw, 33vw" className={styles.pillarImage} />
+                <Image src="/images/stock/u-1512820790803-83ca734da794-800.jpg" alt="Reviews, author features and digital reach" fill sizes="(max-width: 768px) 100vw, 33vw" className={styles.pillarImage} />
               </div>
               <h3>Reviews, Features & Digital Reach</h3>
               <p>Book reviews, author features, website promotion, and newsletter exposure — additional touchpoints where readers can discover your book.</p>
@@ -113,7 +105,7 @@ export default function Home() {
             <FadeIn direction="up" delay={0.1} className={styles.processStep}>
               <div className={styles.stepNumber}>01</div>
               <h3>Understand</h3>
-              <p>We start with your book — genre, themes, characters, tone, and who it's really written for. Every strategy begins here, never with a template.</p>
+              <p>We start with your book — genre, themes, characters, tone, and who it&rsquo;s really written for. Every strategy begins here, never with a template.</p>
             </FadeIn>
             <FadeIn direction="up" delay={0.2} className={styles.processStep}>
               <div className={styles.stepNumber}>02</div>
@@ -251,8 +243,8 @@ export default function Home() {
         <div className={`container ${styles.ctaContainer}`}>
           <FadeIn direction="up">
             <h2>Ready for your book to be discovered?</h2>
-            <p>Let's build a promotional campaign around your book and the readers waiting to find it.</p>
-            <Button href="/contact" variant="secondary">Book a Consultation</Button>
+            <p>Let&rsquo;s build a promotional campaign around your book and the readers waiting to find it.</p>
+            <Button href="/contact" variant="secondary">Start Your Campaign</Button>
           </FadeIn>
         </div>
       </section>

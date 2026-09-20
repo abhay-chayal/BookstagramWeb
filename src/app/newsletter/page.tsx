@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
@@ -14,35 +15,52 @@ export default function NewsletterPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  // Honeypot: a real person never fills this in, bots fill everything.
+  const [website, setWebsite] = useState("");
 
   const handleSubscribe = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
+    if (website) return; // silently drop bot submissions
 
     setIsSubmitting(true);
     setErrorMessage(null);
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_NEWSLETTER_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setErrorMessage(
+        "Subscriptions aren't set up yet. Please email hello@bookstagram.club and we'll add you to the list."
+      );
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
-      const res = await fetch("/api/newsletter/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email, firstName, source: "newsletter_landing_page" }),
-      });
-
-      if (!res.ok) {
-        const data = await res.json().catch(() => ({}));
-        throw new Error(data.message || "Failed to subscribe");
-      }
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          subscriber_email: email,
+          subscriber_name: firstName || "Not provided",
+          source: "newsletter_landing_page",
+          submitted_at: new Date().toISOString(),
+        },
+        publicKey
+      );
 
       setIsSuccess(true);
       setEmail("");
       setFirstName("");
-    } catch (err: any) {
-      console.warn("Newsletter subscription simulated:", err);
-      // Seamless optimistic confirmation
-      setIsSuccess(true);
-      setEmail("");
-      setFirstName("");
+    } catch (err) {
+      // Previously this swallowed every failure and showed a success state
+      // anyway, so signups were lost silently. Surface the failure instead.
+      console.error("Newsletter subscription failed:", err);
+      setErrorMessage(
+        "We couldn't add you just now. Please try again, or email hello@bookstagram.club."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -92,6 +110,17 @@ export default function NewsletterPage() {
                   <p>Delivered every Saturday morning. Free forever. No spam.</p>
 
                   {errorMessage && <div className={styles.errorAlert}>{errorMessage}</div>}
+
+                  <input
+                    type="text"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    aria-hidden="true"
+                    value={website}
+                    onChange={(e) => setWebsite(e.target.value)}
+                    style={{ position: "absolute", left: "-9999px", width: 1, height: 1 }}
+                  />
 
                   <div className={styles.inputGroupRow}>
                     <input

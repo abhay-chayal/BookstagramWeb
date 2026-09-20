@@ -179,7 +179,7 @@ A curated bookshelf is an intimate portrait of an individual’s intellectual jo
 
 The future of reading is not a zero-sum war between digital convenience and physical pages. E-readers excel at portability; audiobooks excel during commutes. But when a reader seeks deep immersion, aesthetic reverence, and lasting memory, they invariably return to the spine, the page, and the weight of paper.
     `,
-    coverImage: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200",
+    coverImage: "/images/stock/u-1524995997946-a1c2e315a42f-1200.jpg",
     category: "literature",
     tags: ["Physical Books", "Cognitive Science", "Book Aesthetics", "Slow Living"],
     authorName: "Elena Vance",
@@ -219,7 +219,7 @@ The unreliable narrator is not merely a cheap plot device; when executed with ma
 
 The cardinal rule of deceptive narrative is that **the author must never cheat**. Every breadcrumb must be fairly laid upon the floorboards. The genius of the unreliable narrator lies in re-reading: the second time through, every sentence should take on an entirely different, chilling clarity.
     `,
-    coverImage: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1200",
+    coverImage: "/images/stock/u-1457369804613-52c61a468e7d-1200.jpg",
     category: "books",
     tags: ["Craft of Writing", "Psychological Thrillers", "Narrative Structure"],
     authorName: "Marcus Thorne",
@@ -255,7 +255,7 @@ Great worldbuilding happens at eye level:
 
 When worldbuilding operates as an organic reflection of human culture, magic ceases to be a gimmick and becomes part of the world's natural poetry.
     `,
-    coverImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200",
+    coverImage: "/images/stock/u-1518709268805-4e9042af9f23-1200.jpg",
     category: "books",
     tags: ["Fantasy", "Worldbuilding", "Fiction Craft"],
     authorName: "Sarah Lin",
@@ -288,7 +288,7 @@ An opening chapter is a promise. It establishes the rhythm of the prose, the tem
 
 The goal is never to explain everything upfront; it is to make the next sentence completely irresistible.
     `,
-    coverImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200",
+    coverImage: "/images/stock/u-1455390582262-044cdead277a-1200.jpg",
     category: "books",
     tags: ["Opening Chapters", "Writing Craft", "Literary Analysis"],
     authorName: "Abhay",
@@ -346,7 +346,7 @@ Murakami wakes at 4:00 AM, writes for five hours, runs ten kilometers, and liste
 
 Ritual is not restrictive; it is the scaffolding within which inspiration feels safe enough to appear.
     `,
-    coverImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200",
+    coverImage: "/images/stock/u-1499750310107-5fef28a66643-1200.jpg",
     category: "authors",
     tags: ["Writing Habits", "Author Life", "Productivity"],
     authorName: "Sarah Lin",
@@ -369,7 +369,7 @@ Ritual is not restrictive; it is the scaffolding within which inspiration feels 
 
 Holding your first published book is an unforgettable milestone. But between the initial manuscript and the bookstore shelf lies a gauntlet of editorial rounds, cover design compromises, and pre-launch anxiety.
     `,
-    coverImage: "https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?q=80&w=1200",
+    coverImage: "/images/stock/u-1471107340929-a87cd0f5b5f3-1200.jpg",
     category: "authors",
     tags: ["Debut Authors", "Publishing Journey", "Writing Community"],
     authorName: "Elena Vance",
@@ -392,7 +392,7 @@ Holding your first published book is an unforgettable milestone. But between the
 
 Most authors write because they prefer the quiet intimacy of words over crowded rooms. The modern demand for 'author branding' can feel overwhelming, but genuine reader connection comes from authenticity, not constant noise.
     `,
-    coverImage: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=1200",
+    coverImage: "/images/stock/u-1488190211105-8b0e65b80b4e-1200.jpg",
     category: "authors",
     tags: ["Author Platform", "Introverted Writers", "Authenticity"],
     authorName: "Abhay",
@@ -415,7 +415,7 @@ Most authors write because they prefer the quiet intimacy of words over crowded 
 
 Co-authoring a novel requires an extraordinary level of artistic trust. How do two distinct voices blend into a single harmonious narrative consciousness?
     `,
-    coverImage: "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200",
+    coverImage: "/images/stock/u-1517841905240-472988babdf9-1200.jpg",
     category: "authors",
     tags: ["Co-Authoring", "Collaboration", "Creative Process"],
     authorName: "Marcus Thorne",
@@ -448,7 +448,7 @@ When the leaves turn amber and the mornings grow crisp, literature calls for lea
 4. **The Historian** by Elizabeth Kostova — *A sweeping scholarly quest across European archives.*
 5. **Ninth House** by Leigh Bardugo — *Occult societies embedded in Yale's gothic architecture.*
     `,
-    coverImage: "https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=80&w=1200",
+    coverImage: "/images/stock/u-1519682337058-a94d519337bc-1200.jpg",
     category: "reading-lists",
     tags: ["Dark Academia", "Autumn Reads", "Book Recommendations"],
     authorName: "Sarah Lin",
@@ -471,7 +471,7 @@ When the leaves turn amber and the mornings grow crisp, literature calls for lea
 
 Science fiction at its pinnacle does not merely predict gadgets; it interrogates what it means to be human across vast gulfs of time and space.
     `,
-    coverImage: "https://images.unsplash.com/photo-1506703719100-a0f3a48c0f86?q=80&w=1200",
+    coverImage: "/images/stock/u-1506703719100-a0f3a48c0f86-1200.jpg",
     category: "reading-lists",
     tags: ["Sci-Fi", "Worldbuilding", "Reading Guide"],
     authorName: "Marcus Thorne",
@@ -494,7 +494,7 @@ Science fiction at its pinnacle does not merely predict gadgets; it interrogates
 
 A truly great thriller doesn't rely on cheap jump scares; it builds a suffocating psychological tension that makes putting the book down physically impossible.
     `,
-    coverImage: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?q=80&w=1200",
+    coverImage: "/images/stock/u-1509198397868-475647b2a1e5-1200.jpg",
     category: "reading-lists",
     tags: ["Thrillers", "Suspense", "Binge Reads"],
     authorName: "Elena Vance",
@@ -517,7 +517,7 @@ A truly great thriller doesn't rely on cheap jump scares; it builds a suffocatin
 
 Sometimes we do not want high-stakes violence or catastrophic tragedy. We seek books that remind us of human kindness, quiet triumph, and the solace of simple pleasures.
     `,
-    coverImage: "https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200",
+    coverImage: "/images/stock/u-1512820790803-83ca734da794-1200.jpg",
     category: "reading-lists",
     tags: ["Cozy Reads", "Mental Wellbeing", "Comfort Fiction"],
     authorName: "Sarah Lin",
@@ -540,7 +540,7 @@ Sometimes we do not want high-stakes violence or catastrophic tragedy. We seek b
 
 Independent authors and boutique presses take the artistic risks that corporate conglomerates avoid. Discover the five standout indie titles captivating literary circles right now.
     `,
-    coverImage: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1200",
+    coverImage: "/images/stock/u-1497633762265-9d179a990aa6-1200.jpg",
     category: "new-releases",
     tags: ["Indie Books", "New Releases", "Book Discovery"],
     authorName: "Abhay",
@@ -563,7 +563,7 @@ Independent authors and boutique presses take the artistic risks that corporate 
 
 A book cover must perform a dual miracle: it must look exquisite as an embossed physical jacket in a reader's hand, and it must arrest attention as a 120-pixel thumbnail on an Instagram explore feed.
     `,
-    coverImage: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=1200",
+    coverImage: "/images/stock/u-1544716278-ca5e3f4abd8c-1200.jpg",
     category: "new-releases",
     tags: ["Cover Design", "Visual Arts", "Book Trends"],
     authorName: "Marcus Thorne",
@@ -609,7 +609,7 @@ High fantasy demands grand scope, but memorable fantasy requires intimate emotio
 
 To step into someone's living room and browse their bookshelf is to read their private diary with their permission. Every volume represents a specific era of curiosity, healing, or intellectual rebellion.
     `,
-    coverImage: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=1200",
+    coverImage: "/images/stock/u-1481627834876-b7833e8f5570-1200.jpg",
     category: "literature",
     tags: ["Literary Culture", "Personal Libraries", "Book Collecting"],
     authorName: "Elena Vance",
@@ -632,7 +632,7 @@ To step into someone's living room and browse their bookshelf is to read their p
 
 When you open a classic novel for the second or third time across decades, you are not simply re-experiencing the plot; you are taking the measure of the distance you have traveled as a human being.
     `,
-    coverImage: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=1200",
+    coverImage: "/images/stock/u-1457369804613-52c61a468e7d-1200.jpg",
     category: "literature",
     tags: ["Classics", "Re-Reading", "Literary Reflection"],
     authorName: "Elena Vance",
@@ -655,7 +655,7 @@ When you open a classic novel for the second or third time across decades, you a
 
 Some readers preserve their volumes like museum relics. Others treat them like maps to be annotated, bracketed, and debated. Here is why marginalia is an act of deep reverence.
     `,
-    coverImage: "https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200",
+    coverImage: "/images/stock/u-1455390582262-044cdead277a-1200.jpg",
     category: "literature",
     tags: ["Marginalia", "Reading Habits", "Book Collecting"],
     authorName: "Marcus Thorne",
@@ -687,7 +687,7 @@ No book should step out into the world on publication day in total silence. An A
 3. **Structured Timelines:** Staggering reviews across release week to maximize Amazon and Goodreads algorithms.
 4. **Community Engagement:** Encouraging reviewers to tag quotes and aesthetic photo flat-lays.
     `,
-    coverImage: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200",
+    coverImage: "/images/stock/u-1524995997946-a1c2e315a42f-1200.jpg",
     category: "publishing",
     tags: ["ARC Tours", "Author Marketing", "Publishing Guide"],
     authorName: "Abhay",
@@ -710,7 +710,7 @@ No book should step out into the world on publication day in total silence. An A
 
 Every author’s goals, timeline, and risk tolerance are unique. Understanding the concrete differences in royalties, intellectual property control, and marketing workload is essential before signing any contract.
     `,
-    coverImage: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1200",
+    coverImage: "/images/stock/u-1497633762265-9d179a990aa6-1200.jpg",
     category: "publishing",
     tags: ["Publishing Models", "Author Career", "Industry Insights"],
     authorName: "Elena Vance",
@@ -733,7 +733,7 @@ Every author’s goals, timeline, and risk tolerance are unique. Understanding t
 
 A book’s lifespan is not measured in weeks. With strategic cover refreshes, metadata optimization, and targeted community tours, older books can experience resurgence that rivals their initial launch.
     `,
-    coverImage: "https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?q=80&w=1200",
+    coverImage: "/images/stock/u-1488190211105-8b0e65b80b4e-1200.jpg",
     category: "publishing",
     tags: ["Backlist Marketing", "Author Strategy", "Long-Term Growth"],
     authorName: "Abhay",
@@ -764,7 +764,7 @@ Readers on visual platforms do not browse by plot summary; they browse by emotio
 2. **The Visual Atmosphere:** High-contrast color grading, cinematic lighting, and tactile page turns.
 3. **The Unresolved Question:** A single sentence that leaves the viewer needing to know what happened next.
     `,
-    coverImage: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200",
+    coverImage: "/images/stock/u-1518709268805-4e9042af9f23-1200.jpg",
     category: "book-marketing",
     tags: ["Bookstagram Marketing", "Social Media", "Author Growth"],
     authorName: "Marcus Thorne",
@@ -795,7 +795,7 @@ When you post on social media, algorithms decide whether your fans see your news
 * **Storytelling Over Selling:** Share your creative vulnerabilities, reading recommendations, and personal essays rather than constant sales pitches.
 * **Consistent Rhythm:** A monthly or bi-weekly dispatch builds anticipating habits without overwhelming your audience.
     `,
-    coverImage: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1200",
+    coverImage: "/images/stock/u-1499750310107-5fef28a66643-1200.jpg",
     category: "book-marketing",
     tags: ["Author Newsletter", "Direct to Reader", "Email Marketing"],
     authorName: "Abhay",
@@ -818,7 +818,7 @@ When you post on social media, algorithms decide whether your fans see your news
 
 With over 85,000 devoted followers, literary curator Clara shares the secrets of what makes a book flat-lay captivating and how authors can pitch reviewers with respect and grace.
     `,
-    coverImage: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200",
+    coverImage: "/images/stock/u-1534528741775-53994a69daeb-1200.jpg",
     category: "interviews",
     tags: ["Creator Interview", "Influencer Marketing", "Bookstagram Community"],
     authorName: "Sarah Lin",

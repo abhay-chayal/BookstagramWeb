@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import emailjs from "@emailjs/browser";
@@ -12,27 +12,21 @@ function ContactFormContent() {
   const searchParams = useSearchParams();
   const planParam = searchParams.get("plan");
 
+  // Deep links such as /contact?plan=launch preselect the enquiry type.
+  // Derived at init rather than synced from an effect.
+  const PLANS = ["launch", "brand", "promotion", "editorial", "review", "website", "tech"];
+  const initialInterest = planParam && PLANS.includes(planParam) ? planParam : "launch";
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [bookTitle, setBookTitle] = useState("");
-  const [interest, setInterest] = useState("launch");
+  const [interest, setInterest] = useState(initialInterest);
   const [message, setMessage] = useState("");
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  useEffect(() => {
-    if (planParam) {
-      if (planParam === "launch") setInterest("launch");
-      else if (planParam === "brand") setInterest("brand");
-      else if (planParam === "promotion") setInterest("promotion");
-      else if (planParam === "editorial") setInterest("editorial");
-      else if (planParam === "review") setInterest("review");
-      else if (planParam === "website") setInterest("website");
-      else if (planParam === "tech") setInterest("tech");
-    }
-  }, [planParam]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -66,9 +60,10 @@ function ContactFormContent() {
       try {
         await emailjs.send(serviceId, templateId, templateParams, publicKey);
         setIsSuccess(true);
-      } catch (err: any) {
+      } catch (err) {
         console.error("EmailJS submission error:", err);
-        const errText = err?.text || err?.message || "Check your EmailJS service/template status.";
+        const e = err as { text?: string; message?: string } | undefined;
+        const errText = e?.text || e?.message || "Check your EmailJS service/template status.";
         setErrorMessage(
           `EmailJS Error (${errText}). Please ensure your EmailJS Service is active and connected to your email provider.`
         );
@@ -233,7 +228,7 @@ export default function ContactPage() {
     <div className={styles.page}>
       <header className={styles.header}>
         <div className={`container ${styles.headerContainer}`}>
-          <StaggeredText text="Start Your Journey" className={styles.headerTitle} />
+          <StaggeredText text="Start Your Campaign" className={styles.headerTitle} />
           <FadeIn delay={0.3}>
             <p className={styles.headerSubtitle}>
               Tell us about your book — where it is right now, and who you hope will read it. We&rsquo;ll review your title and reply with an honest assessment and tailored strategy.
@@ -259,7 +254,7 @@ export default function ContactPage() {
               }}
             >
               <Image
-                src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000"
+                src="/images/stock/u-1499750310107-5fef28a66643-1000.jpg"
                 alt="Author desk with notebook and warm beverage"
                 fill
                 sizes="(max-width: 900px) 100vw, 45vw"
@@ -280,7 +275,7 @@ export default function ContactPage() {
                   <div className={styles.timelineStepNum}>1</div>
                   <div className={styles.timelineStepContent}>
                     <h4>Direct Review within 24 Hours</h4>
-                    <p>A senior literary strategist reviews your book's genre, hook, and current reader positioning.</p>
+                    <p>A senior literary strategist reviews your book&rsquo;s genre, hook, and current reader positioning.</p>
                   </div>
                 </div>
 
@@ -288,7 +283,7 @@ export default function ContactPage() {
                   <div className={styles.timelineStepNum}>2</div>
                   <div className={styles.timelineStepContent}>
                     <h4>Tailored Proposal (No Templates)</h4>
-                    <p>We send a clear recommendation of what campaign fits best — and what wouldn't be worth your money.</p>
+                    <p>We send a clear recommendation of what campaign fits best — and what wouldn&rsquo;t be worth your money.</p>
                   </div>
                 </div>
 

@@ -1,0 +1,11 @@
+/* Base layout for every GlassCard.
+   These used to be inline styles on the motion.div, which meant page-level
+   CSS Modules could never override them (inline always wins) — that is what
+   broke the two-column pillar card on the homepage. Keeping them here lets
+   a page opt into a different layout with a normal class. */
+.card {
+  padding: var(--space-md);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}

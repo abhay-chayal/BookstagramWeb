@@ -68,7 +68,7 @@ export default function SolutionsPage() {
               <p className={styles.philosophyText}>
                 Every successful author journey starts with a conversation. Let us help you identify exactly what your brand needs to grow.
               </p>
-              <a href="/contact" className={styles.ctaButton}>Book a Discovery Consultation</a>
+              <a href="/contact" className={styles.ctaButton}>Start Your Campaign</a>
             </div>
           </FadeIn>
         </div>

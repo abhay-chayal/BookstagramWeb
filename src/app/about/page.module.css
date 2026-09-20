@@ -163,7 +163,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .problemCard {
@@ -242,7 +242,7 @@
 .splitProgressGrid {
   display: grid;
   grid-template-columns: 1fr 1.25fr;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
   align-items: flex-start;
 }
 
@@ -612,7 +612,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 .ecoPillarCard {

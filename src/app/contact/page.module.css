@@ -40,7 +40,7 @@
 .contactGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-xl);
+  gap: var(--space-md);
 }
 
 @media (min-width: 900px) {

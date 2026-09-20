@@ -124,7 +124,7 @@ export default function PricingPage() {
 
             <FadeIn direction="up" delay={0.3}>
               <details className={styles.faqItem}>
-                <summary>My book isn't finished yet. Is it too early?</summary>
+                <summary>My book isn&rsquo;t finished yet. Is it too early?</summary>
                 <div className={styles.faqAnswer}>
                   <p>It is usually the opposite — most authors come to us too late. If your book is still at manuscript or pre-publication stage, we can work on positioning, target readership, and the promotional plan before release, which is the most valuable window for building anticipation.</p>
                 </div>
@@ -142,7 +142,7 @@ export default function PricingPage() {
 
             <FadeIn direction="up" delay={0.5}>
               <details className={styles.faqItem}>
-                <summary>I'm traditionally published. Can I still work with you?</summary>
+                <summary>I&rsquo;m traditionally published. Can I still work with you?</summary>
                 <div className={styles.faqAnswer}>
                   <p>Yes. Many traditionally published authors work with us alongside their publisher&rsquo;s own marketing, particularly for social media presence and author brand — areas publishers often leave to the author.</p>
                 </div>

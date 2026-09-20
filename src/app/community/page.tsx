@@ -56,7 +56,7 @@ export default function CommunityPage() {
           <FadeIn direction="left" delay={0.2} className={styles.collageGrid}>
             <div className={styles.collageItem}>
               <Image
-                src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=800"
+                src="/images/stock/u-1512820790803-83ca734da794-800.jpg"
                 alt="Cozy reading moment with open book"
                 fill
                 className={styles.collageImage}
@@ -65,7 +65,7 @@ export default function CommunityPage() {
             </div>
             <div className={styles.collageItem}>
               <Image
-                src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=800"
+                src="/images/stock/u-1497633762265-9d179a990aa6-800.jpg"
                 alt="Stack of aesthetic books and coffee"
                 fill
                 className={styles.collageImage}
@@ -74,7 +74,7 @@ export default function CommunityPage() {
             </div>
             <div className={styles.collageItem}>
               <Image
-                src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=800"
+                src="/images/stock/u-1481627834876-b7833e8f5570-800.jpg"
                 alt="Library shelves with warm ambient lighting"
                 fill
                 className={styles.collageImage}

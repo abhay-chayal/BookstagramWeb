@@ -14,7 +14,7 @@ export default function NewArticlePage() {
   const [category, setCategory] = useState("books");
   const [authorName, setAuthorName] = useState("Abhay");
   const [authorRole, setAuthorRole] = useState("Founder & Head Strategist");
-  const [coverImage, setCoverImage] = useState("https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200");
+  const [coverImage, setCoverImage] = useState("/images/stock/u-1524995997946-a1c2e315a42f-1200.jpg");
   const [tags, setTags] = useState("Books, Literature, Writing");
   const [content, setContent] = useState(`
 # The Power of Great Narrative Hooks

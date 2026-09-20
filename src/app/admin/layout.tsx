@@ -4,6 +4,7 @@ import styles from "./layout.module.css";
 export const metadata = {
   title: "Admin Editorial CMS | Bookstagram Club",
   description: "Manage Journal articles, Newsletter issues, and editorial content.",
+  robots: { index: false, follow: false },
 };
 
 export default function AdminLayout({

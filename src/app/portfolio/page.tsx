@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
 import StaggeredText from "@/components/StaggeredText";
@@ -7,7 +6,7 @@ import styles from "./page.module.css";
 
 export const metadata = {
   title: "Author Case Studies & Portfolio | Bookstagram Club",
-  description: "Explore real campaign case studies, reader reach metrics, and brand transformations across our author ecosystem.",
+  description: "Books we have worked on, the campaigns we built around them, and the editorial reviews we published.",
 };
 
 interface CaseStudy {
@@ -16,14 +15,12 @@ interface CaseStudy {
   author: string;
   genre: string;
   campaignType: string;
+  stage: string;
   image: string;
   reviewSlug?: string;
-  metrics: { label: string; value: string }[];
   challenge: string;
   strategy: string;
   deliverables: string[];
-  quote: string;
-  quoteAuthor: string;
 }
 
 const CASE_STUDIES: CaseStudy[] = [
@@ -33,27 +30,19 @@ const CASE_STUDIES: CaseStudy[] = [
     author: "Zari",
     genre: "Epic Fantasy",
     campaignType: "Signature Launch Campaign",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1000",
+    stage: "Pre-launch through release",
+    image: "/images/books/queen-of-nordern.webp",
     reviewSlug: "queen-of-nordern",
-    metrics: [
-      { label: "Reader Impressions", value: "34,500+" },
-      { label: "ARC Applications", value: "142" },
-      { label: "Community Rating", value: "4.8 / 5.0" },
-    ],
     challenge:
-      "A high-stakes epic fantasy debut competing against established powerhouse authors. The primary goal was to create early world-building intrigue and drive qualified ARC reviewers who actively read and champion fantasy fiction.",
+      "An epic fantasy debut entering a category dominated by established names. The work is to build world-building intrigue early and put the book in front of readers who actively seek out new fantasy rather than a general audience.",
     strategy:
-      "Executed a multi-phase pre-launch countdown featuring aesthetic character quotes, high-engagement lore carousels, and a cinematic Bookstagram reel series. Paired with a featured editorial review that highlighted the novel's fast pacing and unique magic system.",
+      "A multi-phase pre-launch build: aesthetic character quotes, lore carousels that reward readers for paying attention, and a Bookstagram reel series. Anchored by a full editorial review on this site covering the pacing and the magic system.",
     deliverables: [
       "Custom Aesthetic Reels",
       "Character Art Quotes",
       "Dedicated Editorial Feature",
-      "ARC Reviewer Blitz",
       "Newsletter Highlight",
     ],
-    quote:
-      "Bookstagram Club didn't just promote my book — they understood the soul of the story. The readers who came through were genuinely excited about the world I built.",
-    quoteAuthor: "Zari, Author of The Queen of Nordern",
   },
   {
     id: "faucet",
@@ -61,54 +50,39 @@ const CASE_STUDIES: CaseStudy[] = [
     author: "Mara Aurora",
     genre: "Inspirational & Self-Growth",
     campaignType: "Author Brand & Positioning",
-    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=1000",
+    stage: "Published — long-term brand building",
+    image: "/images/books/faucet.webp",
     reviewSlug: "faucet",
-    metrics: [
-      { label: "Organic Reach", value: "28,000+" },
-      { label: "Engagement Rate", value: "7.4%" },
-      { label: "Verified 5-Star Reviews", value: "35+" },
-    ],
     challenge:
-      "Transitioning an inspiring manuscript into a recognizable personal brand with lasting evergreen momentum, rather than relying on a short launch-week spike.",
+      "Turning an inspirational book into a recognisable author identity with momentum that outlasts release week, rather than a short spike that fades.",
     strategy:
-      "Designed an elegant visual identity emphasizing mindfulness and personal agency. Produced bite-sized, shareable reflection carousels paired with an in-depth author interview and dedicated reader discussion threads.",
+      "A visual identity built around mindfulness and personal agency, carried across every asset. Short, shareable reflection carousels paired with an in-depth author interview and reader discussion threads, published on a steady cadence.",
     deliverables: [
       "Brand Style Alignment",
       "Shareable Quote Graphics",
-      "Targeted Mindset Reader Outreach",
       "Featured Editorial Review",
       "Long-Term Promo Cadence",
     ],
-    quote:
-      "The aesthetic consistency and editorial care were beyond anything I expected. My readership has grown with real, supportive people who actively reach out.",
-    quoteAuthor: "Mara Aurora, Author of Faucet",
   },
   {
     id: "space-traveller",
-    title: "The Space Traveller’s Lover",
-    author: "Sci-Fi Collective",
+    title: "The Space Traveller\u2019s Lover",
+    author: "Omara Williams",
     genre: "Sci-Fi Romance",
     campaignType: "Spotlight Campaign",
-    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1000",
+    stage: "Published \u2014 focused visibility push",
+    image: "/images/books/space-travellers-lover.webp",
     reviewSlug: "space-travellers",
-    metrics: [
-      { label: "Campaign Impressions", value: "22,800+" },
-      { label: "Story Link Clicks", value: "680+" },
-      { label: "Amazon Conversions", value: "Tracked Surge" },
-    ],
     challenge:
-      "Bridging two distinct reading fandoms — hardcore space opera fans and passionate romance readers — without alienating either group.",
+      "Bridging two reading fandoms \u2014 space opera readers and romance readers \u2014 without writing copy that alienates either one.",
     strategy:
-      "Developed a dual-angle narrative campaign emphasizing both the vast celestial worldbuilding and the high-emotion character stakes, driving direct traffic to Amazon.",
+      "A dual-angle narrative campaign: half the assets lead with the worldbuilding, half lead with the emotional stakes, each pointed at the audience it was written for, with a direct path through to the retailer page.",
     deliverables: [
       "Dynamic Sci-Fi Reels",
       "Dual-Genre Hook Teasers",
       "Dedicated Feed Showcase",
-      "Direct Purchase Attribution Link",
+      "Retailer Link Routing",
     ],
-    quote:
-      "They found the exact sweet spot in my story that hooked readers on Instagram. My release day sales saw an immediate, noticeable lift.",
-    quoteAuthor: "Independent Sci-Fi Romance Author",
   },
   {
     id: "infectious-injustice",
@@ -116,26 +90,19 @@ const CASE_STUDIES: CaseStudy[] = [
     author: "Justin Cook",
     genre: "Memoir & True Story",
     campaignType: "Backlist Revival Campaign",
+    stage: "Backlist \u2014 months after release",
     image: "/images/books/infectious-injustice.webp",
     reviewSlug: "infectious-injustice",
-    metrics: [
-      { label: "New Reader Discovery", value: "19,200+" },
-      { label: "Review Saves", value: "410+" },
-      { label: "Backlist Rank Increase", value: "+45%" },
-    ],
     challenge:
-      "Re-igniting reader interest for a thrilling backlist title that deserved a second wave of attention months after its initial traditional launch window.",
+      "Bringing fresh attention to a backlist title well after its original launch window, when the initial publisher push is long over.",
     strategy:
-      "Structured a thriller-enthusiast spotlight campaign, highlighting the forensic tension, moral complexity, and courtroom stakes to fresh mystery readers.",
+      "A spotlight campaign aimed squarely at thriller and true-story readers, leading with the forensic tension and moral complexity, and positioning the book against titles those readers already love.",
     deliverables: [
       "Plot Hook Carousels",
       "Comparative Title Positioning",
       "Featured Editorial Review",
-      "Newsletter Blast",
+      "Newsletter Feature",
     ],
-    quote:
-      "A book doesn't stop deserving readers after release week. Bookstagram Club showed me how to keep my backlist working for me continuously.",
-    quoteAuthor: "Justin M. Kiska, Mystery Author",
   },
 ];
 
@@ -145,10 +112,10 @@ export default function PortfolioPage() {
       {/* Header */}
       <header className={styles.header}>
         <div className={`container ${styles.headerContainer}`}>
-          <StaggeredText text="Real Stories. Real Reach." className={styles.headerTitle} />
+          <StaggeredText text="The Books We’ve Worked On." className={styles.headerTitle} />
           <FadeIn delay={0.3}>
             <p className={styles.headerSubtitle}>
-              Explore how we help authors build credible literary brands, connect with passionate readers, and achieve measurable launch momentum across our ecosystem.
+              Every campaign below was built around one specific book and the readers it was written for. Each one has a full editorial review published on this site — read them and judge the work for yourself.
             </p>
           </FadeIn>
         </div>
@@ -201,14 +168,22 @@ export default function PortfolioPage() {
 
                   <div className={styles.contentWrapper}>
                     <div>
-                      {/* Metric Badges */}
-                      <div className={styles.metricsRow}>
-                        {study.metrics.map((m, mIdx) => (
-                          <div key={mIdx} className={styles.metricBadge}>
-                            <span>⚡</span>
-                            <strong>{m.value}</strong> {m.label}
+                      {/* Campaign at a glance */}
+                      <div className={styles.glanceRow}>
+                        <div className={styles.glanceItem}>
+                          <span className={styles.glanceLabel}>Campaign</span>
+                          <strong>{study.campaignType}</strong>
+                        </div>
+                        <div className={styles.glanceItem}>
+                          <span className={styles.glanceLabel}>Stage</span>
+                          <strong>{study.stage}</strong>
+                        </div>
+                        {study.reviewSlug && (
+                          <div className={styles.glanceItem}>
+                            <span className={styles.glanceLabel}>Editorial review</span>
+                            <strong>Published on site</strong>
                           </div>
-                        ))}
+                        )}
                       </div>
 
                       {/* The Challenge */}
@@ -229,22 +204,16 @@ export default function PortfolioPage() {
                           ))}
                         </div>
                       </div>
-
-                      {/* Author Testimonial Quote */}
-                      <div className={styles.quoteBox}>
-                        <p className={styles.quoteText}>&ldquo;{study.quote}&rdquo;</p>
-                        <p className={styles.quoteAuthor}>— {study.quoteAuthor}</p>
-                      </div>
                     </div>
 
                     {/* Actions */}
                     <div className={styles.cardActions}>
                       {study.reviewSlug && (
-                        <Button href={`/reviews/${study.reviewSlug}`} variant="outline">
-                          Read Review &rarr;
+                        <Button href={`/reviews/${study.reviewSlug}`} variant="primary">
+                          Read the Full Review &rarr;
                         </Button>
                       )}
-                      <Button href="/contact?plan=launch" variant="primary">
+                      <Button href="/contact?plan=launch" variant="outline">
                         Plan a Similar Campaign
                       </Button>
                     </div>
@@ -262,7 +231,7 @@ export default function PortfolioPage() {
                 Whether you are gearing up for release day or breathing fresh life into an established title, our team builds tailored promotional campaigns designed for your specific readers.
               </p>
               <Button href="/contact" variant="primary">
-                Book a Strategy Consultation
+                Start Your Campaign
               </Button>
             </div>
           </FadeIn>

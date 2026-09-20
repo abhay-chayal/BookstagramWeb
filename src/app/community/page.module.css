@@ -38,7 +38,7 @@
 .introGrid {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: var(--space-xl);
+  gap: var(--space-lg);
   align-items: center;
 }
 

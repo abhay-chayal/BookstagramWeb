@@ -35,7 +35,7 @@ export default function Navbar() {
 
           <div className={styles.navActions}>
             <Link href="/contact" className={styles.ctaButton} onClick={close}>
-              Start Your Journey
+              Start Your Campaign
             </Link>
             <button
               type="button"
