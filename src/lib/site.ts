@@ -20,6 +20,17 @@ export const INSTAGRAM_URL = "https://www.instagram.com/bookstagram.club_/";
 
 export const CONTACT_EMAIL = "bookstagram.cclub@gmail.com";
 
+/**
+ * Every official profile, used for the Organization `sameAs` list. This is how
+ * search engines tie the website and the social accounts together as one
+ * brand — so the site can surface alongside the profiles that already rank.
+ * Only add URLs confirmed to be the club's own accounts.
+ */
+export const SOCIAL_PROFILES: string[] = [
+  INSTAGRAM_URL,
+  process.env.NEXT_PUBLIC_FACEBOOK_URL,
+].filter((u): u is string => Boolean(u));
+
 /** Absolute URL for a site-relative path — required by OG tags and JSON-LD. */
 export function absoluteUrl(path = "/"): string {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;

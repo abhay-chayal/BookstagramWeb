@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SiteChrome from "@/components/SiteChrome";
 import "./globals.css";
-import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, INSTAGRAM_URL, CONTACT_EMAIL, absoluteUrl } from "@/lib/site";
+import { SITE_URL, SITE_NAME, SITE_TAGLINE, SITE_DESCRIPTION, CONTACT_EMAIL, SOCIAL_PROFILES, absoluteUrl } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -46,6 +46,14 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} | Professional Book Promotion`,
     description: "Great books deserve to be discovered. Strategic book promotion and author marketing.",
   },
+  // Search Console / Bing ownership tokens. Set in the host's environment so
+  // verifying needs no code change; omitted from the page when unset.
+  verification: {
+    google: process.env.GOOGLE_SITE_VERIFICATION || undefined,
+    other: process.env.BING_SITE_VERIFICATION
+      ? { "msvalidate.01": process.env.BING_SITE_VERIFICATION }
+      : undefined,
+  },
 };
 
 const orgJsonLd = {
@@ -55,7 +63,7 @@ const orgJsonLd = {
   "url": SITE_URL,
   "logo": absoluteUrl("/images/logo.png"),
   "description": "Professional Book Promotion, Author Marketing & Literary Community Ecosystem.",
-  "sameAs": [INSTAGRAM_URL],
+  "sameAs": SOCIAL_PROFILES,
   "contactPoint": {
     "@type": "ContactPoint",
     "email": CONTACT_EMAIL,
