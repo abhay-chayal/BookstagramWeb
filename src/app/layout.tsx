@@ -81,6 +81,7 @@ const siteJsonLd = {
   "url": SITE_URL,
   "description": SITE_DESCRIPTION,
   "publisher": { "@type": "Organization", "name": SITE_NAME, "url": SITE_URL },
+  "inLanguage": "en-US",
 };
 
 export default function RootLayout({

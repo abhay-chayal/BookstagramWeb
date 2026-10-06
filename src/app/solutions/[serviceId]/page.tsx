@@ -69,7 +69,11 @@ export default async function ServicePage({ params }: PageProps) {
       name: SITE_NAME,
       url: SITE_URL,
     },
-    areaServed: "Worldwide",
+    areaServed: [
+      { "@type": "Country", name: "United States" },
+      { "@type": "Country", name: "United Kingdom" },
+    ],
+    inLanguage: "en-US",
     audience: {
       "@type": "Audience",
       audienceType: "Authors and publishers",
