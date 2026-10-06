@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
       "Professional book promotion and author marketing — Instagram campaigns, editorial reviews, and author websites.",
     start_url: "/",
     display: "standalone",
-    background_color: "#1C2530",
+    background_color: "#FFFFFF",
     theme_color: "#1C2530",
     icons: [
       { src: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
