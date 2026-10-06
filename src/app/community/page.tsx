@@ -6,8 +6,11 @@ import styles from "./page.module.css";
 
 export const metadata = {
   alternates: { canonical: "/community" },
-  title: "Reader & Reviewer Community",
-  description: "Join our active literary network of over 10,000 readers, Bookstagram reviewers, and book influencers.",
+  // Targets "bookstagram community" — a term this page competes for and
+  // previously did not use anywhere in its title, description or H1.
+  title: "The Bookstagram Community",
+  description:
+    "Join the Bookstagram community — over 10,000 readers, reviewers and book influencers sharing honest reviews, advance reader copies and genuine literary conversation.",
 };
 
 export default function CommunityPage() {
@@ -16,10 +19,10 @@ export default function CommunityPage() {
       {/* Header */}
       <header className={styles.header}>
         <div className={`container ${styles.headerContainer}`}>
-          <StaggeredText text="The Reader Community" className={styles.headerTitle} />
+          <StaggeredText text="The Bookstagram Community" className={styles.headerTitle} />
           <FadeIn delay={0.3}>
             <p className={styles.headerSubtitle}>
-              Connecting passionate readers, active bookstagrammers, and gifted authors through honest reviews, advance reader copies, and genuine literary conversations.
+              The Bookstagram community is where readers, reviewers and authors meet. We connect passionate readers and active bookstagrammers with the authors who need them — through honest reviews, advance reader copies, and genuine literary conversation.
             </p>
           </FadeIn>
         </div>
