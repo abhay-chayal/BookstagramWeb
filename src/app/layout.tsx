@@ -32,7 +32,10 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   keywords: ["Book Promotion", "Author Marketing", "Bookstagram", "Instagram Book Promotion", "Book Launch Campaign", "Book Reviews"],
-  alternates: { canonical: "/" },
+  alternates: {
+    canonical: "/",
+    types: { "application/rss+xml": `${SITE_URL}/feed.xml` },
+  },
   openGraph: {
     title: `${SITE_NAME} | ${SITE_TAGLINE}`,
     description: "Great books deserve to be discovered. Strategic Instagram promotion, creative content, and launch campaigns for authors.",

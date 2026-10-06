@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
@@ -51,6 +52,12 @@ export default async function NewsletterIssuePage({ params }: Props) {
       {/* 1. HEADER */}
       <header className={styles.header}>
         <div className={`container ${styles.headerContainer}`}>
+          <Breadcrumbs
+            items={[
+              { name: "Newsletter", href: "/newsletter" },
+              { name: `Issue #${String(issue.issueNumber).padStart(3, "0")}` },
+            ]}
+          />
           <FadeIn direction="up">
             <div className={styles.breadcrumbRow}>
               <Link href="/newsletter" className={styles.breadcrumbLink}>
