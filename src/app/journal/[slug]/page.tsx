@@ -4,23 +4,28 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import FadeIn from "@/components/FadeIn";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { JOURNAL_ARTICLES, JOURNAL_CATEGORIES, JournalArticle } from "@/data/journal";
+import { JOURNAL_CATEGORIES, JournalArticle, getPublishedArticles } from "@/data/journal";
 import styles from "./page.module.css";
 import { absoluteUrl } from "@/lib/site";
+
+// Regenerated daily so scheduled articles appear on their publication date
+// without a redeploy.
+export const revalidate = 86400;
+
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return JOURNAL_ARTICLES.map((article) => ({
+  return getPublishedArticles().map((article) => ({
     slug: article.slug,
   }));
 }
 
 export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
-  const article = JOURNAL_ARTICLES.find((a) => a.slug === slug);
+  const article = getPublishedArticles().find((a) => a.slug === slug);
 
   if (!article) {
     return {
@@ -45,7 +50,7 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function JournalArticlePage({ params }: Props) {
   const { slug } = await params;
-  const article = JOURNAL_ARTICLES.find((a) => a.slug === slug);
+  const article = getPublishedArticles().find((a) => a.slug === slug);
 
   if (!article) {
     notFound();
@@ -54,7 +59,7 @@ export default async function JournalArticlePage({ params }: Props) {
   const categoryObj = JOURNAL_CATEGORIES.find((c) => c.slug === article.category);
 
   // Related articles
-  const relatedArticles = JOURNAL_ARTICLES.filter(
+  const relatedArticles = getPublishedArticles().filter(
     (a) => a.slug !== article.slug && (a.category === article.category || article.tags.some(t => a.tags.includes(t)))
   ).slice(0, 3);
 

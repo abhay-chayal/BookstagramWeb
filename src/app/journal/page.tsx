@@ -5,11 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import StaggeredText from "@/components/StaggeredText";
-import { JOURNAL_ARTICLES, JOURNAL_CATEGORIES, JournalArticle } from "@/data/journal";
+import { JOURNAL_CATEGORIES, JournalArticle, getPublishedArticles } from "@/data/journal";
 import styles from "./page.module.css";
 
 
+
+
 export default function JournalPage() {
+  // Only articles whose publication date has arrived.
+  const JOURNAL_ARTICLES = getPublishedArticles();
   const [activeCategory, setActiveCategory] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState<string>("");
 

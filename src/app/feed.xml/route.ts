@@ -1,5 +1,10 @@
-import { JOURNAL_ARTICLES } from "@/data/journal";
+import { getPublishedArticles } from "@/data/journal";
 import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, absoluteUrl } from "@/lib/site";
+
+// Regenerated daily so scheduled articles appear on their publication date
+// without a redeploy.
+export const revalidate = 86400;
+
 
 /**
  * RSS feed for the journal.
@@ -18,10 +23,9 @@ function escapeXml(value: string): string {
     .replace(/'/g, "&apos;");
 }
 
-export const dynamic = "force-static";
 
 export async function GET() {
-  const published = JOURNAL_ARTICLES.filter((a) => a.status !== "draft").sort(
+  const published = getPublishedArticles().sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
 

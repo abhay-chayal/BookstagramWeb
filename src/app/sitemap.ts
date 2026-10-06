@@ -1,9 +1,14 @@
 import type { MetadataRoute } from "next";
 import { getAllSolutions } from "@/data/solutions";
 import { reviewsData } from "@/data/reviews";
-import { JOURNAL_ARTICLES } from "@/data/journal";
+import { getPublishedArticles } from "@/data/journal";
 import { NEWSLETTER_ISSUES } from "@/data/newsletter";
 import { SITE_URL } from "@/lib/site";
+
+// Regenerated daily so scheduled articles appear on their publication date
+// without a redeploy.
+export const revalidate = 86400;
+
 
 const BASE_URL = SITE_URL;
 
@@ -57,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Editorial entries carry their own publication date, so crawlers can tell
   // what actually changed instead of seeing every URL stamped with build time.
-  for (const article of JOURNAL_ARTICLES) {
+  for (const article of getPublishedArticles()) {
     entries.push({
       url: `${BASE_URL}/journal/${article.slug}`,
       lastModified: publishedDate(article.publishedAt),

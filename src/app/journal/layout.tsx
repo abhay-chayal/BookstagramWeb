@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE_NAME } from "@/lib/site";
 
+// Regenerated daily so scheduled articles appear on their publication date
+// without a redeploy. Set on the layout because the page is a client component.
+export const revalidate = 86400;
+
 export const metadata: Metadata = {
   title: "The Journal",
   description:

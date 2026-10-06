@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import FadeIn from "@/components/FadeIn";
 import { NEWSLETTER_ISSUES } from "@/data/newsletter";
-import { JOURNAL_ARTICLES, JOURNAL_CATEGORIES } from "@/data/journal";
+import { JOURNAL_CATEGORIES, getPublishedArticles } from "@/data/journal";
 import styles from "./page.module.css";
 
 interface Props {
@@ -43,7 +43,7 @@ export default async function NewsletterIssuePage({ params }: Props) {
   }
 
   // Resolve curated journal articles
-  const curatedArticles = JOURNAL_ARTICLES.filter((a) =>
+  const curatedArticles = getPublishedArticles().filter((a) =>
     issue.curatedArticleSlugs.includes(a.slug)
   );
 

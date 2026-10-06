@@ -3,8 +3,13 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import FadeIn from "@/components/FadeIn";
 import GlassCard from "@/components/GlassCard";
-import { JOURNAL_ARTICLES } from "@/data/journal";
+import { getPublishedArticles } from "@/data/journal";
 import styles from "./page.module.css";
+
+// Regenerated daily so scheduled articles appear on their publication date
+// without a redeploy.
+export const revalidate = 86400;
+
 
 export default function Home() {
   return (
@@ -188,7 +193,7 @@ export default function Home() {
           </FadeIn>
 
           <div className={styles.journalGrid}>
-            {JOURNAL_ARTICLES.slice(0, 3).map((art, idx) => (
+            {getPublishedArticles().slice(0, 3).map((art, idx) => (
               <FadeIn key={art.id} direction="up" delay={idx * 0.1}>
                 <article className={styles.journalCard}>
                   <Link href={`/journal/${art.slug}`} className={styles.journalCardImgLink}>

@@ -1212,3 +1212,34 @@ With over 85,000 devoted followers, literary curator Clara shares the secrets of
     status: "published",
   },
 ];
+
+/**
+ * Articles visible to the public: status "published" AND a publishedAt date
+ * that has arrived.
+ *
+ * Nothing filtered on either field before, so a draft or a future-dated piece
+ * went live the moment it was added. Scheduling matters here: publishing a
+ * large batch of articles at once is a pattern search engines treat as a
+ * quality signal in its own right, so the journal releases on a cadence.
+ *
+ * Pages that use this set `revalidate`, so a scheduled article appears on its
+ * date without needing a deploy.
+ */
+export function getPublishedArticles(now: Date = new Date()): JournalArticle[] {
+  const today = now.toISOString().slice(0, 10); // date-only, avoids timezone edges
+  return JOURNAL_ARTICLES.filter(
+    (a) => a.status === "published" && a.publishedAt <= today
+  ).sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
+}
+
+export function getArticleBySlug(slug: string, now: Date = new Date()): JournalArticle | undefined {
+  return getPublishedArticles(now).find((a) => a.slug === slug);
+}
+
+/** Scheduled but not yet live — for the CMS, never for public pages. */
+export function getScheduledArticles(now: Date = new Date()): JournalArticle[] {
+  const today = now.toISOString().slice(0, 10);
+  return JOURNAL_ARTICLES.filter(
+    (a) => a.status === "scheduled" || (a.status === "published" && a.publishedAt > today)
+  ).sort((a, b) => a.publishedAt.localeCompare(b.publishedAt));
+}
