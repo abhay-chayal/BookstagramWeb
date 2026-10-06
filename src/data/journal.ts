@@ -20,6 +20,9 @@ export interface JournalArticle {
   authorRole: string;
   authorAvatar?: string;
   publishedAt: string;
+  /** Set when an article is substantially revised. Feeds schema.org
+   *  dateModified, which should not simply mirror datePublished. */
+  updatedAt?: string;
   readingTimeMinutes: number;
   isFeatured: boolean;
   status: "published" | "draft" | "scheduled" | "archived";
@@ -472,6 +475,7 @@ is a career. The second is a number.
     authorName: "Abhay",
     authorRole: "Head Strategist",
     publishedAt: "2026-08-01",
+    updatedAt: "2026-10-06",
     readingTimeMinutes: 3,
     isFeatured: false,
     status: "published",
@@ -842,6 +846,7 @@ longer new. A campaign that ends on release day throws most of that away.
     authorName: "Abhay",
     authorRole: "Head Strategist",
     publishedAt: "2026-06-15",
+    updatedAt: "2026-10-06",
     readingTimeMinutes: 3,
     isFeatured: false,
     status: "published",
@@ -967,6 +972,7 @@ in release week. They are the ones who never stopped.
     authorName: "Abhay",
     authorRole: "Head Strategist",
     publishedAt: "2026-06-05",
+    updatedAt: "2026-10-06",
     readingTimeMinutes: 3,
     isFeatured: false,
     status: "published",
@@ -1015,7 +1021,7 @@ The image has to agree with the words. A dark academia novel photographed in
 bright daylight against a white wall sends two contradictory signals, and the
 reader resolves the contradiction by scrolling on.
 
-Atmosphere is mostly colour and light. Warm, low light reads as intimate and
+Atmosphere is mostly color and light. Warm, low light reads as intimate and
 romantic. Cold, high-contrast reads as tense. Muted and overcast reads as
 literary and melancholy. Readers process this before they read a single word.
 
@@ -1046,7 +1052,7 @@ rotate them. Most novels yield more than you would expect:
 - **The character hook** — a want and the thing standing in its way
 - **The atmosphere hook** — place and mood, no plot at all
 - **The comparison hook** — "for readers of X and Y", which is doing positioning work, not borrowing credit
-- **The question hook** — the moral problem at the centre of the book
+- **The question hook** — the moral problem at the center of the book
 
 Rotating these keeps a weeks-long campaign from sounding like one sentence
 repeated, while still saying one coherent thing about the book.
@@ -1080,6 +1086,7 @@ books never get.
     authorName: "Marcus Thorne",
     authorRole: "Editorial Director",
     publishedAt: "2026-05-28",
+    updatedAt: "2026-10-06",
     readingTimeMinutes: 3,
     isFeatured: false,
     status: "published",
@@ -1161,7 +1168,7 @@ A list of four hundred readers who open and reply is worth more than four
 thousand who signed up for a giveaway and do not remember you.
 
 Open rates fall as lists grow, and lists built through unrelated incentives fall
-fastest. Growth is not the metric worth optimising for; the proportion of people
+fastest. Growth is not the metric worth optimizing for; the proportion of people
 who actually want the email is.
 
 ## The slow part
@@ -1184,6 +1191,7 @@ social work rather than underneath it.
     authorName: "Abhay",
     authorRole: "Head Strategist",
     publishedAt: "2026-05-20",
+    updatedAt: "2026-10-06",
     readingTimeMinutes: 3,
     isFeatured: false,
     status: "published",

@@ -27,7 +27,7 @@ const faqJsonLd = {
       "name": "Do you guarantee book sales or bestseller status?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. We will not promise sales figures, bestseller rankings, review counts, or follower numbers — no one honestly can, because reader behaviour cannot be controlled. What we commit to is the work itself: professional promotional content made specifically for your book, and consistent, targeted exposure to readers who are genuinely likely to be interested in it."
+        "text": "No. We will not promise sales figures, bestseller rankings, review counts, or follower numbers — no one honestly can, because reader behavior cannot be controlled. What we commit to is the work itself: professional promotional content made specifically for your book, and consistent, targeted exposure to readers who are genuinely likely to be interested in it."
       }
     },
     {
@@ -178,7 +178,7 @@ export default function PricingPage() {
               <details className={styles.faqItem}>
                 <summary>Do you guarantee book sales or bestseller status?</summary>
                 <div className={styles.faqAnswer}>
-                  <p>No. We will not promise sales figures, bestseller rankings, review counts, or follower numbers — no one honestly can, because reader behaviour cannot be controlled. What we commit to is the work itself: professional promotional content made specifically for your book, and consistent, targeted exposure to readers who are genuinely likely to be interested in it.</p>
+                  <p>No. We will not promise sales figures, bestseller rankings, review counts, or follower numbers — no one honestly can, because reader behavior cannot be controlled. What we commit to is the work itself: professional promotional content made specifically for your book, and consistent, targeted exposure to readers who are genuinely likely to be interested in it.</p>
                 </div>
               </details>
             </FadeIn>

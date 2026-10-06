@@ -55,7 +55,7 @@ const CASE_STUDIES: CaseStudy[] = [
     image: "/images/books/faucet.webp",
     reviewSlug: "faucet",
     challenge:
-      "Turning an inspirational book into a recognisable author identity with momentum that outlasts release week, rather than a short spike that fades.",
+      "Turning an inspirational book into a recognizable author identity with momentum that outlasts release week, rather than a short spike that fades.",
     strategy:
       "A visual identity built around mindfulness and personal agency, carried across every asset. Short, shareable reflection carousels paired with an in-depth author interview and reader discussion threads, published on a steady cadence.",
     deliverables: [

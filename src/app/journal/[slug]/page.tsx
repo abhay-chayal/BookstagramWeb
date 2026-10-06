@@ -71,7 +71,7 @@ export default async function JournalArticlePage({ params }: Props) {
     description: article.excerpt,
     image: [article.coverImage],
     datePublished: article.publishedAt,
-    dateModified: article.publishedAt,
+    dateModified: article.updatedAt ?? article.publishedAt,
     author: [
       {
         "@type": "Person",
@@ -131,13 +131,25 @@ export default async function JournalArticlePage({ params }: Props) {
               </div>
 
               <div className={styles.metaDetails}>
-                <span>
+                {/* <time dateTime> gives crawlers the machine-readable ISO value
+                    alongside the human-readable US format. */}
+                <time dateTime={article.publishedAt}>
                   {new Date(article.publishedAt).toLocaleDateString("en-US", {
                     month: "long",
                     day: "numeric",
                     year: "numeric",
                   })}
-                </span>
+                </time>
+                {article.updatedAt && article.updatedAt !== article.publishedAt && (
+                  <time dateTime={article.updatedAt}>
+                    Updated{" "}
+                    {new Date(article.updatedAt).toLocaleDateString("en-US", {
+                      month: "long",
+                      day: "numeric",
+                      year: "numeric",
+                    })}
+                  </time>
+                )}
                 <span>•</span>
                 <span>{article.readingTimeMinutes} min read</span>
               </div>

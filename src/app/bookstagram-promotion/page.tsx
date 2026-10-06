@@ -22,11 +22,11 @@ export const metadata: Metadata = {
 const FAQ = [
   {
     q: "What is Bookstagram?",
-    a: "Bookstagram is the book community on Instagram — readers, reviewers and authors who post about what they are reading. It is not a formal platform or a separate app, just a long-running community that organises itself through hashtags, shared aesthetics and reading habits. It skews heavily toward fiction, and certain genres, romance and fantasy in particular, are far more active than others.",
+    a: "Bookstagram is the book community on Instagram — readers, reviewers and authors who post about what they are reading. It is not a formal platform or a separate app, just a long-running community that organizes itself through hashtags, shared aesthetics and reading habits. It skews heavily toward fiction, and certain genres, romance and fantasy in particular, are far more active than others.",
   },
   {
     q: "Does Bookstagram promotion actually sell books?",
-    a: "It creates visibility among people who read in your genre, and visibility is what makes a sale possible. Nobody can honestly promise you sales figures, because reader behaviour cannot be controlled and no agency has access to the levers that would guarantee it. Be sceptical of anyone who does promise numbers.",
+    a: "It creates visibility among people who read in your genre, and visibility is what makes a sale possible. Nobody can honestly promise you sales figures, because reader behavior cannot be controlled and no agency has access to the levers that would guarantee it. Be skeptical of anyone who does promise numbers.",
   },
   {
     q: "How long should a Bookstagram campaign run?",
@@ -96,7 +96,7 @@ export default function BookstagramPromotionPage() {
               existence — no separate app, no governing body, no membership. It is
               simply the very large number of people who use Instagram primarily to
               talk about books, and who have developed their own conventions for doing
-              so: recognisable photography styles, shared hashtags, recurring formats
+              so: recognizable photography styles, shared hashtags, recurring formats
               like stacked-spine shots and annotated pages.
             </p>
             <p>
